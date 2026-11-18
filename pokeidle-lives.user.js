@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.17
+// @version      1.18
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -23,7 +23,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.17';
+  const VERSAO = '1.18';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -571,7 +571,31 @@
     const jogoFresco = agora() - ler('t_jogo', 0) < 10 * MIN; // o jogo já diz quem está ao vivo na Kick
     const querVivo = agora() - tV > (plat === 'tw' ? 90e3 : (jogoFresco ? 10 * MIN : 3 * MIN)), querSaldo = agora() - tS > 15 * MIN;
     const querSegue = agora() - ler('t_segue_' + plat, 0) > 6 * H && !querSaldo;
-    if (!querVivo && !querSaldo && !querSegue) return;
+    // 1.18: pacotes de XP com relógio próprio (na 1.17 iam junto com quem segue e só seriam lidos 6 h depois)
+    const querPremios = agora() - ler('t_premios_' + plat, 0) > 6 * H && !querSaldo && !querSegue;
+    if (!querVivo && !querSaldo && !querSegue && !querPremios) return;
+    if (querPremios) {
+      gravar('t_premios_' + plat, agora());
+      // pacotes de XP de cada canal
+      try {
+        if (plat === 'tw') {
+          const pr = await lerPremiosTwitch(lista);
+          for (const c of Object.keys(pr)) guardarOpcoes('tw', c, pr[c], 'API');
+          gravar('premios_estado_tw', { t: agora(), ok: Object.keys(pr).length });
+        } else {
+          let ok = 0;
+          for (const c of lista) {
+            const pr = await lerPremiosKick(c);
+            if (pr) { guardarOpcoes('kk', c, pr, 'API'); ok++; } else if (!ler('kk_premios_url', '')) break;
+            await dorme(700);
+          }
+          gravar('premios_estado_kk', { t: agora(), ok });
+        }
+      } catch (e) {
+        gravar('premios_estado_' + plat, { t: agora(), ok: 0, erro: String(e.message || e).slice(0, 100) });
+      }
+      if (!querVivo) return;
+    }
     if (querSegue) {
       gravar('t_segue_' + plat, agora());
       try {
@@ -582,24 +606,6 @@
             try { const x = await lerSegueKick(c); if (x != null) mapa[c] = x; } catch (e) { /* segue */ }
             await dorme(700);
           }
-        }
-        // 1.17: pacotes de XP de cada canal
-        try {
-          if (plat === 'tw') {
-            const pr = await lerPremiosTwitch(lista);
-            for (const c of Object.keys(pr)) guardarOpcoes('tw', c, pr[c], 'API');
-            gravar('premios_estado_tw', { t: agora(), ok: Object.keys(pr).length });
-          } else {
-            let ok = 0;
-            for (const c of lista) {
-              const pr = await lerPremiosKick(c);
-              if (pr) { guardarOpcoes('kk', c, pr, 'API'); ok++; } else if (!ler('kk_premios_url', '')) break;
-              await dorme(700);
-            }
-            gravar('premios_estado_kk', { t: agora(), ok });
-          }
-        } catch (e) {
-          gravar('premios_estado_' + plat, { t: agora(), ok: 0, erro: String(e.message || e).slice(0, 100) });
         }
         if (Object.keys(mapa).length) {
           gravar('segue_' + plat, { t: agora(), mapa });
