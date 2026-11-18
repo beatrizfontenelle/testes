@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.19
+// @version      1.20
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -23,7 +23,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.19';
+  const VERSAO = '1.20';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -54,6 +54,31 @@
   // 1.17: cada canal tem os seus pacotes (18/11: kick.com/denissnider só tem 3, 5 e 10 h). Sem pacotes conferidos,
   // vale 1, 3, 5 e 10 h, marcado como incerto.
   const RX_XP_TITULO = /b[oô]nus\s*(de\s*)?\+?\s*15\s*%\s*(de\s*)?xp/i;
+  // 1.20: os três bônus do PokeIdle (XP, Capture Boost e Secret Lure), com pacotes de horas e preço por canal
+  const RX_TIPO = {
+    xp: RX_XP_TITULO,
+    captura: /b[oô]nus\s*(de\s*)?\+?\s*15\s*%\s*(de\s*)?capture/i,
+    lure: /b[oô]nus\s*(de\s*)?\+?\s*15\s*%\s*(de\s*)?(secret\s*)?lure/i,
+  };
+  const NOME_TIPO = { xp: 'XP', captura: 'Captura', lure: 'Lure' };
+  function tiposDePremios(premios, custoXpHora) {
+    const out = { xp: [], captura: [], lure: [] };
+    for (const r of premios || []) {
+      if (!r) continue;
+      const titulo = String(r.titulo != null ? r.titulo : r.title || '');
+      const custo = Number(r.custo != null ? r.custo : r.cost);
+      if (!(custo > 0) || r.ativo === false || r.isEnabled === false || r.isPaused === true) continue;
+      for (const tipo of Object.keys(RX_TIPO)) {
+        if (!RX_TIPO[tipo].test(titulo)) continue;
+        const m = titulo.replace(RX_TIPO[tipo], ' ').match(/(\d+)\s*(h\b|hora)/i);
+        let h = m ? Number(m[1]) : 1;
+        if (tipo === 'xp' && !m && custoXpHora && custo % custoXpHora === 0) h = custo / custoXpHora;
+        if (!out[tipo].some((x) => x.h === h)) out[tipo].push({ h, custo });
+      }
+    }
+    for (const t of Object.keys(out)) out[t].sort((a, b) => a.h - b.h);
+    return out;
+  }
   function pacotesDoCanal(opcoes, canal) {
     const o = opcoes && opcoes[canal];
     return o && Array.isArray(o.hs) && o.hs.length ? { hs: o.hs.slice().sort((a, b) => b - a), certo: true } : { hs: PACOTES.slice(), certo: false };
@@ -341,7 +366,7 @@
     return Object.keys(out).length ? Object.assign(out, { servidorAgora: Number(e.servidorAgora) || 0 }) : null;
   }
 
-  const PURAS = { pacotesDoCanal, maxHoras, pacotesDePremios, horasResgataveis, melhorPacote, recomendar, textoRecomendacao, precisaSequencia, escolherCanal, extrairCanais, lerListaColada, lerNumeroTela, avaliarContagem, ajustarAbas, urlCanal, planoResgate, textoPlano, lerComandoResgate, lerEstadoJogo, posicaoJanela, versaoMaior };
+  const PURAS = { tiposDePremios, pacotesDoCanal, maxHoras, pacotesDePremios, horasResgataveis, melhorPacote, recomendar, textoRecomendacao, precisaSequencia, escolherCanal, extrairCanais, lerListaColada, lerNumeroTela, avaliarContagem, ajustarAbas, urlCanal, planoResgate, textoPlano, lerComandoResgate, lerEstadoJogo, posicaoJanela, versaoMaior };
   if (typeof window === 'undefined' || typeof GM_getValue === 'undefined') {
     if (typeof module !== 'undefined') module.exports = PURAS;
     return;
@@ -530,14 +555,28 @@
     }
     return out;
   }
+  function autoXpEstadoGlobal(p) {
+    if (!(ler('auto_ok_' + p, false) || ((ler('teste_resgate_fim_' + p, null) || {}).ok === true && ((ler('teste_resgate_fim_' + p, null) || {}).tipo || 'xp') === 'xp'))) return 'espera um resgate de XP certo pelo painel';
+    const b = ler('auto_bloq_' + p, null);
+    if (b) return 'desligado às ' + hora(b.t) + ' (' + b.motivo + '); um resgate certo pelo painel liga de novo';
+    const u = ler('auto_feito_' + p, null);
+    return 'ligado (resgata quando faltar menos de 3 h)' + (u ? '; último às ' + hora(u.t) + ', ' + u.h + ' h em ' + u.canal : '');
+  }
+  function descreverPacotes(op) {
+    const t = op.tipos || { xp: (op.hs || []).map((h) => ({ h })) };
+    return ['xp', 'captura', 'lure'].filter((k) => t[k] && t[k].length).map((k) => NOME_TIPO[k] + ' ' + t[k].map((x) => x.h).join('/')).join(', ') + ' h (' + op.fonte + ')';
+  }
   function guardarOpcoes(plat, canal, premios, fonte) {
     const pk = pacotesDePremios(premios, CUSTO_HORA[plat]);
+    const tipos = tiposDePremios(premios, CUSTO_HORA[plat]);
     const op = ler('opcoes_' + plat, {});
+    // a lista da API vale mais que a tela (na tela pode faltar cartão fora de vista)
+    if (fonte === 'tela' && op[canal] && op[canal].fonte === 'API' && agora() - op[canal].t < 12 * H) return pk;
     const antes = op[canal] && op[canal].hs ? op[canal].hs.join(',') : '';
-    if (!pk.hs.length) { if (op[canal]) { delete op[canal]; gravar('opcoes_' + plat, op); } return pk; }
-    op[canal] = { hs: pk.hs, t: agora(), fonte };
+    if (!pk.hs.length && !tipos.captura.length && !tipos.lure.length) { if (op[canal]) { delete op[canal]; gravar('opcoes_' + plat, op); } return pk; }
+    op[canal] = { hs: pk.hs, tipos, t: agora(), fonte };
     gravar('opcoes_' + plat, op);
-    if (antes !== pk.hs.join(',')) logar(NOME[plat] + ': ' + canal + ' tem XP de ' + pk.hs.slice().reverse().join(', ') + ' h (' + fonte + ')');
+    if (antes !== pk.hs.join(',') && pk.hs.length) logar(NOME[plat] + ': ' + canal + ' tem XP de ' + pk.hs.slice().reverse().join(', ') + ' h (' + fonte + ')');
     return pk;
   }
   async function lerSegueKick(c) {
@@ -964,18 +1003,23 @@
       const canal = canalDaUrl(plat);
       const fim = (ok, msg) => {
         passos.push(msg);
-        gravar('teste_resgate_fim', { id, plat, canal, t: agora(), ok, passos });
-        gravar('teste_resgate_fim_' + plat, { id, plat, canal, t: agora(), ok, passos });
-        logar(NOME[plat] + ' ' + id + ': teste de resgate em ' + canal + (ok ? ' deu certo: ' : ' parou: ') + msg);
+        const tp = (pedido && pedido.tipo) || 'xp', hh = (pedido && pedido.h) || 1;
+        gravar('teste_resgate_fim', { id, plat, canal, t: agora(), ok, passos, tipo: tp, h: hh });
+        gravar('teste_resgate_fim_' + plat, { id, plat, canal, t: agora(), ok, passos, tipo: tp, h: hh });
+        logar(NOME[plat] + ' ' + id + ': resgate de ' + hh + ' h de ' + (NOME_TIPO[tp] || 'XP') + ' em ' + canal + (pedido && pedido.origem ? ' (' + pedido.origem + ')' : '') + (ok ? ' deu certo: ' : ' parou: ') + msg);
       };
       try {
         try { window.focus(); } catch (e) { /* nada */ }
         await dorme(2500);
         atualizarCustos();
+        const tipo = (pedido && RX_TIPO[pedido.tipo]) ? pedido.tipo : 'xp';
+        const RX = RX_TIPO[tipo];
         const custo = (pedido && pedido.custo) || CUSTO_HORA[plat];
         const antes = await lerMeuSaldo(canal);
-        passos.push('canal ' + canal + ', saldo ' + antes + ', pacote ' + ((pedido && pedido.h) || 1) + ' h por ' + custo);
+        passos.push('canal ' + canal + ', saldo ' + antes + ', ' + NOME_TIPO[tipo] + ' ' + ((pedido && pedido.h) || 1) + ' h por ' + custo + (pedido && pedido.origem ? ' (' + pedido.origem + ')' : ''));
         if (antes == null || antes < custo) return fim(false, antes == null ? 'não consegui ler o saldo do canal' : 'saldo de ' + antes + ' não paga ' + custo + ' (resgatado antes do teste?)');
+        // campos de texto que já existiam (o chat): só um campo NOVO depois de escolher a recompensa conta como "pede texto"
+        const camposAntes = new Set(document.querySelectorAll('textarea, input[type="text"], [contenteditable="true"]'));
         // 1) o botão que abre o menu de pontos
         let botao = null;
         if (plat === 'tw') {
@@ -984,9 +1028,22 @@
           passos.push('botões do resumo de pontos: ' + (bs.map(rotulo).join(' ; ') || 'nenhum (chat escondido?)'));
           botao = bs.find((b) => !b.querySelector('.claimable-bonus__icon') && !/b[oô]nus/i.test(b.getAttribute('aria-label') || '')) || null;
         } else {
-          const cands = [...document.querySelectorAll('button, [role="button"]')].filter(vis)
-            .filter((b) => /pontos|points|recompensa|reward/i.test((b.getAttribute('aria-label') || '') + ' ' + (b.getAttribute('title') || '') + ' ' + txt(b).slice(0, 40)));
-          passos.push('botões candidatos: ' + (cands.map(rotulo).join(' ; ') || 'nenhum'));
+          // 1.20: na Kick o botão dos pontos mostra o saldo (18/11 13:14: o único com "reward" no nome era o dos Drops)
+          const todos = [...document.querySelectorAll('button, [role="button"]')].filter(vis);
+          const num = (t) => {
+            const m = String(t).replace(/\s/g, '').match(/^([0-9][0-9.,]*)(k|mil)?$/i);
+            if (!m) return null;
+            let v = Number(m[1].replace(/[.,](?=\d{3}(\D|$))/g, '').replace(',', '.'));
+            if (m[2]) v *= 1000;
+            return isFinite(v) ? v : null;
+          };
+          const porSaldo = todos.filter((b) => { const v = num(txt(b)); return v != null && antes > 0 && Math.abs(v - antes) <= Math.max(10, antes * 0.06); });
+          const porNome = todos.filter((b) => /pontos do canal|channel points/i.test((b.getAttribute('aria-label') || '') + ' ' + (b.getAttribute('title') || '') + ' ' + txt(b).slice(0, 40)) && !/drops/i.test(txt(b)));
+          passos.push('botões com o saldo: ' + (porSaldo.map(rotulo).join(' ; ') || 'nenhum') + ' | com "channel points": ' + (porNome.map(rotulo).join(' ; ') || 'nenhum'));
+          const caixa = document.querySelector('textarea, [contenteditable="true"]');
+          let perto = caixa; for (let i = 0; i < 4 && perto; i++) perto = perto.parentElement;
+          if (perto) passos.push('botões perto do chat: ' + ([...perto.querySelectorAll('button, [role="button"]')].filter(vis).map(rotulo).join(' ; ') || 'nenhum'));
+          const cands = porNome.length === 1 ? porNome : porSaldo;
           if (cands.length === 1) botao = cands[0];
         }
         if (!botao) return fim(false, 'não achei, com certeza, o botão do menu de pontos');
@@ -995,29 +1052,29 @@
         const menu = menuAberto();
         passos.push('menu: ' + (menu ? txt(menu).slice(0, 600) : 'nenhum menu à vista'));
         try { const pr = premiosDaTela(); if (pr.length) guardarOpcoes(plat, canal, pr, 'tela'); } catch (e) { /* nada */ }
-        // 2) o bônus de XP de 1 hora: cartão com o nome certo e o preço de 1 hora
+        // 2) o cartão do bônus pedido, com o preço pedido
         const raiz = menu || document.body;
-        const titulos = [...raiz.querySelectorAll('*')].filter((e) => RX_XP.test(txt(e)) && ![...e.children].some((f) => RX_XP.test(txt(f))));
+        const titulos = [...raiz.querySelectorAll('*')].filter((e) => RX.test(txt(e)) && ![...e.children].some((f) => RX.test(txt(f))));
         // 1.19: o cartão é o pedaço que tem o nome e o preço (sobe a partir do nome até aparecer um número, sem pegar
         // outro bônus de XP junto). Na Twitch, 18/11 11:42: o nome e o preço ficam em partes separadas do cartão.
-        const contaXp = (t) => (t.match(new RegExp(RX_XP.source, 'gi')) || []).length;
+        const contaXp = (t) => Object.values(RX_TIPO).reduce((n, rx) => n + (t.match(new RegExp(rx.source, 'gi')) || []).length, 0);
         const cartoes = titulos.map((e) => {
           let el = e;
           for (let i = 0; i < 6 && el; i++, el = el.parentElement) {
             const t = txt(el);
             if (contaXp(t) > 1) return null;
-            if (/(^|[^0-9.,%+])\d{2,3}([.,]\d{3})*([^0-9%]|$)/.test(t.replace(RX_XP, ' ').replace(/\(\s*\d+\s*h\s*\)/i, ' '))) return el;
+            if (/(^|[^0-9.,%+])(\d{1,3}([.,]\d{3})+|\d{2,3})([^0-9%]|$)/.test(t.replace(RX, ' ').replace(/\(\s*\d+\s*h\s*\)/i, ' '))) return el;
           }
           return null;
         }).filter(Boolean);
-        passos.push('cartões de XP: ' + (cartoes.map((c) => txt(c).slice(0, 60)).join(' ; ') || 'nenhum'));
+        passos.push('cartões de ' + NOME_TIPO[tipo] + ': ' + (cartoes.map((c) => txt(c).slice(0, 60)).join(' ; ') || 'nenhum'));
         const cartao = cartoes.filter((c) => temNumero(txt(c), custo)).map((c) => c.closest('button, [role="button"], a') || c.querySelector('button, [role="button"]') || c);
-        if (cartao.length !== 1) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, cartao.length ? 'mais de um bônus de XP com o preço de ' + custo : 'não achei o bônus de XP de ' + custo + ' pontos'); }
+        if (cartao.length !== 1) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, cartao.length ? 'mais de um bônus de ' + NOME_TIPO[tipo] + ' com o preço de ' + custo : 'não achei o bônus de ' + NOME_TIPO[tipo] + ' de ' + custo + ' pontos'); }
         cartao[0].click();
         await dorme(2000);
         // 3) confirmar: botão "Resgatar" ou com o preço; nada de recompensa que pede texto
         const tela = menuAberto() || document.body;
-        if ([...tela.querySelectorAll('textarea, input[type="text"]')].some(vis)) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, 'a recompensa pede um texto; não confirmei'); }
+        if ([...document.querySelectorAll('textarea, input[type="text"], [contenteditable="true"]')].some((e) => !camposAntes.has(e) && vis(e))) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, 'a recompensa pede um texto; não confirmei'); }
         const confs = [...tela.querySelectorAll('button, [role="button"]')].filter(vis).filter((b) => b !== botao && b !== cartao[0] && (/resgatar|redeem/i.test(txt(b) + ' ' + (b.getAttribute('aria-label') || '')) || temNumero(txt(b), custo)));
         passos.push('botões de confirmar: ' + (confs.map(rotulo).join(' ; ') || 'nenhum') + ' | tela: ' + txt(tela).slice(0, 300));
         if (confs.length !== 1) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, confs.length ? 'mais de um botão de confirmar; não cliquei' : 'não achei o botão de confirmar'); }
@@ -1170,7 +1227,8 @@
           const fim = jogo && agora() - jogo.t < 15 * MIN && jogo[p] != null ? jogo[p] : (el[p] ? Number(el[p].getAttribute('data-' + p + '-fim')) || 0 : (bonus[p] || 0));
           const t = textoPlano(p, ler('saldos_' + p, {}), ler('vivos_' + p, {}), fim, cmd.horas, cmd.tudo, agora(), ler('opcoes_' + p, {}));
           const tS = ler('t_saldos_' + p, 0);
-          return t + (tS && agora() - tS > 40 * MIN ? ' (pontos lidos às ' + hora(tS) + ')' : '');
+          const bq = ler('auto_bloq_' + p, null);
+          return t + (tS && agora() - tS > 40 * MIN ? ' (pontos lidos às ' + hora(tS) + ')' : '') + (bq ? '\nO resgate automático parou às ' + hora(bq.t) + ': ' + bq.motivo + '.' : '');
         }).join('\n\n');
       }
       const out = JSON.stringify({ nonce: ped.nonce, texto, versao: VERSAO });
@@ -1202,12 +1260,15 @@
         '#pkl-central{position:fixed;inset:0;z-index:2147483647;background:#14121a;color:#eee;font:15px/1.45 system-ui,sans-serif;padding:28px;overflow:auto}' +
         '#pkl-central h1{font-size:22px;margin:0 0 6px}#pkl-central .sub{color:#b9b4c8;margin:0 0 18px;max-width:760px}' +
         '#pkl-central button{font:600 15px system-ui,sans-serif;padding:10px 18px;margin:0 10px 10px 0;border-radius:10px;border:0;cursor:pointer;background:#3a3550;color:#fff}' +
-        '#pkl-central .segue{margin:4px 0 12px;max-width:900px}#pkl-central .segue a{color:#bf94ff}#pkl-central button.ligar{background:#7c4dff}#pkl-central pre{white-space:pre-wrap;background:#1d1a26;padding:14px;border-radius:10px;font:13px/1.5 ui-monospace,Consolas,monospace}' +
+        '#pkl-central .resg{margin:6px 0;color:#efeff1}#pkl-central .resg select{background:#26262c;color:#efeff1;border:1px solid #555;border-radius:6px;padding:6px;margin:0 4px}#pkl-central .segue{margin:4px 0 12px;max-width:900px}#pkl-central .segue a{color:#bf94ff}#pkl-central button.ligar{background:#7c4dff}#pkl-central pre{white-space:pre-wrap;background:#1d1a26;padding:14px;border-radius:10px;font:13px/1.5 ui-monospace,Consolas,monospace}' +
         '</style><h1>Central das lives (PokeIdle)</h1>' +
         '<p class="sub">As lives abrem em abas nesta janela, só quando você clica em Ligar ou +1. Quando uma live para no fundo (canal saiu do ar, live engasgou), esta janela mostra a aba dela uns segundos até o vídeo voltar e depois volta para a central. Deixe esta janela aparecendo na tela (não minimizada). Som: o Chrome já silencia twitch.tv e kick.com ("Silenciar site"); não use o mudo do vídeo.</p>' +
         '<div class="segue"></div>' +
         '<div><button class="ligar">Ligar</button><button class="desligar">Desligar</button><button class="plano">O que resgatar (12 h)</button><button class="relatorio">Relatório (arquivo)</button></div>' +
-        '<div><button class="teste" data-p="tw">Testar resgate Twitch (1 h)</button><button class="teste" data-p="kk">Testar resgate Kick (1 h)</button></div>' +
+        '<div class="resg">Resgatar agora: <select class="r-plat"><option value="tw">Twitch</option><option value="kk">Kick</option></select> ' +
+        '<select class="r-tipo"><option value="xp">XP</option><option value="captura">Captura</option><option value="lure">Lure</option></select> ' +
+        '<select class="r-h"><option value="1">1 h</option><option value="3">3 h</option><option value="5">5 h</option><option value="10">10 h</option></select> ' +
+        '<button class="resgatar">Resgatar</button></div>' +
         '<div><button class="mais" data-p="kk">Kick +1</button><button class="menos" data-p="kk">Kick −1</button><button class="mais" data-p="tw">Twitch +1</button><button class="menos" data-p="tw">Twitch −1</button></div>' +
         '<pre class="status">Carregando...</pre>';
       document.body.appendChild(painel);
@@ -1220,7 +1281,7 @@
         setTimeout(ciclo, 300);
       };
       painel.querySelector('.desligar').onclick = () => { desligar(); mostrar(); };
-      painel.querySelectorAll('.teste').forEach((b) => { b.onclick = () => testarResgateCentral(b.dataset.p).catch(() => {}); });
+      painel.querySelector('.resgatar').onclick = () => resgatarAgora(painel.querySelector('.r-plat').value, painel.querySelector('.r-tipo').value, Number(painel.querySelector('.r-h').value)).catch(() => {});
       painel.querySelectorAll('.mais, .menos').forEach((b) => {
         b.onclick = () => {
           const p = b.dataset.p, mais = b.classList.contains('mais');
@@ -1390,48 +1451,129 @@
     }
     setInterval(() => { reiniciarAba().catch(() => {}); }, 15e3);
 
-    // 1.14: teste de resgate. Escolhe a aba aberta cujo canal tem mais pontos (pelo menos 1 hora), pede confirmação,
-    // manda a aba fazer o teste e volta para a central. Uns minutos depois, confere no jogo se o bônus aumentou.
-    async function testarResgateCentral(p) {
+    // 1.20: resgate (XP, Captura ou Lure). A aba faz os cliques do jeito que você faria, confere nome, preço e saldo
+    // e para se algo não bater. Se o canal escolhido não estiver aberto, a primeira aba da plataforma vai até ele.
+    let resgatando = false;
+    function custoNoCanal(p, c, tipo, h) {
+      const op = (ler('opcoes_' + p, {}) || {})[c];
+      const ts = op && op.tipos && op.tipos[tipo];
+      const x = ts && ts.find((q) => q.h === h);
+      if (x) return { custo: x.custo, certo: true };
+      if (tipo === 'xp' && !(op && op.hs && op.hs.length)) return { custo: h * CUSTO_HORA[p], certo: false };
+      return null;
+    }
+    function abasAbertas(p) {
+      return abasDe(p).filter((a) => a && agora() - a.t < 3 * MIN && Number(a.id.slice(2)) <= (cfg().abas[p] || 0));
+    }
+    // canais que pagam "h" horas de "tipo": abertos primeiro, depois mais pontos
+    function canaisQuePagam(p, tipo, h) {
+      const saldos = ler('saldos_' + p, {}), abertas = abasAbertas(p);
+      return Object.keys(saldos).map((c) => {
+        const k = custoNoCanal(p, c, tipo, h);
+        return k && { c, pts: (saldos[c] || {}).pts || 0, custo: k.custo, certo: k.certo, aba: abertas.find((a) => a.canal === c) || null };
+      }).filter((x) => x && x.pts >= x.custo).sort((a, b) => (!!b.aba - !!a.aba) || b.pts - a.pts);
+    }
+    async function executarResgate(o) {
+      if (resgatando) return null;
+      resgatando = true;
+      try {
+        let aba = o.aba;
+        if (!aba) {
+          aba = abasAbertas(o.p)[0];
+          if (!aba) { logar(NOME[o.p] + ': resgate não feito, nenhuma aba aberta'); return null; }
+          gravar('assumir_' + aba.id, { canal: o.canal, t: agora() });
+          logar(NOME[o.p] + ': a aba ' + aba.id + ' vai até ' + o.canal + ' para o resgate');
+          let chegou = false;
+          for (let i = 0; i < 100 && !chegou; i++) { await dorme(1000); const a = ler('aba_' + aba.id, null); chegou = !!(a && a.canal === o.canal); }
+          if (!chegou) { logar(NOME[o.p] + ': a aba ' + aba.id + ' não chegou em ' + o.canal + '; resgate não feito'); return null; }
+          await dorme(10000);
+        }
+        const jb0 = ler('jogo_bonus', null), fim0 = jb0 ? Number(jb0[o.p]) || 0 : 0;
+        const t0 = agora();
+        gravar('teste_resgate', { id: aba.id, t: t0, tipo: o.tipo, h: o.h, custo: o.custo, origem: o.origem });
+        let r = null;
+        for (let i = 0; i < 60 && !r; i++) {
+          await dorme(1000);
+          const f = ler('teste_resgate_fim', null);
+          if (f && f.id === aba.id && f.t >= t0) r = f;
+        }
+        try { window.focus(); } catch (e) { /* nada */ }
+        mostrar();
+        ghRelatorio('resgate ' + o.origem).catch(() => {});
+        if (!r) { logar(NOME[o.p] + ': o resgate não respondeu em 60 s'); return { ok: false }; }
+        if (r.ok && o.tipo === 'xp') {
+          gravar('auto_ok_' + o.p, true); gravar('auto_bloq_' + o.p, null); gravar('auto_falhas_' + o.p, 0);
+          setTimeout(() => {
+            const j = ler('jogo_bonus', null), fim1 = j ? Number(j[o.p]) || 0 : 0;
+            const base = Math.max(fim0, t0);
+            const recebeu = fim1 - base > o.h * H - 20 * MIN;
+            logar(NOME[o.p] + ': no jogo, o XP ia até ' + (fim0 ? hora(fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') + (recebeu ? ' (o jogo recebeu ' + o.h + ' h)' : ' (o jogo ainda não mostrou as ' + o.h + ' h)'));
+            if (!recebeu && o.origem === 'automático') { gravar('auto_bloq_' + o.p, { t: agora(), motivo: 'o jogo não mostrou as horas resgatadas' }); logar(NOME[o.p] + ': resgate automático desligado até um resgate certo pelo painel'); }
+            mostrar();
+            ghRelatorio('5 min depois do resgate').catch(() => {});
+          }, 5 * MIN);
+        }
+        return r;
+      } finally { resgatando = false; }
+    }
+    async function resgatarAgora(p, tipo, h) {
       atualizarCustos();
-      const custoHora = CUSTO_HORA[p], saldos = ler('saldos_' + p, {}), opcoes = ler('opcoes_' + p, {});
-      // 1.17: o menor pacote de XP que o canal tem e o saldo paga
-      const abas = abasDe(p).filter((a) => a && a.vivo && agora() - a.t < 3 * MIN && Number(a.id.slice(2)) <= (cfg().abas[p] || 0))
-        .map((a) => {
-          const pts = (saldos[a.canal] || {}).pts || 0, pc = pacotesDoCanal(opcoes, a.canal);
-          const h = pc.hs.slice().sort((x, y) => x - y).find((q) => q * custoHora <= pts) || 0;
-          return { a, pts, h, certo: pc.certo, menor: Math.min(...pc.hs) };
-        }).sort((x, y) => y.pts - x.pts);
-      const escolha = abas.find((x) => x.h > 0);
-      if (!escolha) {
-        alert(NOME[p] + ': nenhuma aba aberta está num canal com pontos para o menor pacote de XP de lá (' + (abas.map((x) => x.a.canal + ' ' + x.pts + ' pontos, menor pacote ' + x.menor + ' h').join('; ') || 'nenhuma aba') + '). Tente quando algum chegar lá.');
+      const cs = canaisQuePagam(p, tipo, h);
+      if (!cs.length) {
+        const op = ler('opcoes_' + p, {}), saldos = ler('saldos_' + p, {});
+        const tem = Object.keys(op).filter((c) => custoNoCanal(p, c, tipo, h)).map((c) => c + ' (' + milhar((saldos[c] || {}).pts || 0) + ' de ' + milhar(custoNoCanal(p, c, tipo, h).custo) + ')').slice(0, 8);
+        alert(NOME[p] + ': nenhum canal tem pontos para ' + h + ' h de ' + NOME_TIPO[tipo] + '.' + (tem.length ? ' Canais com esse pacote: ' + tem.join(', ') + '.' : ' Nenhum canal conferido tem esse pacote.'));
         return;
       }
-      const a = escolha.a, custo = escolha.h * custoHora;
-      if (!confirm('Teste: vou resgatar ' + escolha.h + ' h de XP em ' + urlCurta(p, a.canal) + ' (' + custo + ' pontos)' + (escolha.certo ? '' : ', se o canal tiver esse pacote') + ', uma vez só. A aba vai aparecer uns segundos. Pode?')) return;
-      const jogo0 = ler('jogo_bonus', null);
-      const fim0 = jogo0 ? jogo0[p] : null;
-      const t0 = agora();
-      logar(NOME[p] + ': teste de resgate pedido para a aba ' + a.id + ' (' + a.canal + ')');
-      gravar('teste_resgate', { id: a.id, t: t0, h: escolha.h, custo });
-      let r = null;
-      for (let i = 0; i < 50 && !r; i++) {
-        await dorme(1000);
-        const f = ler('teste_resgate_fim', null);
-        if (f && f.id === a.id && f.t >= t0) r = f;
-      }
-      try { window.focus(); } catch (e) { /* nada */ }
-      mostrar();
-      if (!r) { logar(NOME[p] + ': o teste de resgate não respondeu em 50 s'); ghRelatorio('teste de resgate').catch(() => {}); return; }
-      ghRelatorio('teste de resgate').catch(() => {});
-      if (r.ok) setTimeout(() => {
-        const j = ler('jogo_bonus', null);
-        const fim1 = j ? j[p] : null;
-        logar(NOME[p] + ': no jogo, o XP ia até ' + (fim0 ? hora(fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') + (fim0 && fim1 && fim1 - fim0 > 50 * MIN ? ' (o jogo recebeu o resgate)' : ' (confira no jogo)'));
-        mostrar();
-        ghRelatorio('5 min depois do teste de resgate').catch(() => {});
-      }, 5 * MIN);
+      const x = cs[0];
+      if (!confirm('Resgatar ' + h + ' h de ' + NOME_TIPO[tipo] + ' em ' + urlCurta(p, x.c) + ' (' + milhar(x.custo) + ' pontos; o canal tem ' + milhar(x.pts) + ')' + (x.certo ? '' : ', se o canal tiver esse pacote') + '?' +
+        (x.aba ? ' A aba ' + x.aba.id + ' vai aparecer uns segundos.' : ' A aba ' + ((abasAbertas(p)[0] || {}).id || '?') + ' vai até esse canal antes.'))) return;
+      logar(NOME[p] + ': resgate de ' + h + ' h de ' + NOME_TIPO[tipo] + ' pedido em ' + x.c);
+      await executarResgate({ p, tipo, h, custo: x.custo, canal: x.c, aba: x.aba, origem: 'painel' });
     }
+    // 1.20: resgate automático de XP (escolha dela: só XP, quando faltar menos de 3 h). Só depois de um resgate de XP
+    // certo nessa plataforma; maior pacote até 10 h; no máximo 30 h por dia; 2 falhas, ou o jogo sem mostrar as horas,
+    // desligam até um resgate certo pelo painel.
+    const AUTO_XP_ABAIXO = 3 * H;
+    const autoXpEstado = autoXpEstadoGlobal;
+    async function autoXp() {
+      if (!cfg().ativo || resgatando || trazendo) return;
+      if (document.hasFocus() && agora() - ultMexida < 30e3) return;
+      const jogo = ler('jogo_bonus', null);
+      if (!jogo || agora() - jogo.t > 15 * MIN) return;
+      for (const p of ['tw', 'kk']) {
+        if (!/^ligado/.test(autoXpEstado(p))) continue;
+        const fim = Number(jogo[p]) || 0;
+        if (fim - agora() >= AUTO_XP_ABAIXO) continue;
+        if (agora() - ler('auto_ult_' + p, 0) < 20 * MIN) continue;
+        const dia = new Date().toDateString(), d = ler('auto_dia_' + p, { dia: '', h: 0 });
+        const hojeH = d.dia === dia ? d.h : 0;
+        if (hojeH >= 30) continue;
+        let escolha = null;
+        for (const h of [10, 5, 3, 1]) {
+          if (hojeH + h > 30) continue;
+          const cs = canaisQuePagam(p, 'xp', h).filter((x) => x.certo);
+          if (cs.length) { escolha = Object.assign({ h }, cs[0]); break; }
+        }
+        if (!escolha) {
+          if (agora() - ler('auto_sem_' + p, 0) > H) { gravar('auto_sem_' + p, agora()); logar(NOME[p] + ': XP acaba às ' + hora(fim) + ' e nenhum canal conferido tem pontos para um pacote de XP'); }
+          continue;
+        }
+        gravar('auto_ult_' + p, agora());
+        logar(NOME[p] + ': XP acaba às ' + (fim > agora() ? hora(fim) : 'já acabou') + '; resgate automático de ' + escolha.h + ' h em ' + escolha.c);
+        const r = await executarResgate({ p, tipo: 'xp', h: escolha.h, custo: escolha.custo, canal: escolha.c, aba: escolha.aba, origem: 'automático' });
+        if (r && r.ok) {
+          gravar('auto_dia_' + p, { dia, h: hojeH + escolha.h });
+          gravar('auto_feito_' + p, { t: agora(), h: escolha.h, canal: escolha.c });
+        } else {
+          const f = ler('auto_falhas_' + p, 0) + 1;
+          gravar('auto_falhas_' + p, f);
+          if (f >= 2) { gravar('auto_bloq_' + p, { t: agora(), motivo: '2 resgates seguidos não deram certo' }); logar(NOME[p] + ': resgate automático desligado depois de 2 falhas; um resgate certo pelo painel liga de novo'); }
+        }
+        return;
+      }
+    }
+    setInterval(() => { autoXp().catch(() => {}); }, 2 * MIN);
 
     // 1.15: atualização sem cliques. O Tampermonkey instala a versão nova do repositório no intervalo dele; as páginas
     // abertas continuam com a antiga até recarregar. A central confere a versão publicada a cada 10 min: se for maior que
@@ -1492,6 +1634,7 @@
     const ce = ler('central', null), jv = ler('jogo_vis', null), cj0 = ler('canais_jogo', null);
     linhas.push('Central: ' + (ce && t - ce.t < 2 * MIN ? 'aberta' : 'fechada (abra pelo menu do jogo: "Lives: abrir a central")') +
       '; aba do jogo: ' + (jv && t - jv.t < 3 * MIN ? 'aberta' : 'sem sinal') + '; lista de parceiros: ' + (cj0 && t - cj0.t < 2 * 24 * H ? 'do jogo (' + hora(cj0.t) + ')' : 'reserva fixa de 17/11'));
+    linhas.push('Resgate automático de XP: Twitch ' + autoXpEstadoGlobal('tw') + '; Kick ' + autoXpEstadoGlobal('kk'));
     const ghU = ler('ghUltimo', 0);
     linhas.push('GitHub: ' + (ghChave() ? 'relatório enviado ' + (ghU ? 'às ' + hora(ghU) : 'ainda não') + ' (lives/relatorio.txt, a cada 30 min)' : 'sem a chave (menu do Tampermonkey: "Lives: colar a chave do GitHub")'));
     const baus = ler('baus_tw', { dia: '', n: 0 });
@@ -1545,11 +1688,21 @@
         const op = (ler('opcoes_' + p, {}) || {})[c];
         linhas.push(' ' + c + ': ' + (s ? s.pts + ' pontos (' + hora(s.t) + ', ' + s.fonte + ')' : 'sem leitura') + (vivos[c] && vivos[c].sid ? ', ao vivo' : '') +
           (p === 'tw' && hist[c] ? ', ' + Math.round(hist[c].min) + ' min na live ' + hist[c].sid : '') +
-          (op && op.hs ? ', XP de ' + op.hs.slice().reverse().join('/') + ' h (' + op.fonte + ')' : ''));
+          (op ? ', ' + descreverPacotes(op) : ''));
       });
       const pe = ler('premios_estado_' + p, null);
       linhas.push(' Pacotes de XP: ' + Object.keys(ler('opcoes_' + p, {})).length + ' canais conferidos' + (pe ? ' (última leitura ' + hora(pe.t) + (pe.erro ? ', erro: ' + pe.erro : '') + ')' : '') +
         (p === 'kk' ? '; sonda da API: ' + (JSON.stringify(ler('kk_premios_sonda', {})) || '{}') + '; a tela de pontos aberta numa aba também conta' : ''));
+    }
+    // 1.20: preços de Captura e Lure nos canais com pontos para algum pacote
+    if (!curto) for (const p of ['tw', 'kk']) {
+      const op = ler('opcoes_' + p, {}), saldos = ler('saldos_' + p, {});
+      const ls = Object.keys(op).filter((c) => op[c].tipos).map((c) => ({ c, pts: (saldos[c] || {}).pts || 0, t: op[c].tipos }))
+        .filter((x) => ['captura', 'lure'].some((k) => (x.t[k] || []).some((q) => q.custo <= x.pts))).sort((a, b) => b.pts - a.pts);
+      if (!ls.length) continue;
+      linhas.push('');
+      linhas.push(NOME[p] + ', Captura e Lure nos canais com pontos (horas: preço):');
+      ls.forEach((x) => linhas.push(' ' + x.c + ' (' + milhar(x.pts) + '): ' + ['captura', 'lure'].filter((k) => (x.t[k] || []).length).map((k) => NOME_TIPO[k] + ' ' + x.t[k].map((q) => q.h + ' h ' + milhar(q.custo)).join(', ')).join('; ')));
     }
     for (const p of ['tw', 'kk']) {
       const sg = ler('segue_' + p, null);
