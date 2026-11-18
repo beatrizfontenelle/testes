@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.23
+// @version      1.24
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.24: na Kick o botão de pontos é achado pelo data-testid gravado em 18/11 15:13; quando o menu de pontos abre (clique dela ou teste) o script grava os botões novos e os cartões de XP; cada aba da Kick, uma vez por versão, abre o menu só para olhar, sem resgatar; canal da Kick com pacote desconhecido não entra na recomendação; pacotes da Kick relidos pela API.) (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -24,7 +24,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.23';
+  const VERSAO = '1.24';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -131,6 +131,7 @@
     for (const canal of Object.keys(saldos || {})) {
       const pts = Number((saldos[canal] || {}).pts) || 0;
       const pc = pacotesDoCanal(opcoes, canal);
+      if (plat === 'kk' && !pc.certo && Object.keys(opcoes || {}).length) continue; // 1.24: na Kick, pacote desconhecido não conta (denissnider só tem 3 h)
       const horas = horasResgataveis(pts, custo, pc.hs);
       banco += horas;
       if (!horas) continue;
@@ -421,8 +422,18 @@
   const agora = () => Date.now();
   // 1.22: gravação na Kick (pedido dela em 18/11): os cliques dela e os pedidos de recompensa da página, para achar o caminho do resgate
   function gravarKick(item) { try { const g = GM_getValue('gravacao_kk') || []; g.push(Object.assign({ t: Date.now() }, item)); GM_setValue('gravacao_kk', g.slice(-40)); } catch (e) { /* nada */ } }
+  let fotoKick = null; // 1.24: foto do menu de pontos da Kick (botões novos e cartões de XP)
   if (/(^|\.)kick\.com$/.test(location.hostname)) {
     try {
+      fotoKick = (antes) => {
+        const vi = (el) => { try { const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; } catch (e) { return false; } };
+        const tx = (el) => ((el && (el.innerText || el.textContent)) || '').replace(/\s+/g, ' ').trim();
+        const d = (el) => el ? [el.tagName, el.getAttribute('data-testid') || '', el.getAttribute('role') || '', (el.getAttribute('aria-label') || '').slice(0, 30), String(el.className || '').slice(0, 50), tx(el).slice(0, 80)].join('|') : '';
+        const novos = [...document.querySelectorAll('button, [role="button"], [role="dialog"], [data-testid]')].filter(vi).filter((b) => !antes || !antes.has(b)).slice(0, 40).map(d);
+        const RXP = /pokeidle/i, folha = (e) => RXP.test(e.textContent || '') && ![...e.children].some((f) => RXP.test(f.textContent || ''));
+        const xps = [...document.querySelectorAll('body *')].filter((e) => folha(e) && vi(e)).slice(0, 8).map((e) => { const c = []; let x = e; for (let i = 0; i < 6 && x; i++, x = x.parentElement) c.push(d(x)); return c.join(' < '); });
+        return { novos, xps };
+      };
       const W = typeof unsafeWindow !== 'undefined' ? unsafeWindow : window, RXK = /reward|redeem|point|loyalty/i;
       const vale = (url, metodo) => /redeem/i.test(url) || (metodo !== 'GET' && RXK.test(url));
       let ghDepois = 0; const subir = () => { if (Date.now() - ghDepois > 60e3) { ghDepois = Date.now(); setTimeout(() => { try { ghRelatorio('gravação da Kick').catch(() => {}); } catch (e) { /* nada */ } }, 5000); } };
@@ -443,11 +454,16 @@
         const el = e.target && e.target.closest ? (e.target.closest('button, [role="button"], a, [role="menuitem"]') || e.target) : null; if (!el) return;
         const at = (x) => x ? [x.tagName, (x.getAttribute('aria-label') || '').slice(0, 40), String(x.className || '').slice(0, 60), [...x.attributes].filter((a) => /^data-/.test(a.name)).map((a) => a.name + '=' + String(a.value).slice(0, 30)).join(' ')].join(' | ') : '';
         gravarKick({ tipo: 'clique', texto: ((el.innerText || el.textContent || '') + '').replace(/\s+/g, ' ').trim().slice(0, 80), el: at(el), pai: at(el.parentElement), avo: at(el.parentElement && el.parentElement.parentElement), url: location.pathname });
+        if (el.getAttribute && el.getAttribute('data-testid') === 'channel-points-button') {
+          const antes = new Set([...document.querySelectorAll('button, [role="button"], [role="dialog"], [data-testid]')]);
+          setTimeout(() => { try { const f = fotoKick(antes); gravarKick({ tipo: 'menu', origem: 'clique dela', novos: f.novos, xps: f.xps }); subir(); } catch (e2) { /* nada */ } }, 1500);
+        }
       }, true);
     } catch (e) { /* nada */ }
   }
   const ler = (k, padrao) => { try { const v = GM_getValue(k); return v === undefined ? padrao : v; } catch (e) { return padrao; } };
   const gravar = (k, v) => { try { GM_setValue(k, v); } catch (e) { /* nada */ } };
+  if (ler('premios_relidos', '') !== '1.24') { gravar('premios_relidos', '1.24'); gravar('t_premios_kk', 0); } // 1.24: relê os pacotes da Kick (denissnider sumiu da lista)
   const $ = (s, r) => (r || document).querySelector(s);
   const dorme = (ms) => new Promise((r) => setTimeout(r, ms));
   function logar(txt) {
@@ -1113,7 +1129,8 @@
         const custo = (pedido && pedido.custo) || CUSTO_HORA[plat];
         const antes = await lerMeuSaldo(canal);
         passos.push('canal ' + canal + ', saldo ' + antes + ', ' + NOME_TIPO[tipo] + ' ' + ((pedido && pedido.h) || 1) + ' h por ' + custo + (pedido && pedido.origem ? ' (' + pedido.origem + ')' : ''));
-        if (antes == null || antes < custo) return fim(false, antes == null ? 'não consegui ler o saldo do canal' : 'saldo de ' + antes + ' não paga ' + custo + ' (resgatado antes do teste?)');
+        const olhar = !!(pedido && pedido.olhar);
+        if (!olhar && (antes == null || antes < custo)) return fim(false, antes == null ? 'não consegui ler o saldo do canal' : 'saldo de ' + antes + ' não paga ' + custo + ' (resgatado antes do teste?)');
         // campos de texto que já existiam (o chat): só um campo NOVO depois de escolher a recompensa conta como "pede texto"
         const camposAntes = new Set(document.querySelectorAll('textarea, input[type="text"], [contenteditable="true"]'));
         // 1) o botão que abre o menu de pontos
@@ -1126,6 +1143,7 @@
         } else {
           // 1.20: na Kick o botão dos pontos mostra o saldo (18/11 13:14: o único com "reward" no nome era o dos Drops)
           const todos = [...document.querySelectorAll('button, [role="button"]')].filter(vis);
+          const porId = todos.filter((b) => b.getAttribute('data-testid') === 'channel-points-button'); // 1.24: gravado no clique dela em 18/11 15:13
           const num = (t) => {
             const m = String(t).replace(/\s/g, '').match(/^([0-9][0-9.,]*)(k|mil)?$/i);
             if (!m) return null;
@@ -1139,12 +1157,21 @@
           const caixa = document.querySelector('textarea, [contenteditable="true"]');
           let perto = caixa; for (let i = 0; i < 4 && perto; i++) perto = perto.parentElement;
           if (perto) passos.push('botões perto do chat: ' + ([...perto.querySelectorAll('button, [role="button"]')].filter(vis).map(rotulo).join(' ; ') || 'nenhum'));
-          const cands = porNome.length === 1 ? porNome : porSaldo;
+          const cands = porId.length === 1 ? porId : porNome.length === 1 ? porNome : porSaldo;
           if (cands.length === 1) botao = cands[0];
         }
         if (!botao) return fim(false, 'não achei, com certeza, o botão do menu de pontos');
+        const visAntes = new Set([...document.querySelectorAll('button, [role="button"], [role="dialog"], [data-testid]')]);
         botao.click();
         await dorme(2000);
+        if (plat === 'kk' && fotoKick) { try { const f = fotoKick(visAntes); gravarKick({ tipo: 'menu', origem: olhar ? 'só olhar' : 'teste', canal, novos: f.novos, xps: f.xps }); passos.push('menu novo: ' + f.novos.slice(0, 15).join(' ; ').slice(0, 1200)); } catch (e) { /* nada */ } }
+        if (olhar) {
+          const fechar = [...document.querySelectorAll('button')].filter(vis).find((b) => !visAntes.has(b) && /close|fechar/i.test(b.getAttribute('aria-label') || ''));
+          if (fechar) fechar.click(); else document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+          logar(NOME[plat] + ' ' + id + ': abri o menu de pontos em ' + canal + ' só para olhar (sem resgatar)');
+          ghRelatorio('olhei o menu da Kick').catch(() => {});
+          return;
+        }
         const menu = menuAberto();
         passos.push('menu: ' + (menu ? txt(menu).slice(0, 600) : 'nenhum menu à vista'));
         try { const pr = premiosDaTela(); if (pr.length) guardarOpcoes(plat, canal, pr, 'tela'); } catch (e) { /* nada */ }
@@ -1193,6 +1220,11 @@
         if (val && agora() - val.t < 60e3 && versaoMaior(val.versao, VERSAO) && !testando) { logar(NOME[plat] + ' ' + id + ': recarregando para a versão ' + val.versao); location.reload(); }
       });
     } catch (e) { /* nada */ }
+    if (plat === 'kk') setTimeout(() => { // 1.24: uma vez por versão, abre o menu de pontos só para olhar
+      if (ler('kk_olhou', '') === VERSAO || testando) return;
+      gravar('kk_olhou', VERSAO);
+      testarResgate({ olhar: true, tipo: 'xp', origem: 'olhar' }).catch(() => {});
+    }, 150e3 + Math.random() * 30e3);
     try {
       GM_addValueChangeListener('teste_resgate', (k, a, val) => {
         if (val && val.id === id && agora() - val.t < 30e3) testarResgate(val).catch(() => {});
@@ -1788,7 +1820,7 @@
     linhas.push('Resgate automático de XP: Twitch ' + autoXpEstadoGlobal('tw') + '; Kick ' + autoXpEstadoGlobal('kk'));
     const ordensAbertas = ler('ordens', []).filter((o) => o.estado === 'pendente' || o.estado === 'andamento');
     if (curto && ordensAbertas.length) linhas.push('Ordens de resgate: ' + ordensAbertas.map(textoOrdem).join('; '));
-    if (!curto) { const gk = ler('gravacao_kk', []); if (gk.length) { linhas.push('Gravação da Kick (1.22; últimos ' + gk.length + '):'); gk.slice(-25).forEach((g) => linhas.push(' ' + hora(g.t) + ' ' + JSON.stringify(Object.assign({}, g, { t: undefined })).slice(0, 700))); } }
+    if (!curto) { const gk = ler('gravacao_kk', []); if (gk.length) { linhas.push('Gravação da Kick (1.22; últimos ' + gk.length + '):'); gk.slice(-25).forEach((g) => { if (g.tipo === 'menu') { linhas.push(' ' + hora(g.t) + ' menu de pontos (' + (g.origem || '') + (g.canal ? ', ' + g.canal : '') + '):'); (g.novos || []).forEach((x) => linhas.push('   novo: ' + x)); (g.xps || []).forEach((x) => linhas.push('   XP: ' + String(x).slice(0, 900))); } else linhas.push(' ' + hora(g.t) + ' ' + JSON.stringify(Object.assign({}, g, { t: undefined })).slice(0, 700)); }); } }
     if (!curto && ler('ordens', []).length) { linhas.push('Ordens de resgate (as 10 últimas):'); ler('ordens', []).slice(-10).forEach((o) => linhas.push(' ' + o.id + ' ' + new Date(o.criada).toLocaleDateString('pt-BR').slice(0, 5) + ' ' + hora(o.criada) + ' (' + o.origem + (o.motivo ? ', ' + o.motivo : '') + '): ' + textoOrdem(o))); }
     const ghU = ler('ghUltimo', 0);
     linhas.push('GitHub: ' + (ghChave() ? 'relatório enviado ' + (ghU ? 'às ' + hora(ghU) : 'ainda não') + ' (lives/relatorio.txt, a cada 30 min)' : 'sem a chave (menu do Tampermonkey: "Lives: colar a chave do GitHub")'));
