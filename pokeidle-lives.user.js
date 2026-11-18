@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.14
+// @version      1.15
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -21,7 +21,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.14';
+  const VERSAO = '1.15';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -55,6 +55,11 @@
   function melhorPacote(saldo, custo) {
     const h = Math.floor((Number(saldo) || 0) / custo);
     return PACOTES.find((p) => p <= h) || 0;
+  }
+  function versaoMaior(a, b) {
+    const x = String(a || '0').split('.').map(Number), y = String(b || '0').split('.').map(Number);
+    for (let i = 0; i < Math.max(x.length, y.length); i++) { const d = (x[i] || 0) - (y[i] || 0); if (d) return d > 0; }
+    return false;
   }
   function urlCanal(plat, canal) { return plat === 'tw' ? 'https://www.twitch.tv/' + canal : 'https://kick.com/' + canal; }
   function urlCurta(plat, canal) { return (plat === 'tw' ? 'twitch.tv/' : 'kick.com/') + canal; }
@@ -300,7 +305,7 @@
     return Object.keys(out).length ? Object.assign(out, { servidorAgora: Number(e.servidorAgora) || 0 }) : null;
   }
 
-  const PURAS = { horasResgataveis, melhorPacote, recomendar, textoRecomendacao, precisaSequencia, escolherCanal, extrairCanais, lerListaColada, lerNumeroTela, avaliarContagem, ajustarAbas, urlCanal, planoResgate, textoPlano, lerComandoResgate, lerEstadoJogo, posicaoJanela };
+  const PURAS = { horasResgataveis, melhorPacote, recomendar, textoRecomendacao, precisaSequencia, escolherCanal, extrairCanais, lerListaColada, lerNumeroTela, avaliarContagem, ajustarAbas, urlCanal, planoResgate, textoPlano, lerComandoResgate, lerEstadoJogo, posicaoJanela, versaoMaior };
   if (typeof window === 'undefined' || typeof GM_getValue === 'undefined') {
     if (typeof module !== 'undefined') module.exports = PURAS;
     return;
@@ -780,7 +785,7 @@
           }
         }
       }
-      Object.assign(estado, { tocando, t: agora(), vivo: !!atualVivo });
+      Object.assign(estado, { tocando, t: agora(), vivo: !!atualVivo, versao: VERSAO });
       gravar('aba_' + id, estado);
     }
 
@@ -883,6 +888,13 @@
         fim(false, 'erro ' + String(e.message || e).slice(0, 100));
       } finally { testando = false; }
     }
+    // 1.15: a central pede para esta aba recarregar quando há versão nova instalada (a aba volta no mesmo canal;
+    // o vídeo que ficar parado no fundo a central traz de volta mostrando a aba uns segundos)
+    try {
+      GM_addValueChangeListener('recarregar_' + id, (k, a, val) => {
+        if (val && agora() - val.t < 60e3 && versaoMaior(val.versao, VERSAO) && !testando) { logar(NOME[plat] + ' ' + id + ': recarregando para a versão ' + val.versao); location.reload(); }
+      });
+    } catch (e) { /* nada */ }
     try {
       GM_addValueChangeListener('teste_resgate', (k, a, val) => {
         if (val && val.id === id && agora() - val.t < 30e3) testarResgate().catch(() => {});
@@ -1262,6 +1274,40 @@
       }, 5 * MIN);
     }
 
+    // 1.15: atualização sem cliques. O Tampermonkey instala a versão nova do repositório no intervalo dele; as páginas
+    // abertas continuam com a antiga até recarregar. A central confere a versão publicada a cada 10 min: se for maior que
+    // a dela, ela se recarrega (no máximo a cada 30 min) e, já na versão nova, recarrega as abas antigas, uma a cada 90 s.
+    const URL_REPO = 'https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js';
+    const carregadaEm = agora();
+    async function conferirVersao() {
+      try {
+        const r = await fetch(URL_REPO + '?t=' + Math.floor(agora() / 60e3), { cache: 'no-store' });
+        if (!r.ok) return;
+        const m = (await r.text()).match(/@version\s+([0-9.]+)/);
+        if (!m) return;
+        gravar('versao_repo', { v: m[1], t: agora() });
+        if (versaoMaior(m[1], VERSAO) && agora() - carregadaEm > 2 * MIN && agora() - ler('t_central_recarregou', 0) > 30 * MIN &&
+          !(document.hasFocus() && agora() - ultMexida < 60e3)) {
+          gravar('t_central_recarregou', agora());
+          logar('Central: versão ' + m[1] + ' publicada (esta é a ' + VERSAO + '); recarregando a central');
+          location.reload();
+        }
+      } catch (e) { /* sem rede: tenta depois */ }
+    }
+    function recarregarAbasAntigas() {
+      if (!cfg().ativo || agora() - ler('t_recarregou_aba', 0) < 90e3) return;
+      const velha = [...abasDe('tw'), ...abasDe('kk')].find((a) => a && a.versao && versaoMaior(VERSAO, a.versao) && agora() - a.t < 3 * MIN &&
+        agora() - ler('t_pediu_recarga_' + a.id, 0) > 10 * MIN);
+      if (!velha) return;
+      gravar('t_recarregou_aba', agora());
+      gravar('t_pediu_recarga_' + velha.id, agora());
+      logar('Central: pedindo para a aba ' + velha.id + ' recarregar (' + velha.versao + ' → ' + VERSAO + ')');
+      gravar('recarregar_' + velha.id, { t: agora(), versao: VERSAO });
+    }
+    setTimeout(() => { conferirVersao(); }, 60e3);
+    setInterval(() => { conferirVersao(); }, 10 * MIN);
+    setInterval(recarregarAbasAntigas, 30e3);
+
     rodarCentralAgora = () => setTimeout(ciclo, 500);
     try { GM_addValueChangeListener('cfg', (k, antes, depois, remoto) => { if (remoto && depois && depois.ativo && agora() - (depois.ligadoEm || 0) < 30e3) setTimeout(ciclo, 500); }); } catch (e) { /* nada */ }
     document.title = 'Central das lives';
@@ -1279,7 +1325,9 @@
     const linhas = [];
     const t = agora();
     const d = new Date(t);
-    linhas.push('PokeIdle lives ' + VERSAO + ', ' + (curto ? 'situação às ' : 'relatório de ' + d.toLocaleDateString('pt-BR') + ' ') + hora(t));
+    const vr = ler('versao_repo', null);
+    linhas.push('PokeIdle lives ' + VERSAO + ', ' + (curto ? 'situação às ' : 'relatório de ' + d.toLocaleDateString('pt-BR') + ' ') + hora(t) +
+      (vr && versaoMaior(vr.v, VERSAO) ? ' (a ' + vr.v + ' já está publicada; quando o Tampermonkey instalar, a central recarrega sozinha)' : ''));
     const ce = ler('central', null), jv = ler('jogo_vis', null), cj0 = ler('canais_jogo', null);
     linhas.push('Central: ' + (ce && t - ce.t < 2 * MIN ? 'aberta' : 'fechada (abra pelo menu do jogo: "Lives: abrir a central")') +
       '; aba do jogo: ' + (jv && t - jv.t < 3 * MIN ? 'aberta' : 'sem sinal') + '; lista de parceiros: ' + (cj0 && t - cj0.t < 2 * 24 * H ? 'do jogo (' + hora(cj0.t) + ')' : 'reserva fixa de 17/11'));
