@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: ponte das extras
 // @namespace    biafontenelle.pokeidle
-// @version      1.6
+// @version      1.7
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
-// @description  (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
+// @description  (1.7, 18/11 20h30, decisão dela depois do erro 502 do Telegram das 18:22 às 19:24: aviso importante de conta extra que falha (shiny e sorteio ganho no Mercado) fica guardado e é reenviado até 12 h depois, com a hora original na frente; os outros tentam uma vez só, como antes.) (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
 // @match        https://pokeidle.io/*
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
@@ -18,7 +18,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.6';
+  const VERSAO = '1.7';
 
   const TOKEN_DO_ARQUIVO = 'COLE_AQUI_O_TOKEN', CHAT_DO_ARQUIVO = '1451127393';
   // 1.3: o token e o chat ficam guardados no Tampermonkey deste perfil. Se o arquivo vier sem eles (cópia do Projeto), usa os guardados; se vier com eles, guarda.
@@ -33,16 +33,53 @@
   const vistos = new Set();
   let conta = '', ocupado = false, pedidoN = 0, ultimaLeitura = 0, leituras = 0, falhas = 0, status = 0, erro = '', ultimoN = Number(GM_getValue('ultimoN', -1));
   let ultimaBoa = 0, ultimoPulsoPagina = 0, avisouPrincipal = false;
-  function mandar(texto, silencioso) {
-    if (!CONFIGURADO) return;
+  // 1.7: shiny e sorteio ganho que falham no Telegram ficam guardados e saem de novo até 12 h depois, com a hora original na frente
+  const RX_IMPORTANTE = /SHINY|levou no Mercado|Vendeu /;
+  const PEND_VALIDADE = 12 * 3600e3;
+  const pendentesTg = (GM_getValue('tgPendentes', []) || []).filter((x) => x && x.texto && Date.now() - (x.em || 0) < PEND_VALIDADE);
+  let pendTentativas = 0, pendProxima = 0, pendEnviando = false;
+  function horaCurta(t) {
+    const d = new Date(t), hh = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+    return d.toDateString() === new Date().toDateString() ? hh : String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0') + ' ' + hh;
+  }
+  function mandar(texto, silencioso, em, cb) {
+    if (!CONFIGURADO) return cb && cb(false);
+    em = em || Date.now();
+    const atrasado = Date.now() - em > 5 * 60e3;
+    let feito = false;
+    const fim = (status) => {
+      if (feito) return; feito = true;
+      if (status === 200) { if (pendTentativas) { pendTentativas = 0; pendProxima = 0; } return cb && cb(true); }
+      console.warn('[ponte das extras] Telegram', status);
+      const definitivo = status === 400 || status === 401 || status === 403 || status === 404;
+      if (!cb && !definitivo && RX_IMPORTANTE.test(String(texto))) { // envio novo que falhou: guarda (o reenvio cuida de si mesmo pelo cb)
+        if (pendentesTg.length >= 30) pendentesTg.shift();
+        pendentesTg.push({ texto, silencioso: !!silencioso, em });
+        GM_setValue('tgPendentes', pendentesTg);
+        pendTentativas++; pendProxima = Date.now() + Math.min(5 * 60e3, 30e3 * Math.pow(2, pendTentativas - 1));
+      }
+      if (cb) cb(false, definitivo);
+    };
     GM_xmlhttpRequest({
       method: 'POST', url: 'https://api.telegram.org/bot' + TOKEN + '/sendMessage', timeout: 20000,
       headers: { 'Content-Type': 'application/json' },
-      data: JSON.stringify({ chat_id: CHAT, text: texto, disable_notification: !!silencioso }),
-      onload: (r) => { if (r.status !== 200) console.warn('[ponte das extras] Telegram', r.status); },
-      onerror: () => console.warn('[ponte das extras] sem resposta do Telegram'),
+      data: JSON.stringify({ chat_id: CHAT, text: (atrasado ? '⏱ ' + horaCurta(em) + ' ' : '') + texto, disable_notification: !!silencioso }),
+      onload: (r) => fim(r.status),
+      onerror: () => fim(0), ontimeout: () => fim(0), onabort: () => fim(0),
+      onloadend: (r) => fim((r && r.status) || 0),
     });
   }
+  function reenviarPendentes() {
+    if (pendEnviando || !pendentesTg.length || Date.now() < pendProxima) return;
+    pendEnviando = true;
+    const x = pendentesTg[0];
+    mandar(x.texto, x.silencioso, x.em, (ok, definitivo) => {
+      pendEnviando = false;
+      if (ok || definitivo || Date.now() - x.em >= PEND_VALIDADE) { pendentesTg.shift(); GM_setValue('tgPendentes', pendentesTg); if (pendentesTg.length) setTimeout(reenviarPendentes, 1500); return; }
+      pendTentativas++; pendProxima = Date.now() + Math.min(5 * 60e3, 30e3 * Math.pow(2, pendTentativas - 1));
+    });
+  }
+  setInterval(reenviarPendentes, 15e3);
   let ultimoArquivo = 0;
   function mandarArquivo(nome, texto) { // 1.2: o relatório da extra vai como documento para a conversa do bot
     if (!CONFIGURADO) return;

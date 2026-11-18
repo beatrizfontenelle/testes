@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.26
+// @version      1.27
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.26, 18/11 17h: computador esquentando. As abas da Twitch abrem o vídeo na menor qualidade (160p), que conta pontos igual e gasta bem menos; na Kick o script anota no relatório as chaves de qualidade do player, para fazer o mesmo depois.) (1.25: Kick: enquanto não houve um resgate de XP certo, o resgate automático tenta sozinho quando o XP está para acabar (uma tentativa por hora; 2 falhas desligam); foto do menu também depois de clicar no cartão.) (1.24: na Kick o botão de pontos é achado pelo data-testid gravado em 18/11 15:13; quando o menu de pontos abre (clique dela ou teste) o script grava os botões novos e os cartões de XP; cada aba da Kick, uma vez por versão, abre o menu só para olhar, sem resgatar; canal da Kick com pacote desconhecido não entra na recomendação; pacotes da Kick relidos pela API.) (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.27, 18/11 20h30: o jogo às vezes leva mais de 5 min para mostrar as horas resgatadas (resgate da Kick das 19:32 só apareceu depois das 19:37, e o automático desligou à toa). Agora a central confere a cada minuto, de 5 a 20 min depois do resgate, e só desliga o automático se em 20 min não aparecer; a conferência sobrevive a um F5 da central. O bloqueio das 19:37 é desfeito uma vez. Versão nova publicada que o Tampermonkey ainda não instalou: a central recarrega uma vez e depois só a cada 2 h, com uma linha no relatório dizendo para atualizar pelo Utilitários.) (1.26, 18/11 17h: computador esquentando. As abas da Twitch abrem o vídeo na menor qualidade (160p), que conta pontos igual e gasta bem menos; na Kick o script anota no relatório as chaves de qualidade do player, para fazer o mesmo depois.) (1.25: Kick: enquanto não houve um resgate de XP certo, o resgate automático tenta sozinho quando o XP está para acabar (uma tentativa por hora; 2 falhas desligam); foto do menu também depois de clicar no cartão.) (1.24: na Kick o botão de pontos é achado pelo data-testid gravado em 18/11 15:13; quando o menu de pontos abre (clique dela ou teste) o script grava os botões novos e os cartões de XP; cada aba da Kick, uma vez por versão, abre o menu só para olhar, sem resgatar; canal da Kick com pacote desconhecido não entra na recomendação; pacotes da Kick relidos pela API.) (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -24,7 +24,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.26';
+  const VERSAO = '1.27';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -1640,18 +1640,39 @@
         if (!r) { logar(NOME[o.p] + ': o resgate não respondeu em 60 s'); return { ok: false }; }
         if (r.ok && o.tipo === 'xp') {
           gravar('auto_ok_' + o.p, true); gravar('auto_bloq_' + o.p, null); gravar('auto_falhas_' + o.p, 0);
-          setTimeout(() => {
-            const j = ler('jogo_bonus', null), fim1 = j ? Number(j[o.p]) || 0 : 0;
-            const base = Math.max(fim0, t0);
-            const recebeu = fim1 - base > o.h * H - 20 * MIN;
-            logar(NOME[o.p] + ': no jogo, o XP ia até ' + (fim0 ? hora(fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') + (recebeu ? ' (o jogo recebeu ' + o.h + ' h)' : ' (o jogo ainda não mostrou as ' + o.h + ' h)'));
-            if (!recebeu && o.origem === 'automático') { gravar('auto_bloq_' + o.p, { t: agora(), motivo: 'o jogo não mostrou as horas resgatadas' }); logar(NOME[o.p] + ': resgate automático desligado até um resgate certo pelo painel'); }
-            mostrar();
-            ghRelatorio('5 min depois do resgate').catch(() => {});
-          }, 5 * MIN);
+          // 1.27: a conferência fica guardada e é feita a cada minuto, de 5 a 20 min depois (antes era uma vez só, aos 5 min, e se perdia num F5)
+          gravar('conferir_' + o.p, { t0, fim0, base: Math.max(fim0, t0), h: o.h, origem: o.origem });
         }
         return r;
       } finally { resgatando = false; }
+    }
+    // 1.27: o jogo às vezes mostra as horas resgatadas depois de 5 min (Kick, 18/11 19:32: às 19:37 ainda não; às 20:07 já estava).
+    // Confere a cada minuto, de 5 a 20 min depois do resgate; só desliga o automático se em 20 min o jogo não mostrar as horas.
+    function conferirResgates() {
+      for (const p of ['tw', 'kk']) {
+        const c = ler('conferir_' + p, null);
+        if (!c || !c.t0) continue;
+        const dt = agora() - c.t0;
+        if (dt < 5 * MIN) continue;
+        const j = ler('jogo_bonus', null), fim1 = j ? Number(j[p]) || 0 : 0;
+        const recebeu = fim1 - c.base > c.h * H - 20 * MIN;
+        if (!recebeu && dt < 20 * MIN) continue;
+        gravar('conferir_' + p, null);
+        logar(NOME[p] + ': no jogo, o XP ia até ' + (c.fim0 ? hora(c.fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') +
+          (recebeu ? ' (o jogo recebeu ' + c.h + ' h' + (dt >= 6.5 * MIN ? ', visto ' + Math.round(dt / MIN) + ' min depois do resgate' : '') + ')' : ' (o jogo não mostrou as ' + c.h + ' h em 20 min)'));
+        if (!recebeu && c.origem === 'automático') { gravar('auto_bloq_' + p, { t: agora(), motivo: 'o jogo não mostrou as horas resgatadas em 20 min' }); logar(NOME[p] + ': resgate automático desligado até um resgate certo pelo painel'); }
+        mostrar();
+        ghRelatorio('conferência do resgate').catch(() => {});
+      }
+    }
+    setInterval(conferirResgates, 60e3);
+    // 1.27: o bloqueio das 19:37 de 18/11 foi à toa (a hora entrou no jogo); desfaz uma vez
+    if (!ler('mig127', false)) {
+      gravar('mig127', true);
+      for (const p of ['tw', 'kk']) {
+        const b = ler('auto_bloq_' + p, null);
+        if (b && b.motivo === 'o jogo não mostrou as horas resgatadas') { gravar('auto_bloq_' + p, null); gravar('auto_falhas_' + p, 0); logar(NOME[p] + ': resgate automático religado (1.27: o jogo só tinha demorado para mostrar a hora)'); }
+      }
     }
     async function resgatarAgora(p, tipo, h) {
       atualizarCustos();
@@ -1774,10 +1795,16 @@
         const m = (await r.text()).match(/@version\s+([0-9.]+)/);
         if (!m) return;
         gravar('versao_repo', { v: m[1], t: agora() });
-        if (versaoMaior(m[1], VERSAO) && agora() - carregadaEm > 2 * MIN && agora() - ler('t_central_recarregou', 0) > 30 * MIN &&
+        // 1.27: recarrega uma vez por versão publicada; se continuar velha (o Tampermonkey ainda não instalou), só tenta de novo a cada 2 h
+        const jaTentou = ler('recarregou_para', '') === m[1];
+        if (versaoMaior(m[1], VERSAO) && agora() - carregadaEm > 2 * MIN && agora() - ler('t_central_recarregou', 0) > (jaTentou ? 120 : 30) * MIN &&
           !(document.hasFocus() && agora() - ultMexida < 60e3)) {
-          gravar('t_central_recarregou', agora());
-          logar('Central: versão ' + m[1] + ' publicada (esta é a ' + VERSAO + '); recarregando a central');
+          if (jaTentou && !ler('avisou_nao_instalou_' + m[1], false)) {
+            gravar('avisou_nao_instalou_' + m[1], true);
+            logar('Central: a ' + m[1] + ' está publicada e o Tampermonkey ainda não instalou (esta é a ' + VERSAO + '). Para instalar já: menu do Tampermonkey, Utilitários, verificar atualizações; depois F5');
+          }
+          if (!jaTentou) logar('Central: versão ' + m[1] + ' publicada (esta é a ' + VERSAO + '); recarregando a central');
+          gravar('recarregou_para', m[1]); gravar('t_central_recarregou', agora());
           location.reload();
         }
       } catch (e) { /* sem rede: tenta depois */ }
