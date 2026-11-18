@@ -1,15 +1,17 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.15
+// @version      1.16
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
 // @grant        GM_getValue
 // @grant        GM_setValue
+// @grant        GM_xmlhttpRequest
+// @connect      api.github.com
 // @grant        GM_registerMenuCommand
 // @grant        GM_openInTab
 // @grant        GM_addValueChangeListener
@@ -21,7 +23,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.15';
+  const VERSAO = '1.16';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -1265,12 +1267,14 @@
       }
       try { window.focus(); } catch (e) { /* nada */ }
       mostrar();
-      if (!r) { logar(NOME[p] + ': o teste de resgate não respondeu em 50 s'); return; }
+      if (!r) { logar(NOME[p] + ': o teste de resgate não respondeu em 50 s'); ghRelatorio('teste de resgate').catch(() => {}); return; }
+      ghRelatorio('teste de resgate').catch(() => {});
       if (r.ok) setTimeout(() => {
         const j = ler('jogo_bonus', null);
         const fim1 = j ? j[p] : null;
         logar(NOME[p] + ': no jogo, o XP ia até ' + (fim0 ? hora(fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') + (fim0 && fim1 && fim1 - fim0 > 50 * MIN ? ' (o jogo recebeu o resgate)' : ' (confira no jogo)'));
         mostrar();
+        ghRelatorio('5 min depois do teste de resgate').catch(() => {});
       }, 5 * MIN);
     }
 
@@ -1304,6 +1308,8 @@
       logar('Central: pedindo para a aba ' + velha.id + ' recarregar (' + velha.versao + ' → ' + VERSAO + ')');
       gravar('recarregar_' + velha.id, { t: agora(), versao: VERSAO });
     }
+    // 1.16: relatório no GitHub a cada 30 min (só a central manda, para não repetir)
+    setInterval(() => { if (souLider('github', meuId, 5 * MIN) && agora() - Math.max(ler('ghUltimo', 0), ler('ghTentou', 0)) > GH_AUTO) { gravar('ghTentou', agora()); ghRelatorio('automático').catch(() => {}); } }, 60e3);
     setTimeout(() => { conferirVersao(); }, 60e3);
     setInterval(() => { conferirVersao(); }, 10 * MIN);
     setInterval(recarregarAbasAntigas, 30e3);
@@ -1331,6 +1337,8 @@
     const ce = ler('central', null), jv = ler('jogo_vis', null), cj0 = ler('canais_jogo', null);
     linhas.push('Central: ' + (ce && t - ce.t < 2 * MIN ? 'aberta' : 'fechada (abra pelo menu do jogo: "Lives: abrir a central")') +
       '; aba do jogo: ' + (jv && t - jv.t < 3 * MIN ? 'aberta' : 'sem sinal') + '; lista de parceiros: ' + (cj0 && t - cj0.t < 2 * 24 * H ? 'do jogo (' + hora(cj0.t) + ')' : 'reserva fixa de 17/11'));
+    const ghU = ler('ghUltimo', 0);
+    linhas.push('GitHub: ' + (ghChave() ? 'relatório enviado ' + (ghU ? 'às ' + hora(ghU) : 'ainda não') + ' (lives/relatorio.txt, a cada 30 min)' : 'sem a chave (menu do Tampermonkey: "Lives: colar a chave do GitHub")'));
     const baus = ler('baus_tw', { dia: '', n: 0 });
     linhas.push('Situação: ' + (c0.ativo ? 'ligado' : 'desligado') + '; abas: Twitch ' + c0.abas.tw + ', Kick ' + c0.abas.kk +
       '; baús da Twitch hoje: ' + (baus.dia === new Date().toDateString() ? baus.n : 0));
@@ -1402,6 +1410,7 @@
     return linhas.join('\n');
   }
   function relatorio() {
+    ghRelatorio('pedido').catch(() => {});
     const t = agora(), d = new Date(t);
     const texto = montarRelatorio(false);
     const dataLocal = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
@@ -1466,6 +1475,63 @@
       jogo && agora() - jogo.t < 15 * MIN && jogo[p] != null ? jogo[p] : (bonus[p] || 0), 12, false, agora())).join('\n\n');
   }
 
+  // ===== GITHUB (1.16) =====
+  // O relatório vai para o repositório PRIVADO dela, para o Claude ler direto. A chave de escrita fica só no
+  // Tampermonkey (menu "Lives: colar a chave do GitHub"); nunca no arquivo do script, que é público.
+  const GH_REPO = 'beatrizfontenelle/relatorios', GH_RAMO = 'main', GH_ARQ = 'lives/relatorio.txt', GH_AUTO = 30 * MIN;
+  const ghChave = () => { try { return String(GM_getValue('ghChave', '') || ''); } catch (e) { return ''; } };
+  function ghB64(texto) {
+    const u = new TextEncoder().encode(texto), N = 0x2000 * 3; let out = '';
+    for (let i = 0; i < u.length; i += N) out += btoa(String.fromCharCode.apply(null, u.subarray(i, i + N)));
+    return out;
+  }
+  const ghUrl = (caminho) => 'https://api.github.com/repos/' + GH_REPO + '/contents/' + String(caminho).split('/').map(encodeURIComponent).join('/');
+  function ghSha(caminho, cab) {
+    return new Promise((ok) => {
+      const i = caminho.lastIndexOf('/'), pasta = i > 0 ? caminho.slice(0, i) : '', nome = caminho.slice(i + 1);
+      GM_xmlhttpRequest({ method: 'GET', url: ghUrl(pasta) + '?ref=' + GH_RAMO, headers: cab, timeout: 30000,
+        onload: (r) => { let sha = ''; try { const l = JSON.parse(r.responseText); if (Array.isArray(l)) { const x = l.find((y) => y && y.name === nome); sha = x ? x.sha : ''; } } catch (e) { /* nada */ } ok(sha); },
+        onerror: () => ok(null), ontimeout: () => ok(null) });
+    });
+  }
+  // grava (cria ou substitui) um arquivo no repositório; devolve { ok, motivo }
+  function ghSubir(caminho, texto, msg) {
+    return new Promise((fim) => {
+      const chave = ghChave();
+      if (!chave) return fim({ ok: false, motivo: 'sem a chave do GitHub' });
+      let conteudo; try { conteudo = ghB64(texto); } catch (e) { return fim({ ok: false, motivo: 'não consegui preparar o arquivo' }); }
+      const cab = { Authorization: 'Bearer ' + chave, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' };
+      const shas = ler('ghShas', {});
+      const tentar = (sha, vez) => GM_xmlhttpRequest({ method: 'PUT', url: ghUrl(caminho), headers: cab, timeout: 120000,
+        data: JSON.stringify(Object.assign({ message: msg, content: conteudo, branch: GH_RAMO }, sha ? { sha } : {})),
+        onload: (r) => {
+          if (r.status === 200 || r.status === 201) { try { shas[caminho] = JSON.parse(r.responseText).content.sha; gravar('ghShas', shas); } catch (e) { /* nada */ } return fim({ ok: true, motivo: '' }); }
+          if ((r.status === 409 || r.status === 422) && vez < 3) return setTimeout(() => ghSha(caminho, cab).then((s2) => (s2 === null ? fim({ ok: false, motivo: 'o GitHub não respondeu' }) : tentar(s2, vez + 1))), 2000 + Math.floor(Math.random() * 4000));
+          fim({ ok: false, motivo: r.status === 401 ? 'a chave do GitHub não vale mais (401)' : r.status === 403 || r.status === 404 ? 'a chave não tem permissão de escrita no repositório (' + r.status + ')' : 'o GitHub respondeu ' + r.status });
+        },
+        onerror: () => fim({ ok: false, motivo: 'falha de rede com o GitHub' }), ontimeout: () => fim({ ok: false, motivo: 'o GitHub demorou demais' }) });
+      tentar(shas[caminho] || '', 0);
+    });
+  }
+  async function ghRelatorio(motivo) {
+    if (!ghChave()) return null;
+    const r = await ghSubir(GH_ARQ, montarRelatorio(false), 'lives ' + VERSAO + ', ' + motivo + ', ' + new Date().toLocaleString('pt-BR').slice(0, 17));
+    if (r.ok) gravar('ghUltimo', agora());
+    else if (agora() - ler('ghFalhaAviso', 0) > 12 * H) { gravar('ghFalhaAviso', agora()); logar('GitHub: não consegui gravar o relatório (' + r.motivo + ')'); }
+    return r;
+  }
+  function ghMenuChave() {
+    const txt = (prompt('Cole a chave do GitHub que escreve no repositório privado "relatorios" (começa com github_pat_). Fica guardada só no Tampermonkey deste script. Deixe vazio e confirme para desligar.') || '').trim();
+    if (!txt) { if (ghChave() && confirm('Desligar o envio do relatório das lives para o GitHub?')) { GM_setValue('ghChave', ''); alert('Desligado.'); } return; }
+    if (!/^(github_pat_[A-Za-z0-9_]{30,}|ghp_[A-Za-z0-9]{30,})$/.test(txt)) { alert('Isso não parece uma chave do GitHub (github_pat_...). Nada foi guardado.'); return; }
+    GM_setValue('ghChave', txt);
+    ghSubir('teste/lives.txt', 'Teste de escrita das lives em ' + new Date().toLocaleString('pt-BR') + '.\n', 'teste de escrita (lives)')
+      .then((r) => {
+        alert(r.ok ? 'Chave guardada e testada: consegui gravar no repositório. O relatório das lives passa a ir para lá a cada 30 min.' : 'Guardei a chave, mas o teste de escrita falhou: ' + r.motivo + '.');
+        if (r.ok) ghRelatorio('primeiro envio');
+      });
+  }
+
   // ===== MENU DO TAMPERMONKEY =====
   GM_registerMenuCommand('Lives: abrir a central (janela das lives)', () => {
     if (centralViva() && !confirm('A central já está aberta em alguma janela. Abrir outra?')) return;
@@ -1473,6 +1539,7 @@
   });
   GM_registerMenuCommand('Lives: desligar', () => { desligar(); alert('Lives desligadas. As abas se fecham em até 1 minuto.'); });
   GM_registerMenuCommand('Lives: relatório (arquivo)', relatorio);
+  GM_registerMenuCommand('Lives: colar a chave do GitHub (relatórios)', ghMenuChave);
   GM_registerMenuCommand('Lives: o que resgatar (12 h)', () => alert(textoPlanoAgora()));
   GM_registerMenuCommand('Lives: colar lista de canais', () => {
     const txt = prompt('Cole a lista de streamers do jogo (links, ou uma linha "twitch: nome1, nome2" e outra "kick: nome3, nome4"):', '');
