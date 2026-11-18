@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.13
+// @version      1.14
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -21,7 +21,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.13';
+  const VERSAO = '1.14';
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -652,7 +652,9 @@
 
     let ultSaldoProprio = 0, esperando = 0, semVideo = 0;
     const ruins = {}; // canal -> até quando fica de fora (vídeo travado: 15 min; sem pontos com o vídeo rodando: 60 min)
+    let testando = false;
     async function ciclo() {
+      if (testando) return;
       atualizarCustos();
       const c0 = cfg();
       const n = Number(id.slice(2));
@@ -805,6 +807,85 @@
     try {
       GM_addValueChangeListener('frente', (k, antigo, val) => {
         if (val && val.id === id && agora() - val.t < 30e3) aparecer().catch(() => {});
+      });
+    } catch (e) { /* nada */ }
+    // 1.14: teste de resgate (você aperta na central). A aba aparece, abre o menu de pontos do canal, anota o que vê,
+    // resgata 1 vez o bônus de XP de 1 hora (nome e preço conferidos) e confere se o saldo caiu. Nunca tenta de novo sozinha.
+    const RX_XP = /b[oô]nus\s*(de\s*)?\+?\s*15\s*%\s*(de\s*)?xp/i;
+    function vis(el) { try { const r = el.getBoundingClientRect(); return r.width > 0 && r.height > 0; } catch (e) { return false; } }
+    function txt(el) { return ((el && (el.innerText || el.textContent)) || '').replace(/\s+/g, ' ').trim(); }
+    function rotulo(el) { return [el.getAttribute('aria-label'), el.getAttribute('title'), txt(el).slice(0, 40)].filter(Boolean).join(' / ').slice(0, 90); }
+    function temNumero(t, n) { return new RegExp('(^|[^0-9.,])' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '[.,]?') + '([^0-9]|$)').test(t); }
+    function menuAberto() {
+      const ds = [...document.querySelectorAll('[role="dialog"], [role="menu"], [aria-modal="true"], [data-test-selector*="popover" i], .tw-balloon')].filter(vis);
+      return ds[ds.length - 1] || null;
+    }
+    async function testarResgate() {
+      if (testando) return;
+      testando = true;
+      const passos = [];
+      const canal = canalDaUrl(plat);
+      const fim = (ok, msg) => {
+        passos.push(msg);
+        gravar('teste_resgate_fim', { id, plat, canal, t: agora(), ok, passos });
+        logar(NOME[plat] + ' ' + id + ': teste de resgate em ' + canal + (ok ? ' deu certo: ' : ' parou: ') + msg);
+      };
+      try {
+        try { window.focus(); } catch (e) { /* nada */ }
+        await dorme(2500);
+        atualizarCustos();
+        const custo = CUSTO_HORA[plat];
+        const antes = await lerMeuSaldo(canal);
+        passos.push('canal ' + canal + ', saldo ' + antes + ', custo de 1 h ' + custo);
+        if (antes == null || antes < custo) return fim(false, 'saldo insuficiente ou ilegível');
+        // 1) o botão que abre o menu de pontos
+        let botao = null;
+        if (plat === 'tw') {
+          const sum = $('[data-test-selector="community-points-summary"]');
+          const bs = sum ? [...sum.querySelectorAll('button')].filter(vis) : [];
+          passos.push('botões do resumo de pontos: ' + (bs.map(rotulo).join(' ; ') || 'nenhum (chat escondido?)'));
+          botao = bs.find((b) => !b.querySelector('.claimable-bonus__icon') && !/b[oô]nus/i.test(b.getAttribute('aria-label') || '')) || null;
+        } else {
+          const cands = [...document.querySelectorAll('button, [role="button"]')].filter(vis)
+            .filter((b) => /pontos|points|recompensa|reward/i.test((b.getAttribute('aria-label') || '') + ' ' + (b.getAttribute('title') || '') + ' ' + txt(b).slice(0, 40)));
+          passos.push('botões candidatos: ' + (cands.map(rotulo).join(' ; ') || 'nenhum'));
+          if (cands.length === 1) botao = cands[0];
+        }
+        if (!botao) return fim(false, 'não achei, com certeza, o botão do menu de pontos');
+        botao.click();
+        await dorme(2000);
+        const menu = menuAberto();
+        passos.push('menu: ' + (menu ? txt(menu).slice(0, 600) : 'nenhum menu à vista'));
+        // 2) o bônus de XP de 1 hora: cartão com o nome certo e o preço de 1 hora
+        const raiz = menu || document.body;
+        const titulos = [...raiz.querySelectorAll('*')].filter((e) => RX_XP.test(txt(e)) && ![...e.children].some((f) => RX_XP.test(txt(f))));
+        const cartoes = titulos.map((e) => e.closest('button, [role="button"]') || e.parentElement).filter(Boolean);
+        passos.push('cartões de XP: ' + (cartoes.map((c) => txt(c).slice(0, 60)).join(' ; ') || 'nenhum'));
+        const cartao = cartoes.filter((c) => temNumero(txt(c), custo));
+        if (cartao.length !== 1) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, cartao.length ? 'mais de um bônus de XP com o preço de 1 hora' : 'não achei o bônus de XP de ' + custo + ' pontos'); }
+        cartao[0].click();
+        await dorme(2000);
+        // 3) confirmar: botão "Resgatar" ou com o preço; nada de recompensa que pede texto
+        const tela = menuAberto() || document.body;
+        if ([...tela.querySelectorAll('textarea, input[type="text"]')].some(vis)) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, 'a recompensa pede um texto; não confirmei'); }
+        const confs = [...tela.querySelectorAll('button, [role="button"]')].filter(vis).filter((b) => b !== botao && b !== cartao[0] && (/resgatar|redeem/i.test(txt(b) + ' ' + (b.getAttribute('aria-label') || '')) || temNumero(txt(b), custo)));
+        passos.push('botões de confirmar: ' + (confs.map(rotulo).join(' ; ') || 'nenhum') + ' | tela: ' + txt(tela).slice(0, 300));
+        if (confs.length !== 1) { document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })); return fim(false, confs.length ? 'mais de um botão de confirmar; não cliquei' : 'não achei o botão de confirmar'); }
+        confs[0].click();
+        await dorme(6000);
+        // 4) conferir pelo saldo
+        const depois = await lerMeuSaldo(canal);
+        document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+        if (depois != null) guardarSaldo(plat, canal, depois, 'conta');
+        if (depois != null && antes - depois >= custo - 5) return fim(true, 'saldo ' + antes + ' → ' + depois);
+        return fim(false, 'cliquei em confirmar, mas o saldo não caiu (' + antes + ' → ' + depois + ')');
+      } catch (e) {
+        fim(false, 'erro ' + String(e.message || e).slice(0, 100));
+      } finally { testando = false; }
+    }
+    try {
+      GM_addValueChangeListener('teste_resgate', (k, a, val) => {
+        if (val && val.id === id && agora() - val.t < 30e3) testarResgate().catch(() => {});
       });
     } catch (e) { /* nada */ }
     setInterval(clicarBau, 20e3);
@@ -969,6 +1050,7 @@
         '<p class="sub">As lives abrem em abas nesta janela, só quando você clica em Ligar ou +1. Quando uma live para no fundo (canal saiu do ar, live engasgou), esta janela mostra a aba dela uns segundos até o vídeo voltar e depois volta para a central. Deixe esta janela aparecendo na tela (não minimizada). Som: o Chrome já silencia twitch.tv e kick.com ("Silenciar site"); não use o mudo do vídeo.</p>' +
         '<div class="segue"></div>' +
         '<div><button class="ligar">Ligar</button><button class="desligar">Desligar</button><button class="plano">O que resgatar (12 h)</button><button class="relatorio">Relatório (arquivo)</button></div>' +
+        '<div><button class="teste" data-p="tw">Testar resgate Twitch (1 h)</button><button class="teste" data-p="kk">Testar resgate Kick (1 h)</button></div>' +
         '<div><button class="mais" data-p="kk">Kick +1</button><button class="menos" data-p="kk">Kick −1</button><button class="mais" data-p="tw">Twitch +1</button><button class="menos" data-p="tw">Twitch −1</button></div>' +
         '<pre class="status">Carregando...</pre>';
       document.body.appendChild(painel);
@@ -981,6 +1063,7 @@
         setTimeout(ciclo, 300);
       };
       painel.querySelector('.desligar').onclick = () => { desligar(); mostrar(); };
+      painel.querySelectorAll('.teste').forEach((b) => { b.onclick = () => testarResgateCentral(b.dataset.p).catch(() => {}); });
       painel.querySelectorAll('.mais, .menos').forEach((b) => {
         b.onclick = () => {
           const p = b.dataset.p, mais = b.classList.contains('mais');
@@ -1143,6 +1226,42 @@
     }
     setInterval(() => { reiniciarAba().catch(() => {}); }, 15e3);
 
+    // 1.14: teste de resgate. Escolhe a aba aberta cujo canal tem mais pontos (pelo menos 1 hora), pede confirmação,
+    // manda a aba fazer o teste e volta para a central. Uns minutos depois, confere no jogo se o bônus aumentou.
+    async function testarResgateCentral(p) {
+      atualizarCustos();
+      const custo = CUSTO_HORA[p], saldos = ler('saldos_' + p, {});
+      const abas = abasDe(p).filter((a) => a && a.vivo && agora() - a.t < 3 * MIN && Number(a.id.slice(2)) <= (cfg().abas[p] || 0))
+        .map((a) => ({ a, pts: (saldos[a.canal] || {}).pts || 0 })).sort((x, y) => y.pts - x.pts);
+      const escolha = abas.find((x) => x.pts >= custo);
+      if (!escolha) {
+        alert(NOME[p] + ': nenhuma aba aberta está num canal com ' + custo + ' pontos agora (' + (abas.map((x) => x.a.canal + ' ' + x.pts).join(', ') || 'nenhuma aba') + '). Tente quando algum chegar lá.');
+        return;
+      }
+      const a = escolha.a;
+      if (!confirm('Teste: vou resgatar 1 hora de XP em ' + urlCurta(p, a.canal) + ' (' + custo + ' pontos), uma vez só. A aba vai aparecer uns segundos. Pode?')) return;
+      const jogo0 = ler('jogo_bonus', null);
+      const fim0 = jogo0 ? jogo0[p] : null;
+      const t0 = agora();
+      logar(NOME[p] + ': teste de resgate pedido para a aba ' + a.id + ' (' + a.canal + ')');
+      gravar('teste_resgate', { id: a.id, t: t0 });
+      let r = null;
+      for (let i = 0; i < 50 && !r; i++) {
+        await dorme(1000);
+        const f = ler('teste_resgate_fim', null);
+        if (f && f.id === a.id && f.t >= t0) r = f;
+      }
+      try { window.focus(); } catch (e) { /* nada */ }
+      mostrar();
+      if (!r) { logar(NOME[p] + ': o teste de resgate não respondeu em 50 s'); return; }
+      if (r.ok) setTimeout(() => {
+        const j = ler('jogo_bonus', null);
+        const fim1 = j ? j[p] : null;
+        logar(NOME[p] + ': no jogo, o XP ia até ' + (fim0 ? hora(fim0) : '?') + ' e agora vai até ' + (fim1 ? hora(fim1) : '?') + (fim0 && fim1 && fim1 - fim0 > 50 * MIN ? ' (o jogo recebeu o resgate)' : ' (confira no jogo)'));
+        mostrar();
+      }, 5 * MIN);
+    }
+
     rodarCentralAgora = () => setTimeout(ciclo, 500);
     try { GM_addValueChangeListener('cfg', (k, antes, depois, remoto) => { if (remoto && depois && depois.ativo && agora() - (depois.ligadoEm || 0) < 30e3) setTimeout(ciclo, 500); }); } catch (e) { /* nada */ }
     document.title = 'Central das lives';
@@ -1222,6 +1341,12 @@
       const nao = naoSegue(p);
       linhas.push('');
       linhas.push(NOME[p] + ': você não segue ' + nao.length + ' parceiro(s) (conferido às ' + hora(sg.t) + ')' + (nao.length ? ': ' + nao.map((c) => urlCurta(p, c)).join(', ') : ''));
+    }
+    const tr = ler('teste_resgate_fim', null);
+    if (tr && !curto) {
+      linhas.push('');
+      linhas.push('Último teste de resgate (' + NOME[tr.plat] + ', ' + tr.id + ', ' + tr.canal + ', ' + new Date(tr.t).toLocaleDateString('pt-BR').slice(0, 5) + ' ' + hora(tr.t) + '): ' + (tr.ok ? 'deu certo' : 'parou'));
+      (tr.passos || []).forEach((x) => linhas.push('  ' + x));
     }
     linhas.push('');
     linhas.push('Eventos:');
