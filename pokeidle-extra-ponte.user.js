@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: ponte das extras
 // @namespace    biafontenelle.pokeidle
-// @version      1.5
+// @version      1.6
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
-// @description  (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
+// @description  (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
 // @match        https://pokeidle.io/*
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
@@ -18,7 +18,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.5';
+  const VERSAO = '1.6';
 
   const TOKEN_DO_ARQUIVO = 'COLE_AQUI_O_TOKEN', CHAT_DO_ARQUIVO = '1451127393';
   // 1.3: o token e o chat ficam guardados no Tampermonkey deste perfil. Se o arquivo vier sem eles (cópia do Projeto), usa os guardados; se vier com eles, guarda.
@@ -59,7 +59,7 @@
   }
   // GITHUB: os relatórios vão para um repositório PRIVADO dela, para o Claude ler direto (pedido dela em 18/11).
   // A chave de escrita fica só no Tampermonkey deste perfil (menu "Colar a chave do GitHub"); nunca vem no arquivo do script.
-  const GH_REPO = 'beatrizfontenelle/relatorios', GH_RAMO = 'main', GH_AUTO_MS = 3 * 3600e3;
+  const GH_REPO = 'beatrizfontenelle/relatorios', GH_RAMO = 'main', GH_AUTO_MS = 15 * 60e3;
   const ghChave = () => { try { return String(GM_getValue('ghChave', '') || ''); } catch (e) { return ''; } };
   function ghB64(texto) { // texto (UTF-8) em base64, aos pedaços: o arquivo da principal tem alguns MB
     const u = new TextEncoder().encode(texto), N = 0x2000 * 3; let out = '';
@@ -113,7 +113,7 @@
     if (!ghChave() || !conta || conta.toLowerCase() === CONTA_PRINCIPAL || Date.now() - ultimoPulsoPagina > 2 * 60e3) return;
     if (Date.now() - Math.max(Number(GM_getValue('ghUltimo', 0)), Number(GM_getValue('ghTentou', 0))) < GH_AUTO_MS) return;
     GM_setValue('ghTentou', Date.now()); relPedido = 'auto'; paraPagina({ pokeidleExtraPedido: 'relatorioTexto' });
-  } catch (e) {} }, 5 * 60e3);
+  } catch (e) {} }, 60e3);
   const paraPagina = (dado) => { try { window.postMessage(dado, location.origin); } catch (e) {} };
   const situacao = () => paraPagina({ pokeidleExtraPonte: { versao: VERSAO, leituras, falhas, status, erro, ultimoN } });
   // O quadro: uma mensagem fixada na conversa, escrita pelo monitor da principal. Texto = uma linha de título e, na linha seguinte, {"v":1,"s":[sinais]}.
