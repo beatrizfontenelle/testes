@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: ponte das extras
 // @namespace    biafontenelle.pokeidle
-// @version      1.7
+// @version      1.8
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
-// @description  (1.7, 18/11 20h30, decisão dela depois do erro 502 do Telegram das 18:22 às 19:24: aviso importante de conta extra que falha (shiny e sorteio ganho no Mercado) fica guardado e é reenviado até 12 h depois, com a hora original na frente; os outros tentam uma vez só, como antes.) (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
+// @description  (1.8, 20/11, junto com a conta extra 1.20 e o monitor 2.11.41: os comandos da principal passam a valer para as extras. O quadro já trazia tudo; esta versão só aceita o relatório que a extra manda depois de um comando (vai para o GitHub, para a principal ler o anúncio novo logo; sem a chave do GitHub, não vira arquivo no Telegram).) (1.7, 18/11 20h30, decisão dela depois do erro 502 do Telegram das 18:22 às 19:24: aviso importante de conta extra que falha (shiny e sorteio ganho no Mercado) fica guardado e é reenviado até 12 h depois, com a hora original na frente; os outros tentam uma vez só, como antes.) (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
 // @match        https://pokeidle.io/*
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
@@ -18,7 +18,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.7';
+  const VERSAO = '1.8';
 
   const TOKEN_DO_ARQUIVO = 'COLE_AQUI_O_TOKEN', CHAT_DO_ARQUIVO = '1451127393';
   // 1.3: o token e o chat ficam guardados no Tampermonkey deste perfil. Se o arquivo vier sem eles (cópia do Projeto), usa os guardados; se vier com eles, guarda.
@@ -136,9 +136,9 @@
     ghSubir('teste/' + pasta + '.txt', 'Teste de escrita em ' + new Date().toLocaleString('pt-BR') + '.\n', 'teste de escrita (' + pasta + ')', (ok, motivo) => window.alert(ok ? 'Chave guardada e testada: consegui gravar no repositório. Os relatórios desta conta passam a ir para lá.' : 'Guardei a chave, mas o teste de escrita falhou: ' + motivo + '.'));
   }
   let relPedido = ''; // quem pediu o último relatório: 'tudo' (comando da principal) ou 'auto' (a cada 3 h)
-  function relatorioChegou(nome, texto) {
-    const motivo = relPedido; relPedido = '';
-    if (!ghChave()) return mandarArquivo(nome, texto);
+  function relatorioChegou(nome, texto, soGitHub) {
+    const motivo = soGitHub ? 'auto' : relPedido; if (!soGitHub) relPedido = ''; // 1.8: o relatório depois de um comando só vai para o GitHub, em silêncio
+    if (!ghChave()) return soGitHub ? undefined : mandarArquivo(nome, texto);
     const quem = String(conta || 'extra').replace(/[^A-Za-z0-9_.-]/g, '') || 'extra';
     ghSubir('extras/' + quem + '.txt', texto, quem + ' ' + new Date().toLocaleString('pt-BR').slice(0, 17), (ok, porque) => {
       if (ok) { GM_setValue('ghUltimo', Date.now()); return; }
@@ -213,7 +213,7 @@
     const d = e && e.data; if (!d) return;
     if (d.pokeidleExtraPulso) { ultimoPulsoPagina = Date.now(); if (d.pokeidleExtraPulso.conta) conta = String(d.pokeidleExtraPulso.conta); lerQuadro(); return; }
     const rel = d.pokeidleExtraRelatorio; // 1.2
-    if (rel) { if (e.origin === location.origin && typeof rel.texto === 'string' && rel.texto.length < 5e6 && String(rel.conta || '').toLowerCase() !== CONTA_PRINCIPAL) { if (rel.conta && !conta) conta = String(rel.conta); relatorioChegou(rel.nome, rel.texto); } return; }
+    if (rel) { if (e.origin === location.origin && typeof rel.texto === 'string' && rel.texto.length < 5e6 && String(rel.conta || '').toLowerCase() !== CONTA_PRINCIPAL) { if (rel.conta && !conta) conta = String(rel.conta); relatorioChegou(rel.nome, rel.texto, !!rel.soGitHub); } return; }
     const a = d.pokeidleExtraAviso;
     if (!a || typeof a.texto !== 'string' || !a.texto || a.texto.length > 1500) return;
     if (String(a.conta || '').toLowerCase() === CONTA_PRINCIPAL) return; // a principal tem o monitor

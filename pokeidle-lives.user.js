@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: lives (Twitch e Kick)
 // @namespace    biafontenelle.pokeidle
-// @version      1.30
+// @version      1.31
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-lives.user.js
-// @description  (1.30, 19/11 15h, pedido dela: a aba da Kick não ganha pontos desde ~07h de 19/11 (de madrugada ganhava). Cada página da Kick passa a registrar a conexão de "quem assiste" da Kick (websockets.kick.com/viewer): quando conecta, os avisos de "assistindo" que a página manda, o que o servidor responde, quando cai e por quê, se a aba está visível; inclui abas da Kick que não são da central ("solta"). Vai para o relatório. Só olha; não muda nada no que a Kick faz.) (1.29, 19/11 08h: no canal offline, o campo do chat que aparece depois de abrir a aba Chat era lido como "a recompensa pede um texto" e o resgate parava sem confirmar (patopapao2 às 07:41); agora esse campo conta como já existente.) (1.28, 19/11: Kick de madrugada: o resgate automático foi para gragolandia, fora do ar, não achou o botão de pontos, falhou 2 vezes e desligou às 01:36; o XP da Kick acabou às 03:28. Agora, em canal fora do ar, o script abre a aba Chat do topo (caminho gravado por ela em 19/11 06:33) e resgata por lá; prefere canal ao vivo; falha em canal fora do ar não conta; o automático desligado por 2 falhas tenta de novo sozinho depois de 3 h; o bloqueio desta madrugada é desfeito uma vez. Canal que uma aba marcou como sem pontos vale para todas as abas por 60 min (antes cada aba tinha a sua lista, e as abas trocavam de canal entre si; às 22:52 isso levou à conclusão errada de que a Kick conta só 1 aba e a kk2 fechou).) (1.27, 18/11 20h30: o jogo às vezes leva mais de 5 min para mostrar as horas resgatadas (resgate da Kick das 19:32 só apareceu depois das 19:37, e o automático desligou à toa). Agora a central confere a cada minuto, de 5 a 20 min depois do resgate, e só desliga o automático se em 20 min não aparecer; a conferência sobrevive a um F5 da central. O bloqueio das 19:37 é desfeito uma vez. Versão nova publicada que o Tampermonkey ainda não instalou: a central recarrega uma vez e depois só a cada 2 h, com uma linha no relatório dizendo para atualizar pelo Utilitários.) (1.26, 18/11 17h: computador esquentando. As abas da Twitch abrem o vídeo na menor qualidade (160p), que conta pontos igual e gasta bem menos; na Kick o script anota no relatório as chaves de qualidade do player, para fazer o mesmo depois.) (1.25: Kick: enquanto não houve um resgate de XP certo, o resgate automático tenta sozinho quando o XP está para acabar (uma tentativa por hora; 2 falhas desligam); foto do menu também depois de clicar no cartão.) (1.24: na Kick o botão de pontos é achado pelo data-testid gravado em 18/11 15:13; quando o menu de pontos abre (clique dela ou teste) o script grava os botões novos e os cartões de XP; cada aba da Kick, uma vez por versão, abre o menu só para olhar, sem resgatar; canal da Kick com pacote desconhecido não entra na recomendação; pacotes da Kick relidos pela API.) (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
+// @description  (1.31, 20/11 manhã, pedido dela depois da conferência dos pontos da Kick: (1) a Kick só começa a mandar o aviso de "assistindo" depois que a página aparece na tela pelo menos uma vez; aba recarregada no fundo, com a tela apagada, ficava sem ganhar nada (19/11, das 23:29 às 06:48: +0). Nas abas da Kick abertas pela central, a página da Kick passa a ver a aba sempre visível; o script continua lendo o estado de verdade para o relatório; (2) aba da Kick que está contando só troca de canal se o outro fechar o pacote de XP pelo menos 100 pontos antes (era 30: às 23:05 a kk2 saiu de guaxilol1, que contava, e não contou mais); (3) o limite de 2 abas da Kick, medido em 18/11 com outra sessão da conta ocupando uma vaga, é esquecido uma vez: com o +1 dá para testar 3 de novo; (4) com o XP já acabado, o aviso diz "XP já acabou" em vez da hora velha.) (1.30, 19/11 15h, pedido dela: a aba da Kick não ganha pontos desde ~07h de 19/11 (de madrugada ganhava). Cada página da Kick passa a registrar a conexão de "quem assiste" da Kick (websockets.kick.com/viewer): quando conecta, os avisos de "assistindo" que a página manda, o que o servidor responde, quando cai e por quê, se a aba está visível; inclui abas da Kick que não são da central ("solta"). Vai para o relatório. Só olha; não muda nada no que a Kick faz.) (1.29, 19/11 08h: no canal offline, o campo do chat que aparece depois de abrir a aba Chat era lido como "a recompensa pede um texto" e o resgate parava sem confirmar (patopapao2 às 07:41); agora esse campo conta como já existente.) (1.28, 19/11: Kick de madrugada: o resgate automático foi para gragolandia, fora do ar, não achou o botão de pontos, falhou 2 vezes e desligou às 01:36; o XP da Kick acabou às 03:28. Agora, em canal fora do ar, o script abre a aba Chat do topo (caminho gravado por ela em 19/11 06:33) e resgata por lá; prefere canal ao vivo; falha em canal fora do ar não conta; o automático desligado por 2 falhas tenta de novo sozinho depois de 3 h; o bloqueio desta madrugada é desfeito uma vez. Canal que uma aba marcou como sem pontos vale para todas as abas por 60 min (antes cada aba tinha a sua lista, e as abas trocavam de canal entre si; às 22:52 isso levou à conclusão errada de que a Kick conta só 1 aba e a kk2 fechou).) (1.27, 18/11 20h30: o jogo às vezes leva mais de 5 min para mostrar as horas resgatadas (resgate da Kick das 19:32 só apareceu depois das 19:37, e o automático desligou à toa). Agora a central confere a cada minuto, de 5 a 20 min depois do resgate, e só desliga o automático se em 20 min não aparecer; a conferência sobrevive a um F5 da central. O bloqueio das 19:37 é desfeito uma vez. Versão nova publicada que o Tampermonkey ainda não instalou: a central recarrega uma vez e depois só a cada 2 h, com uma linha no relatório dizendo para atualizar pelo Utilitários.) (1.26, 18/11 17h: computador esquentando. As abas da Twitch abrem o vídeo na menor qualidade (160p), que conta pontos igual e gasta bem menos; na Kick o script anota no relatório as chaves de qualidade do player, para fazer o mesmo depois.) (1.25: Kick: enquanto não houve um resgate de XP certo, o resgate automático tenta sozinho quando o XP está para acabar (uma tentativa por hora; 2 falhas desligam); foto do menu também depois de clicar no cartão.) (1.24: na Kick o botão de pontos é achado pelo data-testid gravado em 18/11 15:13; quando o menu de pontos abre (clique dela ou teste) o script grava os botões novos e os cartões de XP; cada aba da Kick, uma vez por versão, abre o menu só para olhar, sem resgatar; canal da Kick com pacote desconhecido não entra na recomendação; pacotes da Kick relidos pela API.) (1.23: na Kick, canal com o pacote de 1 h vem antes; canal que só tem 3 h ou mais só entra se nenhum com 1 h estiver ao vivo.) (1.22, 18/11 15h, este chat: Kick. As abas da Kick vão primeiro para o canal ao vivo que está mais perto de fechar o menor pacote de XP dele (1 h = 200 pontos), e depois ficam concentradas; canal sem pacote de XP conhecido fica de fora. Gravação na Kick: o que ela clica e os pedidos de recompensa que a página faz, para achar o caminho do resgate (seção "Gravação da Kick" no relatório).) (1.21: ordens de resgate vindas do monitor ou do Telegram ("resgatar lure 3h", "resgatar captura 1h às 20:00", "resgates"): as lives executam na Twitch, com reserva de 30 h de XP, e guardam o resultado) (1.20: anota os pacotes de Captura e Lure de cada canal com preço; botão "Resgatar agora" (XP, Captura ou Lure, nas horas escolhidas, no canal com pontos); resgate automático de XP quando faltar menos de 3 h, depois de um resgate certo na plataforma; Kick: acha o botão de pontos pelo saldo) (1.19: teste de resgate acha o cartão do bônus subindo do nome até o pedaço que tem o preço (na Twitch o nome e o preço ficam em partes separadas do cartão); cada plataforma guarda o seu último teste no relatório) (1.18: os pacotes de XP de cada canal são lidos logo depois de atualizar, sem esperar a conferência de quem você segue) (1.17: pacotes de XP de cada canal (tem canal sem o de 1 h): Twitch pela API, Kick pela tela de pontos ou pela API; recomendação, plano do Telegram e teste de resgate só usam pacotes que o canal tem; pulo: só tentativas que falharam contam) (1.16: o relatório completo vai sozinho para o repositório privado "relatorios" (lives/relatorio.txt) a cada 30 min, depois de cada teste de resgate e quando você clica em Relatório; a chave fica só no Tampermonkey, pelo menu "Lives: colar a chave do GitHub") (1.15: quando sai versão nova no repositório e o Tampermonkey a instala, a central se recarrega sozinha e recarrega as abas das lives uma por vez; não precisa mais Desligar, F5 e Ligar) (1.14: botões "Testar resgate" na central: resgata 1 hora de XP uma vez, com a aba à vista, conferindo nome, preço e saldo, e anota o que viu no menu de pontos (primeiro passo do resgate automático)) (1.13: aba que, depois de 30 min, ganha menos da metade do ritmo normal (10 pontos a cada 5 min) passa a contar como "ganhando pouco": troca de canal e, se continuar, sai, e o limite fica anotado) (1.12: mesma regra da 1.11; só passa a se atualizar sozinho pelo repositório) (1.11: aba com o vídeo rodando que não ganha pontos troca de canal primeiro; se continuar sem ganhar, é ela que sai (não outra aba que estava contando) e o limite fica anotado por 7 dias) (1.10: de volta às abas, na janela da central; quando uma live para no fundo (troca de canal da Kick, live engasgada), a central mostra essa aba uns segundos até o vídeo andar e volta; o relatório lista os parceiros que você não segue (seguir dá +300 de uma vez na Twitch)) (1.9: cada live numa janelinha própria, empilhadas no canto inferior direito (à vista, o vídeo reinicia sozinho quando a live troca de canal ou engasga); vídeo parado não conta mais como limite e não fecha aba; resgate não conta como perda) (1.8: a Kick também só dá pontos com o vídeo rodando (medido às 22:24): Kick e Twitch com o som ligado no player, nunca no mudo do player) (1.7: Twitch com o som ligado no player (silencie pelo Chrome: botão direito na aba, Silenciar site), porque vídeo no mudo pausa quando a aba vai para o fundo; nada de mostrar aba sozinho; abas só abrem quando você clica em Ligar ou +1 na central; botões +1 e −1 por plataforma; o número de abas só cai sozinho) (1.6: vídeo conta como tocando se qualquer player da página anda (anúncio não engana mais); mede os pontos mesmo sem achar o vídeo; traz aba para a frente no máximo 3 vezes por canal e não fica indo e voltando) (1.5: a central abre as abas na janela dela mesma, mesmo com você em outra janela) (1.4: resgate de 1 hora entra na conta: qualquer canal com 200 pontos na Kick ou 300 na Twitch já serve) (1.3: as lives rodam numa janela separada do jogo, comandadas por uma aba "central" com botões; lista fixa de parceiros de reserva) (1.2: lista de parceiros, quem está ao vivo, custo por hora e fim do bônus lidos do próprio jogo pela ponte; responde ao comando "resgatar" do Telegram (pelo monitor) com o plano de resgate) (1.1: varre os saldos de todos os parceiros antes de abrir as abas; número de abas se ajusta sozinho pela medição: Kick sobe até 6, Twitch testa 3 uma vez, e cai quando uma live em outro aparelho atrapalha) Mantém 2 lives da Twitch e de 3 a 6 da Kick rodando nos canais parceiros do PokeIdle, troca sozinho quando um canal sai do ar, clica no baú da Twitch, guarda o saldo de cada canal e calcula onde resgatar o +15% de XP. Não resgata nada e não manda mensagem.
 // @match        https://www.twitch.tv/*
 // @match        https://kick.com/*
 // @match        https://pokeidle.io/app*
@@ -24,7 +24,12 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.30';
+  const VERSAO = '1.31';
+
+  // 1.31: estado de visibilidade de verdade (nas abas da Kick da central a página passa a ver sempre "visível")
+  let visReal = null;
+  const escondidaReal = () => { try { if (visReal) return visReal.call(document) !== 'visible'; } catch (e) { /* nada */ } return document.hidden; };
+  const visivelReal = () => { try { if (visReal) return visReal.call(document); } catch (e) { /* nada */ } return document.visibilityState; };
 
   // ===== CONFIGURAÇÃO =====
   const CUSTO_HORA = { tw: 300, kk: 200 };   // pontos por hora de +15% de XP; atualizado pelo que o jogo informa
@@ -435,6 +440,23 @@
         return { novos, xps };
       };
       const W = typeof unsafeWindow !== 'undefined' ? unsafeWindow : window, RXK = /reward|redeem|point|loyalty/i;
+      // 1.31 (20/11, pedido dela): a Kick só começa a mandar o aviso de "assistindo" depois que a página aparece na tela pelo menos uma vez.
+      // Toda aba que contou em 19/11 tinha ficado visível depois de carregar; as recarregadas no fundo (tela apagada) não mandaram nenhum aviso.
+      // Nas abas da Kick abertas pela central (#pkl=kk...), a página da Kick passa a ver a aba sempre visível. Aba da Kick aberta por você não muda.
+      let sempreVisivel = false;
+      try {
+        let idK = ''; try { idK = (location.hash.match(/pkl=(kk\d)/) || [])[1] || sessionStorage.getItem('pkl-aba') || ''; } catch (e) { /* nada */ }
+        const DP = W.Document && W.Document.prototype;
+        if (/^kk\d$/.test(idK) && DP) {
+          const dv = Object.getOwnPropertyDescriptor(DP, 'visibilityState');
+          if (dv && dv.get) visReal = dv.get;
+          Object.defineProperty(DP, 'hidden', { configurable: true, enumerable: true, get() { return false; } });
+          Object.defineProperty(DP, 'visibilityState', { configurable: true, enumerable: true, get() { return 'visible'; } });
+          if ('webkitHidden' in DP) Object.defineProperty(DP, 'webkitHidden', { configurable: true, enumerable: true, get() { return false; } });
+          if ('webkitVisibilityState' in DP) Object.defineProperty(DP, 'webkitVisibilityState', { configurable: true, enumerable: true, get() { return 'visible'; } });
+          sempreVisivel = true;
+        }
+      } catch (e) { /* nada */ }
       // 1.30 (19/11 15h, pedido dela: entender por que a aba da Kick não ganha pontos): registra a conexão de "quem assiste" da Kick
       // (websockets.kick.com/viewer: a página manda handshake, ping e o aviso de que está assistindo a cada ~2 min). Só olha, não manda nada.
       try {
@@ -467,11 +489,13 @@
           Novo.prototype = OWS.prototype;
           for (const k of ['CONNECTING', 'OPEN', 'CLOSING', 'CLOSED']) Novo[k] = OWS[k];
           W.WebSocket = Novo;
-          document.addEventListener('visibilitychange', () => { conta('ficou ' + document.visibilityState); });
+          // 1.31: a troca de visibilidade de verdade fica no relatório; nas abas da central ela não chega à página da Kick (a página acha que continua visível)
+          W.addEventListener('visibilitychange', (e) => { conta('ficou ' + visivelReal()); if (sempreVisivel) { try { e.stopImmediatePropagation(); } catch (x) { /* nada */ } } }, true);
+          if (sempreVisivel) conta('página sempre visível (1.31)');
           setInterval(() => {
             try {
               const id = (sessionStorage.getItem('pkl-aba') || 'solta-' + canalAgora()).slice(0, 40), g = GM_getValue('ws_kick') || {};
-              g[id] = { t: Date.now(), ini: mem.ini, canal: canalAgora(), vis: document.visibilityState, foco: document.hasFocus(), ultTracking: mem.ultTracking, cont: mem.cont, ev: mem.ev.slice(-12) };
+              g[id] = { t: Date.now(), ini: mem.ini, canal: canalAgora(), vis: visivelReal(), foco: document.hasFocus(), ultTracking: mem.ultTracking, cont: mem.cont, ev: mem.ev.slice(-12) };
               for (const k of Object.keys(g)) if (Date.now() - (g[k].t || 0) > 3 * 3600e3) delete g[k];
               GM_setValue('ws_kick', g);
             } catch (e) { /* nada */ }
@@ -953,7 +977,7 @@
           if (v.muted) v.muted = false;
           if (v.volume === 0) v.volume = 0.05;
           const pr = v.play();
-          if (pr && pr.catch) pr.catch(() => { if (!document.hidden) { try { v.muted = true; v.play().catch(() => {}); } catch (e) { /* nada */ } } });
+          if (pr && pr.catch) pr.catch(() => { if (!escondidaReal()) { try { v.muted = true; v.play().catch(() => {}); } catch (e) { /* nada */ } } });
         } catch (e) { /* nada */ }
       }
       estado.mudo = !!(v.muted || v.volume === 0);
@@ -1044,7 +1068,7 @@
         }
       }
       const atualValido = atual && lista.includes(atual);
-      const alvo = escolherCanal({ plat, atual: atualValido ? atual : null, vivos, saldos, hist, ocupados, canais: lista, minSeq: SEQUENCIA_MIN, opcoes: ler('opcoes_' + plat, {}) });
+      const alvo = escolherCanal({ plat, atual: atualValido ? atual : null, vivos, saldos, hist, ocupados, canais: lista, minSeq: SEQUENCIA_MIN, opcoes: ler('opcoes_' + plat, {}), margemKk: estado.contando === true ? 100 : 30 }); // 1.31: aba que está contando só troca por ganho grande
 
       // troca de canal (no máximo a cada 3 min, a menos que o atual tenha saído do ar, travado ou não seja parceiro)
       const atualVivo = atualValido && vivos[atual] && vivos[atual].sid;
@@ -1061,7 +1085,7 @@
 
       // no canal certo: confere o vídeo, a sequência e o saldo. Twitch e Kick só dão pontos com o vídeo rodando
       // (Kick medida às 22:24 de 17/11: 3 abas com o vídeo parado no fundo, +0 em 11 min).
-      const escondida = document.hidden;
+      const escondida = escondidaReal();
       const tocando = atualVivo ? videoTocando() : false;
       // no fundo com o vídeo parado: o Chrome segurando (aba que nunca apareceu, ou no mudo do player).
       // Não troca de canal nem traz a aba para a frente; o painel avisa.
@@ -1131,7 +1155,7 @@
         try { window.focus(); } catch (e) { /* nada */ }
         for (let i = 0; i < 15; i++) {
           await dorme(1000);
-          if (!document.hidden && videoTocando()) {
+          if (!escondidaReal() && videoTocando()) {
             estado.tocando = true; estado.esperandoClique = false; esperando = 0; semVideo = 0;
             gravar('aba_' + id, Object.assign(estado, { t: agora() }));
             gravar('frente_ok', { id, t: agora() });
@@ -1511,6 +1535,11 @@
       gravar('central', { id: meuId, t: agora() });
       const c0 = cfg();
       if (!c0.ativo || !souLider('central', meuId, 150e3)) return;
+      if (!ler('kk_teto_131', 0)) { // 1.31: o limite de 2 abas da Kick foi medido com outra sessão da conta ocupando uma vaga; esquece uma vez
+        gravar('kk_teto_131', agora());
+        const aj = ler('ajuste_kk', {});
+        if (aj && aj.teto) { aj.teto = null; gravar('ajuste_kk', aj); logar('Kick: esqueci o limite de 2 abas (medido em 18/11 com outra sessão da conta ocupando uma vaga); com o +1 dá para testar 3'); }
+      }
       // número de abas de cada plataforma, pela medição
       for (const p of ['tw', 'kk']) {
         const tAj = ler('t_ajuste_' + p, 0);
@@ -1789,7 +1818,7 @@
           if (cs.length) { escolha = Object.assign({ h }, cs[0]); break; }
         }
         if (!escolha) {
-          if (agora() - ler('auto_sem_' + p, 0) > H) { gravar('auto_sem_' + p, agora()); logar(NOME[p] + ': XP acaba às ' + hora(fim) + ' e nenhum canal conferido tem pontos para um pacote de XP'); }
+          if (agora() - ler('auto_sem_' + p, 0) > H) { gravar('auto_sem_' + p, agora()); logar(NOME[p] + ': ' + (fim > agora() ? 'XP acaba às ' + hora(fim) : 'XP já acabou') + ' e nenhum canal conferido tem pontos para um pacote de XP'); }
           continue;
         }
         gravar('auto_ult_' + p, agora());

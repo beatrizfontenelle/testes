@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: conta extra
 // @namespace    biafontenelle.pokeidle
-// @version      1.19
+// @version      1.20
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra.user.js
-// @description  (1.19, 18/11 14h, pedido dela: a extra resgata o Passe (grátis) sozinha todo dia às 00:05, como a principal; o resgate fica no registro e no relatório.) (1.18, 18/11, pedido dela: o aviso de compra da extra traz o mesmo começo e o mesmo piso de venda que a principal usaria no anúncio e na resposta de preço (antes dizia o preço justo e a revenda esperada, que não batiam com a resposta de preço).) (1.17, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.16, 18/11 manhã, pedidos dela: (1) a CoxinhaFria fica fixa na Outland (Furious Scizor 150) para pegar os drops: não testa mais degrau de XP enquanto estiver lá e volta sozinha se sair; só desce se desmaiar demais ou o ouro não pagar a poção; (2) som quase mudo na aba do jogo, para o Chrome não atrasar o pedido do sorteio com a janela em segundo plano; (3) freio de sorteios de 12 para 30 pedidos por hora.) (1.15, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a lista de hunts fica guardada no navegador, então a conta não fica mais "esperando o jogo" quando o script perde a mensagem de entrada do jogo (foi o que deixou a CapivaraZen cega das 13:26 às 15:19, sem amostra, sem sorteio e sem aviso); se mesmo assim passar 8 minutos sem conseguir ler a conta, avisa no Telegram e recarrega a aba uma vez; (2) avisa no Telegram quando a conta fica 15 minutos sem ganhar XP; (3) a etiqueta mostra quando a ponte parou; (4) Shield do Novato: abaixo do nível 1.160 o tipo do dia não deixa mais o selvagem forte, então a conta não foge nem evita alvo do tipo do dia; (5) o resultado do sorteio mostra o número de participantes em vez de "?" e não guarda mais mensagens de batalha; o pedido de relatório não aparece mais como "pulso") (1.14: pedido dela em 17/11: reserva de ouro nos sorteios em Coins = ouro para uns 10 minutos de bolas e poções (de 5 mil a 50 mil; antes era 50 mil fixos e a Vortek77 ficou fora de um anúncio de 2 Coins); o aviso 🎉 diz quantos participaram do sorteio, quanto vale pela conta da principal e se é para revender aqui ou passar para a principal; o relatório traz os stats do pokemon ativo e pode ir ao Telegram pelo "exportar tudo" da principal; na Larvitar 290 (alvo de shiny) fica mesmo com até 10% menos XP) (1.13: o aviso 📦 também sai para anúncio em Coins, com o comando pronto para a principal comprar e passar ouro para esta conta) (1.12: sorteio com relógio próprio (um worker, que o Chrome não atrasa com a janela em segundo plano), e aceita pedir até 3,2 s depois de liberar; a CapivaraZen perdia a janela por chegar 3 s atrasada) (1.11: ouro e poção. Só sobe de hunt com poção para 1,5 h; desce quando o ouro não paga a poção; sem poção e sem ouro, cura de graça e caça 30 níveis abaixo para juntar ouro, em vez de ficar parada no Centro) Para as contas extras (nunca para a principal). Faz só três coisas: repõe poção e revive com o ouro da própria conta, religa a caçada quando a conta fica parada no Centro Pokemon, e sobe de hunt sozinha conforme a treinadora libera, testando cada troca pelo XP por hora (se piorar, volta). Não anuncia nada, não usa diamantes, não manda mensagem no Telegram sozinho. Desde a 1.6 entra em sorteios do Mercado, mas só quando a conta principal avisa e só nos casos combinados (ver 1.6). Aprende a comprar poção e revive na primeira compra feita à mão. 1.1: insiste na ida ao Centro (o jogo recusa enquanto a conta está em combate), escolhe uma hunt sozinho quando não conhece nenhuma, e a etiqueta deixou de mostrar o contador de abates, que não funcionava. 1.2: usa o Desistir do Combate quando o jogo não deixa ir ao Centro. 1.3: a troca de hunt anda no ritmo das mensagens do jogo (com a janela em segundo plano o Chrome atrasava os temporizadores e cada troca levava 7 minutos); repõe bolas quando vê que a conta está arremessando (Lançar sem Parar ligado no jogo, precisa de VIP): Poke Ball sempre, Ultra Ball só com o ouro que sobra. 1.4: hunt que rende menos de 75% do XP da atual só é testada de novo 10 níveis depois (antes eram 4, e a CapivaraZen passou a manhã de 16/11 retestando Marowak 50 e Seaking 50, que davam metade do XP). 1.5: avisa quando um pokemon entra na Coleção (o filtro do próprio jogo) e quando captura shiny; o aviso vai ao Telegram pelo script irmão "PokeIdle: avisos das extras". Ao religar depois de um F5, volta para a última hunt aprovada, nunca para uma reprovada. 1.6: (a) sorteios do Mercado a pedido da principal: o monitor dela publica cada lance num quadro, o script irmão "PokeIdle: ponte das extras" lê e entrega aqui; a conta só entra se o lance está na regra das extras (Gemas: custa até 25% da saída pessimista, ou shiny abaixo do piso; erro em Coins até 200 mil; item muito barato), se tem o saldo e se o aviso chegou a tempo; nunca anuncia nem revende: se ganhar, só avisa no Telegram. Tudo o que chega fica anotado com o atraso, mesmo quando não entra. (b) O relatório agora é um arquivo, com o nick no nome, baixado pelo botão da etiqueta ou pelo menu do Tampermonkey. (c) Guarda uma amostra da conta a cada 10 minutos (nível, XP por hora, ouro, Gemas, bolas). 1.7: quando você anuncia algo em Gemas nesta conta, manda ao Telegram o número do anúncio já no formato do comando da principal (\"comprar anúncio NÚMERO PREÇO\"), porque a tela de itens do jogo não deixa achar um anúncio caro no meio de milhares. Para isso pede ao jogo a lista \"Meus anúncios\" (só leitura). 1.8: tipo do dia. Quando o XP por hora da hunt cai para menos de 55% do que vinha dando (foi o caso da CoxinhaFria em 16/11 às 18h: o alvo virou do tipo do dia e passou a levar um quarto do dano), testa o degrau de baixo da escada e fica nele se render mais; e quando o tipo do dia muda, esquece as reprovações e testa a escada de novo. 1.9: agora olha o tipo de cada alvo da escada. Alvo que é do tipo do dia leva um quarto do dano: a conta sai dele assim que o dia vira (sem esperar o XP cair), nunca testa um alvo do tipo do dia, e ao descer escolhe o degrau mais alto que não seja desse tipo. 1.10: o pedido de sorteio não depende mais só de chegar mensagem do jogo na hora certa (em 16/11 a CapivaraZen perdeu a janela do Wooper shiny porque a página ficou 3 s sem mensagem): ao aceitar um lance, marca também três despertadores diretos para a hora de liberar.
+// @description  (1.20, 20/11, pedido dela: os comandos da principal passam a valer para as extras. Pelo Telegram, com o nome da conta na frente ("capivara anunciar #código 580", "coxinha status", "vortek hunt larvitar") ou respondendo em cima de uma mensagem da extra ("anunciar 580"), a principal manda a ordem pelo quadro e esta conta executa: anunciar, mudar o preço, cancelar, status, relatório, pausar e retomar os sorteios, hunt fixa ("hunt auto" devolve a escolha ao script). O preço do anúncio e a escada de descida são os mesmos da principal: quem calcula é a principal, com a base e o modelo dela, e ela manda os "mudar" quando for a hora (sem mensagem, como na principal). Esta conta lista os próprios anúncios abertos a cada 10 minutos, põe no relatório os dados que a principal usa (pokemon vendáveis com a ficha e anúncios abertos) e avisa quando um anúncio dela vende ("💰 Vendeu").) (1.19, 18/11 14h, pedido dela: a extra resgata o Passe (grátis) sozinha todo dia às 00:05, como a principal; o resgate fica no registro e no relatório.) (1.18, 18/11, pedido dela: o aviso de compra da extra traz o mesmo começo e o mesmo piso de venda que a principal usaria no anúncio e na resposta de preço (antes dizia o preço justo e a revenda esperada, que não batiam com a resposta de preço).) (1.17, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.16, 18/11 manhã, pedidos dela: (1) a CoxinhaFria fica fixa na Outland (Furious Scizor 150) para pegar os drops: não testa mais degrau de XP enquanto estiver lá e volta sozinha se sair; só desce se desmaiar demais ou o ouro não pagar a poção; (2) som quase mudo na aba do jogo, para o Chrome não atrasar o pedido do sorteio com a janela em segundo plano; (3) freio de sorteios de 12 para 30 pedidos por hora.) (1.15, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a lista de hunts fica guardada no navegador, então a conta não fica mais "esperando o jogo" quando o script perde a mensagem de entrada do jogo (foi o que deixou a CapivaraZen cega das 13:26 às 15:19, sem amostra, sem sorteio e sem aviso); se mesmo assim passar 8 minutos sem conseguir ler a conta, avisa no Telegram e recarrega a aba uma vez; (2) avisa no Telegram quando a conta fica 15 minutos sem ganhar XP; (3) a etiqueta mostra quando a ponte parou; (4) Shield do Novato: abaixo do nível 1.160 o tipo do dia não deixa mais o selvagem forte, então a conta não foge nem evita alvo do tipo do dia; (5) o resultado do sorteio mostra o número de participantes em vez de "?" e não guarda mais mensagens de batalha; o pedido de relatório não aparece mais como "pulso") (1.14: pedido dela em 17/11: reserva de ouro nos sorteios em Coins = ouro para uns 10 minutos de bolas e poções (de 5 mil a 50 mil; antes era 50 mil fixos e a Vortek77 ficou fora de um anúncio de 2 Coins); o aviso 🎉 diz quantos participaram do sorteio, quanto vale pela conta da principal e se é para revender aqui ou passar para a principal; o relatório traz os stats do pokemon ativo e pode ir ao Telegram pelo "exportar tudo" da principal; na Larvitar 290 (alvo de shiny) fica mesmo com até 10% menos XP) (1.13: o aviso 📦 também sai para anúncio em Coins, com o comando pronto para a principal comprar e passar ouro para esta conta) (1.12: sorteio com relógio próprio (um worker, que o Chrome não atrasa com a janela em segundo plano), e aceita pedir até 3,2 s depois de liberar; a CapivaraZen perdia a janela por chegar 3 s atrasada) (1.11: ouro e poção. Só sobe de hunt com poção para 1,5 h; desce quando o ouro não paga a poção; sem poção e sem ouro, cura de graça e caça 30 níveis abaixo para juntar ouro, em vez de ficar parada no Centro) Para as contas extras (nunca para a principal). Faz só três coisas: repõe poção e revive com o ouro da própria conta, religa a caçada quando a conta fica parada no Centro Pokemon, e sobe de hunt sozinha conforme a treinadora libera, testando cada troca pelo XP por hora (se piorar, volta). Não anuncia nada, não usa diamantes, não manda mensagem no Telegram sozinho. Desde a 1.6 entra em sorteios do Mercado, mas só quando a conta principal avisa e só nos casos combinados (ver 1.6). Aprende a comprar poção e revive na primeira compra feita à mão. 1.1: insiste na ida ao Centro (o jogo recusa enquanto a conta está em combate), escolhe uma hunt sozinho quando não conhece nenhuma, e a etiqueta deixou de mostrar o contador de abates, que não funcionava. 1.2: usa o Desistir do Combate quando o jogo não deixa ir ao Centro. 1.3: a troca de hunt anda no ritmo das mensagens do jogo (com a janela em segundo plano o Chrome atrasava os temporizadores e cada troca levava 7 minutos); repõe bolas quando vê que a conta está arremessando (Lançar sem Parar ligado no jogo, precisa de VIP): Poke Ball sempre, Ultra Ball só com o ouro que sobra. 1.4: hunt que rende menos de 75% do XP da atual só é testada de novo 10 níveis depois (antes eram 4, e a CapivaraZen passou a manhã de 16/11 retestando Marowak 50 e Seaking 50, que davam metade do XP). 1.5: avisa quando um pokemon entra na Coleção (o filtro do próprio jogo) e quando captura shiny; o aviso vai ao Telegram pelo script irmão "PokeIdle: avisos das extras". Ao religar depois de um F5, volta para a última hunt aprovada, nunca para uma reprovada. 1.6: (a) sorteios do Mercado a pedido da principal: o monitor dela publica cada lance num quadro, o script irmão "PokeIdle: ponte das extras" lê e entrega aqui; a conta só entra se o lance está na regra das extras (Gemas: custa até 25% da saída pessimista, ou shiny abaixo do piso; erro em Coins até 200 mil; item muito barato), se tem o saldo e se o aviso chegou a tempo; nunca anuncia nem revende: se ganhar, só avisa no Telegram. Tudo o que chega fica anotado com o atraso, mesmo quando não entra. (b) O relatório agora é um arquivo, com o nick no nome, baixado pelo botão da etiqueta ou pelo menu do Tampermonkey. (c) Guarda uma amostra da conta a cada 10 minutos (nível, XP por hora, ouro, Gemas, bolas). 1.7: quando você anuncia algo em Gemas nesta conta, manda ao Telegram o número do anúncio já no formato do comando da principal (\"comprar anúncio NÚMERO PREÇO\"), porque a tela de itens do jogo não deixa achar um anúncio caro no meio de milhares. Para isso pede ao jogo a lista \"Meus anúncios\" (só leitura). 1.8: tipo do dia. Quando o XP por hora da hunt cai para menos de 55% do que vinha dando (foi o caso da CoxinhaFria em 16/11 às 18h: o alvo virou do tipo do dia e passou a levar um quarto do dano), testa o degrau de baixo da escada e fica nele se render mais; e quando o tipo do dia muda, esquece as reprovações e testa a escada de novo. 1.9: agora olha o tipo de cada alvo da escada. Alvo que é do tipo do dia leva um quarto do dano: a conta sai dele assim que o dia vira (sem esperar o XP cair), nunca testa um alvo do tipo do dia, e ao descer escolhe o degrau mais alto que não seja desse tipo. 1.10: o pedido de sorteio não depende mais só de chegar mensagem do jogo na hora certa (em 16/11 a CapivaraZen perdeu a janela do Wooper shiny porque a página ficou 3 s sem mensagem): ao aceitar um lance, marca também três despertadores diretos para a hora de liberar.
 // @match        https://pokeidle.io/*
 // @run-at       document-start
 // @grant        none
@@ -13,7 +13,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.19';
+  const VERSAO = '1.20';
   const CONTA_PRINCIPAL = 'biafontenelle';   // trava: nesta conta o script não faz nada (ela tem o monitor)
 
   // ===== REGRAS (tudo que dá para ajustar está aqui) =====
@@ -93,7 +93,8 @@
     Sandshrew: 'GROUND', Vulpix: 'FIRE', Charmander: 'FIRE', Rapidash: 'FIRE', Slugma: 'FIRE', Swinub: 'ICE GROUND', Phanpy: 'GROUND', Houndour: 'DARK FIRE' };
   const doDia = (h) => !!(h && M.diaTipo && !(S.level > 0 && S.level < NIVEL_VETERANO) && (' ' + (TIPOS_ALVO[h.nome] || '') + ' ').indexOf(' ' + M.diaTipo + ' ') >= 0); // o alvo desta hunt é do tipo do dia?
   const S = { pronto: false, nick: null, level: 0, xp: 0, gold: 0, orbs: null, nomesItem: {}, vendaveis: null, items: null, huntSlug: null, noCentro: false, centroLivreEm: 0, difServidor: 0,
-    potionIds: [200, 201, 202, 204], reviveIds: [205, 206], balls: {}, activeId: null, tipo: null, nivelPk: 0, hunts: null, desdeCentro: 0 };
+    potionIds: [200, 201, 202, 204], reviveIds: [205, 206], balls: {}, activeId: null, tipo: null, nivelPk: 0, hunts: null, desdeCentro: 0,
+    pk: null, meus: null, meusEm: 0 }; // 1.20: pokemon da conta (id -> ficha) e anúncios abertos (lista do jogo)
   if (Array.isArray(M.hunts) && M.hunts.length) S.hunts = M.hunts; // 1.15: a lista de hunts guardada da última vez (o jogo só manda na entrada, e o script pode engatar depois)
   let primeiraMsg = 0, prontoEm = 0, ultimoGanhoXp = 0, avisouSemXp = 0, avisouSemLer = false;
   const amostrasXp = [];   // [quando, xp]
@@ -174,6 +175,7 @@
     if (typeof e.orbs === 'number') S.orbs = e.orbs; // Gemas
     if (e.passe && typeof e.passe === 'object') { S.passe = Object.assign({}, S.passe || {}, e.passe); S.passeT = agora(); } // 1.19
     if (e.diaSazonal && e.diaSazonal.tipo) diaNovo(e.diaSazonal.tipo, e.diaSazonal.fim || e.diaSazonal.chave);
+    if (cheio && Array.isArray(e.pokemons)) { try { S.pk = new Map(e.pokemons.map((p) => [p.id, p])); S.pkEm = agora(); conferirSumidos(); } catch (err) {} } // 1.20
     if (cheio && Array.isArray(e.pokemons)) { try { S.vendaveis = e.pokemons.filter((p) => !p.starter && (p.shiny || (p.potencia || 1) >= 5 || ((p.level || 0) >= 50 && (p.nota || 0) >= 3.5))).map((p) => fichaTxt(p) + ' #' + p.id).slice(0, 12); } catch (err) {} }
     if (typeof e.servidorAgora === 'number') S.difServidor = e.servidorAgora - agora();
     if (typeof e.centroLivreEm === 'number') S.centroLivreEm = e.centroLivreEm;
@@ -216,9 +218,12 @@
   function meusAnuncios(txt) {
     const o = JSON.parse(txt);
     if (!o || o.aba !== 'meus' || !Array.isArray(o.linhas) || ehPrincipal()) return;
+    guardarMeus(o.linhas.filter((l) => l && l.id && (!l.estado || l.estado === 'aberto'))); // 1.20
     if (!Array.isArray(M.anunciados)) M.anunciados = [];
     for (const l of o.linhas) {
       if (!l || !l.id || M.anunciados.includes(l.id)) continue;
+      if (l.estado && l.estado !== 'aberto') continue;
+      if (pidDe(l) && M.cmdAnuncio && agora() - (M.cmdAnuncio[pidDe(l)] || 0) < 15 * 60e3) { M.anunciados.push(l.id); if (M.anunciados.length > 200) M.anunciados.shift(); continue; } // 1.20: anunciado por comando: a confirmação já sai pelo comando
       const moeda = l.moeda || (l.anuncio && l.anuncio.moeda), preco = Number(l.preco || l.precoUnit || (l.anuncio && l.anuncio.preco)) || 0;
       if ((moeda !== 'orb' && moeda !== 'gold') || !(preco > 0)) continue; // 1.13: Coins também
       const emCoins = moeda === 'gold';
@@ -235,6 +240,7 @@
     try { if (txt.startsWith('{"t":"market"') && txt.slice(0, 60).indexOf('"aba":"meus"') >= 0) meusAnuncios(txt); } catch (e) {}
     try { const t = agora(); if (S.pronto && !pediuNaCarga) { pediuNaCarga = true; pedirMeusEm = t + 15000; } if (pedirMeusEm && t >= pedirMeusEm && !ehPrincipal()) { pedirMeusEm = 0; mandar({ t: 'market.meus' }); } } catch (e) {}
     try { if (pendentes.length) passoSorteio(); } catch (e) {}
+    try { if (cmdResposta && agora() < cmdResposta.ate && txt.length < 800 && txt.indexOf('"k":"aviso"') >= 0) { const m = txt.match(/"msg":"([^"]{1,160})"/); if (m && cmdResposta.msgs.length < 4) cmdResposta.msgs.push(m[1]); } } catch (e) {} // 1.20
     try { if (respostaAte && agora() < respostaAte && txt.length < 600 && /market|mercado|sorteio|aviso|erro/i.test(txt) && !txt.startsWith('{"t":"chat') && (txt.indexOf('"k":"aviso"') >= 0 || (respostaLinha && respostaLinha[3] && txt.indexOf(String(respostaLinha[3])) >= 0))) { anotarResposta(txt); } } catch (e) {}
     try { const t = agora(); if (t - ultimoPulso >= 4000) { ultimoPulso = t; window.postMessage({ pokeidleExtraPulso: { conta: S.nick || '', quando: t, versao: VERSAO } }, location.origin); } } catch (e) {} // 1.6: o script irmão lê o quadro no ritmo do jogo (o relógio do Chrome atrasa em segundo plano)
     try { if (troca && !M.pausado) passoTroca(); } catch (e) {}
@@ -455,6 +461,18 @@
     if (S.noCentro || trocando || !S.huntSlug) return;
     const atual = huntDe(S.huntSlug);
     if (!atual) return;
+    if (M.huntFixa) { // 1.20: hunt fixa pedida por ela pelo Telegram ("NICK hunt NOME"; "NICK hunt auto" desfaz)
+      const hf = huntDe(M.huntFixa);
+      if (!hf) { M.huntFixa = null; salvar(); }
+      else {
+        if (atual.slug === hf.slug) {
+          if (conta(mortes, t - MORTES_JANELA_MS) >= MORTES_DESCE * 2) { M.huntFixa = null; salvar(); avisar('⚠️ ' + S.nick + ': muitos desmaios em ' + nomeHunt(hf.slug) + ' (hunt fixa): voltei a escolher a hunt sozinha.'); }
+          return;
+        }
+        if (!(falhou[hf.slug] > t) && t - (M.huntFixaEm || 0) > 5 * 60e3) { M.huntFixaEm = t; salvar(); trocarPara(hf.slug, 'hunt fixa (pedida por você): volto para ' + nomeHunt(hf.slug)); }
+        return;
+      }
+    }
     const D = degraus();
     if (!D.length) return;
 
@@ -526,6 +544,8 @@
   if (!Array.isArray(M.sinais)) M.sinais = [];   // [recebido, n, k, id, cls, atraso (ms entre publicar e chegar), folga (ms até liberar), decisão, resultado, nome]
   if (!Array.isArray(M.amostras)) M.amostras = []; // [quando, nível, XP por hora, ouro, Gemas, Ultra, Poke, hunt]
   const pendentes = [];                            // lances que vou pedir: { s, em, linha }
+  const quemSorteio = new Map();                   // 1.20: anúncio -> nomes de quem entrou (só na memória)
+  const FAMILIA_NICKS = [CONTA_PRINCIPAL, 'CapivaraZen', 'CoxinhaFria', 'Vortek77']; // 1.20: as 4 contas dela (para dizer quem da família entrou no sorteio)
   const pedidosSorteio = [];                       // quando pedi (para o freio por hora)
   let respostaAte = 0, respostaLinha = null, ponte = null;
   const ehPrincipal = () => String(S.nick || '').toLowerCase() === CONTA_PRINCIPAL;
@@ -550,6 +570,14 @@
     const linha = [t, s.n, String(s.k || '?'), inteiro(s.id) ? s.id : 0, String(s.cls || ''), atraso, null, '', '', String(s.nome || '').slice(0, 90)];
     M.sinais.push(linha); if (M.sinais.length > 300) M.sinais.splice(0, M.sinais.length - 300);
     linha[11] = 0; linha[12] = { esp: Number(s.esp) > 0 ? Number(s.esp) : null, ju: Number(s.ju) > 0 ? Number(s.ju) : null, co: Number(s.co) > 0 ? Number(s.co) : null, pi: Number(s.pi) > 0 ? Number(s.pi) : null, pv: s.pv && typeof s.pv === 'object' ? s.pv : null, m: s.m === 'orb' ? 'orb' : 'gold', item: s.it ? 1 : 0 }; // 1.14
+    if (s.k === 'cmd') { // 1.20: comando da principal (vindo do Telegram dela)
+      linha[9] = (String(s.a || '?') + (s.pid ? ' #' + s.pid : '') + (s.p ? ' ' + s.p : '') + (s.nome ? ' ' + s.nome : '')).slice(0, 90);
+      if (String(s.c || '').toLowerCase() !== String(S.nick || '').toLowerCase()) { linha[7] = 'comando para ' + (s.c || '?'); salvar(); return; }
+      if (typeof s.q === 'number' && agora() - s.q > CMD_VALIDADE_MS) { linha[7] = 'comando velho (' + fmt((agora() - s.q) / 60e3) + ' min): não executei'; salvar(); return; }
+      linha[7] = 'executando'; salvar();
+      try { executarComando(s, linha); } catch (e) { linha[7] = 'erro no comando: ' + (e && e.message); salvar(); }
+      return;
+    }
     if (s.k !== 'lance') { linha[7] = s.k === 'teste' ? 'teste da ponte recebido' : s.k === 'relatorio' ? 'pedido de relatório' : 'pulso'; salvar(); if (s.k === 'teste') registrar('teste da ponte: chegou em ' + (atraso === null ? '?' : fmt(atraso / 1000)) + ' s'); return; }
     const qtd = inteiro(s.qtd) && s.qtd > 0 ? s.qtd : 1, total = (Number(s.p) || 0) * qtd, folga = typeof s.lib === 'number' ? s.lib - t : null;
     linha[6] = folga;
@@ -595,20 +623,27 @@
     if (ev.k === 'mktSorteio') {
       if (!linha) return;
       const res = ev.fase === 'fim' ? (ev.perdeu ? 'perdeu' : ev.ok ? 'ganhou' : String(ev.msg || 'terminou')) : null;
-      const base = String(linha[8]).replace(/sorteio com (\d+|\?) participante\(s\)(: \S+)?( \| )?/g, '');
-      if (Number(ev.total) > 0) linha[11] = Math.max(Number(linha[11]) || 0, Number(ev.total)); // 1.14: o maior total visto é o número de participantes
-      linha[8] = 'sorteio com ' + (Number(linha[11]) || ev.total || '?') + ' participante(s)' + (res ? ': ' + res : '') + (base ? ' | ' + base : ''); salvar();
+      const base = String(linha[8]).replace(/sorteio com (\d+|\?) participante\(s\)(: \S+)?( \| )?( \(da família: [^)]*\))?/g, '');
+      // 1.20: o jogo manda a lista de quem entrou ("entrou": todos até ali; "lista": os que chegam). A soma dá a contagem certa e as contas da família.
+      let qs = quemSorteio.get(ev.id); if (!qs) { qs = new Set(); quemSorteio.set(ev.id, qs); if (quemSorteio.size > 40) quemSorteio.delete(quemSorteio.keys().next().value); }
+      for (const n of Array.isArray(ev.quem) ? ev.quem : []) if (n && qs.size < 5000) qs.add(String(n).toLowerCase());
+      if (ev.eu && ev.fase === 'entrou') qs.add(String(ev.eu).toLowerCase());
+      const tot = Math.max(Number(ev.total) || 0, qs.size), fam = FAMILIA_NICKS.filter((n) => qs.has(n.toLowerCase())).map((n) => (n.toLowerCase() === CONTA_PRINCIPAL ? 'principal' : n));
+      if (tot > 0) linha[11] = Math.max(Number(linha[11]) || 0, tot); // 1.14: o maior total visto é o número de participantes
+      if (fam.length) linha[13] = fam;
+      linha[8] = 'sorteio com ' + (Number(linha[11]) || ev.total || '?') + ' participante(s)' + (Array.isArray(linha[13]) && linha[13].length ? ' (da família: ' + linha[13].join(', ') + ')' : '') + (res ? ': ' + res : '') + (base ? ' | ' + base : ''); salvar();
       return;
     }
     // marketComprado: a conta levou alguma coisa no Mercado. Só aviso quando foi pedido meu (compra feita à mão não vira mensagem).
     if (!linha || linha[10]) return;
     linha[10] = 1; linha[8] = 'GANHOU' + (linha[8] ? ' | ' + linha[8] : ''); salvar();
-    avisar(textoGanhou(ev, linha));
+    setTimeout(() => { try { avisar(textoGanhou(ev, linha)); } catch (e) { /* nada */ } }, 3000); // 1.20: espera o fim do sorteio para a contagem chegar inteira
   }
   function textoGanhou(ev, linha) { // 1.14: quantos participaram, quanto vale e o que fazer
     const gemas = ev.moeda === 'orb', info = linha[12] || {}, part = Number(linha[11]) || 0, pct = (x) => (Math.round(Number(x) * 10) / 10).toLocaleString('pt-BR');
     const L = ['🎉 ' + S.nick + ' levou no Mercado: ' + String(ev.descricao || linha[9] || 'anúncio ' + ev.id) + ' por ' + fmt(ev.total || 0) + (gemas ? ' Gemas' : ' Coins') + '.'];
-    L.push(part ? 'Sorteio com ' + part + ' participante(s).' : 'Não vi quantos participaram do sorteio.');
+    const famL = Array.isArray(linha[13]) ? linha[13].filter((n) => n.toLowerCase() !== String(S.nick || '').toLowerCase()) : [];
+    L.push(part ? 'Sorteio com ' + part + ' participante(s)' + (part > 1 ? (famL.length ? '; da família também entraram: ' + famL.join(', ') : '; nenhuma outra conta da família entrou') : '') + '.' : 'Não vi quantos participaram do sorteio.'); // 1.20
     const topo = info.co || info.ju || (info.esp ? info.esp * 1.1 : null), piso = info.pi || info.esp || (info.ju ? info.ju * 0.85 : null); // 1.18: o mesmo começo e piso do anúncio da principal e da resposta de preço
     if (topo) L.push('Vale ~' + fmt(Math.round(info.ju || topo)) + ' Gemas pela conta da principal' + (piso && piso < (info.ju || topo) ? ' (revenda esperada ~' + fmt(Math.round(piso)) + ')' : '') + '.');
     const pv = info.pv;
@@ -625,6 +660,147 @@
     if (M.amostras.length > 300) M.amostras.splice(0, M.amostras.length - 300);
     salvar();
   }
+  // ===== 5) 1.20: comandos da principal (os mesmos do Telegram da principal, com o nome desta conta na frente) =====
+  // A principal manda pelo quadro { k: 'cmd', c: nick, a: ação, pid, p (preço), d (dias), tpl (formato de mudar preço), auto (escada: sem mensagem), nota, nome }.
+  const CMD_VALIDADE_MS = 15 * 60e3;
+  let cmdResposta = null; // { ate, msgs }: avisos do jogo logo depois de um comando
+  const pidDe = (l) => Number(l && (l.pokemonId || (l.ficha && l.ficha.id))) || 0;
+  const semAcentoX = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const taxaPk = (t0) => { const t = Math.floor(t0); if (t <= 0) return 0; let piso = 0, bp = 0; for (const [ate, b] of [[500, 1300], [5000, 1000], [Infinity, 750]]) { const teto = Math.min(t, ate); if (teto <= piso) break; bp += (teto - piso) * b; piso = teto; } return Math.min(t, Math.ceil(bp / 10000)); };
+  const liquidoPk = (p) => Math.max(0, Math.floor(p) - taxaPk(p)); // a mesma conta do jogo que a principal usa
+  const descAn = (l) => (l.tipo === 'pokemon' && l.ficha ? fichaTxt(l.ficha) + ' #' + pidDe(l) : (S.nomesItem[l.itemId] || 'item ' + l.itemId) + ((l.qtd || 1) > 1 ? ' ×' + l.qtd : ''));
+  const moedaTxt = (m) => (m === 'gold' ? ' Coins' : ' Gemas');
+  const esperaMeus = [];
+  let ultimoPedidoMeus = 0;
+  const quaseSumidos = new Map(); // anúncio que faltou numa lista: só conta como saído se faltar de novo na lista seguinte (1 min depois ou mais)
+  function guardarMeus(linhas) {
+    const antes = S.meus, t = agora(); S.meus = linhas; S.meusEm = t;
+    const vivos = new Set(linhas.map((l) => l.id));
+    for (const [id, x] of quaseSumidos) { if (vivos.has(id)) quaseSumidos.delete(id); else if (t - x.em >= 60e3) { quaseSumidos.delete(id); sumiu(x.l); } }
+    if (antes) for (const l of antes) if (!vivos.has(l.id) && !quaseSumidos.has(l.id)) quaseSumidos.set(l.id, { l, em: t });
+    while (esperaMeus.length) { const cb = esperaMeus.shift(); try { cb(linhas); } catch (e) { /* nada */ } }
+  }
+  function pedirMeus(cb) {
+    esperaMeus.push(cb); ultimoPedidoMeus = agora();
+    if (!mandar({ t: 'market.meus' })) { const i = esperaMeus.indexOf(cb); if (i >= 0) esperaMeus.splice(i, 1); try { cb(null); } catch (e) { /* nada */ } return; }
+    setTimeout(() => { const i = esperaMeus.indexOf(cb); if (i >= 0) { esperaMeus.splice(i, 1); try { cb(null); } catch (e) { /* nada */ } } }, 6000);
+  }
+  // anúncio que some da lista: se o pokemon também saiu da conta, vendeu (avisa); se voltou, foi cancelado ou venceu (só registra)
+  function sumiu(l) {
+    const pid = pidDe(l); if (!pid || l.tipo !== 'pokemon') return;
+    if (M.cancelados && agora() - (M.cancelados[pid] || 0) < 15 * 60e3) return;
+    if (!Array.isArray(M.sumidos)) M.sumidos = [];
+    if (M.sumidos.some((x) => x.pid === pid)) return;
+    M.sumidos.push({ pid, nome: l.ficha ? fichaTxt(l.ficha) : 'pokemon', preco: Number(l.preco) || 0, moeda: l.moeda, em: agora() }); salvar();
+  }
+  function conferirSumidos() {
+    if (!Array.isArray(M.sumidos) || !M.sumidos.length) return;
+    const t = agora(), resta = [];
+    for (const x of M.sumidos) {
+      if (!S.pk || (S.pkEm || 0) - x.em < 15e3) { if (t - x.em < 40 * 60e3) resta.push(x); else registrar('anúncio de ' + x.nome + ' saiu e não consegui conferir se vendeu'); continue; }
+      if (S.pk.has(x.pid)) registrar('anúncio de ' + x.nome + ' saiu sem vender (cancelado ou venceu); ele voltou para a conta');
+      else avisar('💰 Vendeu na ' + S.nick + ': ' + x.nome + ' (#' + x.pid + ') por ' + fmt(x.preco) + (x.moeda === 'gold' ? ' Coins.' : ' Gemas (você recebe ~' + fmt(liquidoPk(x.preco)) + ').'));
+    }
+    M.sumidos = resta; salvar();
+  }
+  const respostaJogo = (ms) => { cmdResposta = { ate: agora() + (ms || 6000), msgs: [] }; };
+  const textoJogo = () => (cmdResposta && cmdResposta.msgs.length ? ' (o jogo disse: ' + cmdResposta.msgs.join('; ') + ')' : '');
+  function subirRelatorio() { try { if (S.pronto && !ehPrincipal()) window.postMessage({ pokeidleExtraRelatorio: { conta: S.nick, nome: nomeRelatorio(), texto: relatorio(), soGitHub: true } }, location.origin); } catch (e) { /* nada */ } }
+  function statusTexto(ls) {
+    const an = ls ? (ls.length ? 'anúncios: ' + ls.map((l) => descAn(l) + ' a ' + fmt(Number(l.preco) || 0) + moedaTxt(l.moeda)).join('; ') : 'nenhum anúncio aberto') : 'não consegui ler os anúncios agora';
+    return (S.nick + ': ' + situacao() + ' | ouro ' + fmt(S.gold) + ' | ' + an + (M.huntFixa ? ' | hunt fixa (pedida por você)' : '') + (M.sorteioDesligado ? ' | sorteios desligados' : '')).slice(0, 1400);
+  }
+  function executarComando(s, linha) {
+    const nome = S.nick || 'conta extra', ap = String(S.nick || '').toLowerCase();
+    const fim = (txt, aviso) => { linha[7] = String(txt).slice(0, 200); salvar(); if (aviso === false) registrar('comando: ' + txt); else avisar(aviso || txt); };
+    if (!S.pronto) return fim('a conta ainda não carregou', '⚠️ ' + nome + ': a conta ainda não carregou nesta aba. Mande o comando de novo em 1 minuto.');
+    const a = String(s.a || '');
+    if (a === 'status') { linha[7] = 'status pedido'; salvar(); return pedirMeus((ls) => { avisar('📋 ' + statusTexto(ls)); linha[7] = 'status mandado'; salvar(); setTimeout(subirRelatorio, 1500); }); }
+    if (a === 'relatorio') { subirRelatorio(); return fim('relatório mandado ao GitHub', s.quieto ? false : '📁 ' + nome + ': mandei o relatório para o GitHub.'); }
+    if (a === 'pausar' || a === 'retomar') {
+      M.sorteioDesligado = a === 'pausar'; salvar();
+      return fim(a === 'pausar' ? 'sorteios desligados por comando' : 'sorteios ligados por comando', a === 'pausar' ? '⏸️ ' + nome + ': sorteios desligados nesta conta. Para ligar de novo: "' + ap + ' retomar".' : '▶️ ' + nome + ': sorteios ligados de novo.');
+    }
+    if (a === 'hunt') return cmdHunt(s, fim, nome, ap);
+    if (a === 'anunciar') return cmdAnunciar(s, fim, nome, linha);
+    if (a === 'mudar') return cmdMudar(s, fim, nome);
+    if (a === 'cancelar') return cmdCancelar(s, fim, nome);
+    fim('comando desconhecido: ' + a, '⚠️ ' + nome + ': não conheço o comando "' + a + '". Atualize o script desta conta (Tampermonkey, Utilitários, Verificar atualizações).');
+  }
+  function cmdHunt(s, fim, nome, ap) {
+    const q = semAcentoX(String(s.nome || '').toLowerCase()).trim();
+    if (!q || /^auto/.test(q)) { M.huntFixa = null; salvar(); return fim('hunt automática', '🔁 ' + nome + ': volto a escolher a hunt sozinha.'); }
+    const nv = (q.match(/(\d+)\s*$/) || [])[1], nomeQ = q.replace(/\s*\d+\s*$/, '').trim();
+    const hs = (S.hunts || []).filter((h) => semAcentoX(String(h.nome).toLowerCase()).startsWith(nomeQ) && (!nv || h.nivel === Number(nv)));
+    const ok = hs.filter((h) => h.nivel <= S.level).sort((x, y) => y.nivel - x.nivel);
+    if (!ok.length) return fim('hunt não achada: ' + q, '⚠️ ' + nome + ': não achei a hunt "' + (s.nome || '') + '"' + (hs.length ? ' liberada para o nível ' + S.level + ' (ela pede o nível ' + Math.min(...hs.map((h) => h.nivel)) + ')' : '') + '.');
+    const h = ok[0];
+    M.huntFixa = h.slug; M.boa = h.slug; M.huntFixaEm = agora(); teste = null; salvar();
+    if (S.huntSlug !== h.slug && !trocando) trocarPara(h.slug, 'hunt fixa pedida por você: ' + nomeHunt(h.slug));
+    fim('hunt fixa: ' + nomeHunt(h.slug), '🎯 ' + nome + ' vai para ' + nomeHunt(h.slug) + ' e fica lá. Para o script voltar a escolher sozinho: "' + ap + ' hunt auto".');
+  }
+  function cmdAnunciar(s, fim, nome, linha) {
+    const pid = Number(s.pid), preco = Math.round(Number(s.p)), dias = Math.max(1, Math.min(30, Math.round(Number(s.d) || 3)));
+    const p = S.pk && S.pk.get(pid);
+    if (!p) return fim('não achei #' + pid, '⚠️ ' + nome + ': não achei o pokemon #' + pid + ' nesta conta (se acabou de entrar, mande de novo em 1 minuto).');
+    if (!(preco >= 1)) return fim('preço inválido', '⚠️ ' + nome + ': preço inválido para o ' + fichaTxt(p) + '.');
+    if (!(p.shiny || (p.potencia || 1) >= 5 || ((p.level || 0) >= 50 && (p.nota || 0) >= 3.5))) return fim('não pode ser anunciado', '⚠️ ' + nome + ': o ' + fichaTxt(p) + ' ainda não pode ser anunciado (o Mercado pede Nv 50+ e nota 3,5+; shiny e P5 são exceção).');
+    if ((S.meus || []).some((l) => pidDe(l) === pid)) return fim('já anunciado', 'ℹ️ ' + nome + ': o ' + fichaTxt(p) + ' já está anunciado. Para mudar o preço: "' + String(S.nick || '').toLowerCase() + ' mudar #' + pid + ' PREÇO".');
+    if (S.gold - dias * 100000 < RESERVA_OURO) return fim('sem ouro para a estadia', '⚠️ ' + nome + ': sem ouro para a estadia de ' + dias + ' dia(s) (' + fmt(dias * 100000) + ').');
+    if (!M.cmdAnuncio || typeof M.cmdAnuncio !== 'object') M.cmdAnuncio = {};
+    M.cmdAnuncio[pid] = agora(); salvar();
+    respostaJogo(6000);
+    if (!mandar({ t: 'market.criar', tipo: 'pokemon', pokemonId: pid, casaId: null, bicicletaId: null, qtd: 1, preco, moeda: 'orb', dias })) return fim('não consegui mandar ao jogo', '⚠️ ' + nome + ': não consegui mandar o pedido ao jogo agora. Mande de novo em 1 minuto.');
+    linha[7] = 'anúncio pedido a ' + preco; salvar();
+    setTimeout(() => pedirMeus((ls) => {
+      const l = ls && ls.find((x) => pidDe(x) === pid);
+      if (l) { fim('anunciado a ' + l.preco, '✅ ' + nome + ' anunciou ' + fichaTxt(p) + ' (#' + pid + ') por ' + fmt(l.preco) + ' Gemas (você recebe ~' + fmt(liquidoPk(l.preco)) + ').' + (s.nota ? ' ' + String(s.nota).slice(0, 700) : '')); setTimeout(subirRelatorio, 1500); }
+      else fim('o anúncio não apareceu' + textoJogo(), '⚠️ ' + nome + ': pedi o anúncio de ' + fichaTxt(p) + ' por ' + fmt(preco) + ' Gemas, mas ele não apareceu nos anúncios da conta' + textoJogo() + '.');
+    }), 3500);
+  }
+  function cmdMudar(s, fim, nome) {
+    const pid = Number(s.pid), preco = Math.round(Number(s.p)), quieto = !!s.auto;
+    if (!s.tpl || typeof s.tpl !== 'object' || !s.tpl.t) return fim('sem o formato de mudar preço', quieto ? false : '⚠️ ' + nome + ': a principal ainda não sabe o jeito de mudar preço (mude o preço de um anúncio uma vez no jogo da principal).');
+    if (!(preco >= 1)) return fim('preço inválido', quieto ? false : '⚠️ ' + nome + ': preço inválido.');
+    pedirMeus((ls) => {
+      if (!ls) return fim('não consegui ler os anúncios', quieto ? false : '⚠️ ' + nome + ': não consegui ler os anúncios da conta agora. Mande de novo em 1 minuto.');
+      const l = s.aid ? ls.find((x) => x.id === Number(s.aid)) : ls.find((x) => pidDe(x) === pid);
+      if (!l) return fim('sem anúncio de ' + (s.aid ? 'anúncio ' + s.aid : '#' + pid), quieto ? false : '⚠️ ' + nome + ': não achei ' + (s.aid ? 'o anúncio ' + s.aid : 'anúncio do #' + pid) + ' nesta conta.');
+      if (Number(l.preco) === preco) return fim('já estava a ' + preco, quieto ? false : 'ℹ️ ' + nome + ': ' + descAn(l) + ' já está a ' + fmt(preco) + '.');
+      respostaJogo(6000);
+      const pedido = Object.assign({}, s.tpl, { id: l.id, preco }); if (l.moeda) pedido.moeda = l.moeda; // a moeda é a do anúncio (pedra em Coins continua em Coins)
+      if (!mandar(pedido)) return fim('não consegui mandar ao jogo', quieto ? false : '⚠️ ' + nome + ': não consegui mandar o pedido ao jogo agora.');
+      setTimeout(() => pedirMeus((l2s) => {
+        const l2 = l2s && l2s.find((x) => x.id === l.id);
+        if (l2 && Number(l2.preco) === preco) { fim((quieto ? 'escada da principal: ' : '') + descAn(l) + ' de ' + l.preco + ' para ' + preco + moedaTxt(l.moeda), quieto ? false : '✅ ' + nome + ': ' + descAn(l) + ' agora a ' + fmt(preco) + moedaTxt(l.moeda) + (l.tipo === 'pokemon' && l.moeda !== 'gold' ? ' (você recebe ~' + fmt(liquidoPk(preco)) + ')' : '') + '.'); setTimeout(subirRelatorio, 1500); }
+        else fim('o preço de ' + descAn(l) + ' não mudou' + textoJogo(), quieto ? false : '⚠️ ' + nome + ': não consegui mudar o preço de ' + descAn(l) + textoJogo() + '. O jogo só deixa mudar cada anúncio a cada 30 minutos.');
+      }), 3500);
+    });
+  }
+  function cmdCancelar(s, fim, nome) {
+    const pid = Number(s.pid);
+    pedirMeus((ls) => {
+      if (!ls) return fim('não consegui ler os anúncios', '⚠️ ' + nome + ': não consegui ler os anúncios da conta agora. Mande de novo em 1 minuto.');
+      const l = ls.find((x) => pidDe(x) === pid);
+      if (!l) return fim('sem anúncio de #' + pid, '⚠️ ' + nome + ': não achei anúncio do #' + pid + ' nesta conta.');
+      if (!M.cancelados || typeof M.cancelados !== 'object') M.cancelados = {};
+      M.cancelados[pid] = agora(); salvar();
+      respostaJogo(6000);
+      if (!mandar({ t: 'market.cancelar', id: l.id })) return fim('não consegui mandar ao jogo', '⚠️ ' + nome + ': não consegui mandar o pedido ao jogo agora.');
+      setTimeout(() => pedirMeus((l2s) => {
+        if (l2s && !l2s.some((x) => x.id === l.id)) { fim('cancelado: ' + descAn(l), '✅ ' + nome + ': cancelei o anúncio de ' + descAn(l) + '. Ele voltou para a conta (só pode ser anunciado de novo em 30 minutos).'); setTimeout(subirRelatorio, 1500); }
+        else fim('não cancelou' + textoJogo(), '⚠️ ' + nome + ': não consegui cancelar o anúncio de ' + descAn(l) + textoJogo() + '.');
+      }), 3500);
+    });
+  }
+  function dadosParaPrincipal() { // 1.20: o que a principal precisa para os comandos e a escada (lido do relatório no GitHub)
+    const fic = (p) => ({ id: p.id, nome: p.nome, level: p.level, nota: p.nota, potencia: p.potencia || 1, quality: p.quality, ivTotal: p.ivTotal || Object.values(p.ivs || {}).reduce((a, b) => a + (Number(b) || 0), 0), shiny: !!p.shiny, tm: !!(p.tmAoe || p.tmElemental || p.refinoTotal > 0) });
+    const vend = S.pk ? [...S.pk.values()].filter((p) => p && !p.starter && (p.shiny || (p.potencia || 1) >= 5 || ((p.level || 0) >= 50 && (p.nota || 0) >= 3.5))).slice(0, 60).map(fic) : [];
+    const an = (S.meus || []).slice(0, 30).map((l) => Object.assign({ id: l.id, pid: pidDe(l) || null, item: l.tipo === 'pokemon' ? null : (S.nomesItem[l.itemId] || String(l.itemId || '')), qtd: l.qtd || 1, preco: Number(l.preco) || 0, moeda: l.moeda || null, criado: l.criadoEm || null, expira: l.expiraEm || null },
+      l.tipo === 'pokemon' && l.ficha ? { f: fic(Object.assign({}, l.ficha, { id: pidDe(l) })) } : {}));
+    return { v: 1, nick: S.nick, em: agora(), versao: VERSAO, orbs: S.orbs, gold: Math.round(S.gold || 0), hunt: S.huntSlug, huntFixa: M.huntFixa || null, sorteios: !M.sorteioDesligado, meusEm: S.meusEm || 0, pk: vend, an };
+  }
+
   window.addEventListener('message', (e) => {
     try {
       if (e.origin !== location.origin || !e.data) return;
@@ -670,6 +846,7 @@
       if (String(S.nick).toLowerCase() === CONTA_PRINCIPAL) { pintar(); return; }
       try { cuidarDoPasse(); } catch (e) {} // 1.19
       passoTroca(); passoSorteio(); amostrar();
+      try { if (agora() - Math.max(S.meusEm || 0, ultimoPedidoMeus) > 10 * 60e3) { ultimoPedidoMeus = agora(); mandar({ t: 'market.meus' }); } conferirSumidos(); } catch (e) { /* nada */ } // 1.20
       if (!religar()) { repor(); escada(); }
       pintar();
     } catch (e) {}
@@ -718,6 +895,12 @@
       '## O que esta conta pode pôr no Mercado',
       'itens: ' + (itens.length ? itens.join(', ') : 'nenhum'),
       'pokemon (nível 50+ e nota 3,5+, ou shiny, ou P5): ' + (S.vendaveis === null ? 'ainda não li a conta inteira' : S.vendaveis.length ? S.vendaveis.join('; ') : 'nenhum'),
+      '',
+      '## Anúncios abertos (1.20; lidos ' + (S.meusEm ? dh(S.meusEm) : 'ainda não') + ')',
+      ...(S.meus && S.meus.length ? S.meus.map((l) => descAn(l) + ' | ' + fmt(Number(l.preco) || 0) + moedaTxt(l.moeda) + ' | anúncio ' + l.id + (l.criadoEm ? ' | desde ' + dh(l.criadoEm) : '')) : ['nenhum']),
+      '',
+      '## Dados para a principal (1.20)',
+      'DADOS ' + JSON.stringify(dadosParaPrincipal()),
       '',
       '## Amostras a cada 10 minutos (' + M.amostras.length + '; quando | nível | XP por hora | ouro | Gemas | Ultra | Poke | hunt)',
       ...M.amostras.map((x) => [dh(x[0]), x[1], x[2] === null ? '?' : fmt(x[2]), fmt(x[3]), x[4] === null || x[4] === undefined ? '?' : x[4], x[5], x[6], x[7] ? nomeHunt(x[7]) : '?'].join(' | ')),
@@ -785,5 +968,5 @@
     return sendOrig.call(this, x);
   };
 
-  if (typeof window.__pokeidleExtraTeste === 'function') window.__pokeidleExtraTeste({ S, M, receber, tique, vigiar, taxaXp, amostrasXp, mortes, abates, estadoTeste: () => teste, receberSinal, passoSorteio, pendentes, relatorio, escada, trocaTeste: () => troca, somEstado });
+  if (typeof window.__pokeidleExtraTeste === 'function') window.__pokeidleExtraTeste({ S, M, receber, tique, vigiar, taxaXp, amostrasXp, mortes, abates, estadoTeste: () => teste, receberSinal, passoSorteio, pendentes, relatorio, escada, trocaTeste: () => troca, somEstado, dadosParaPrincipal, conferirSumidos });
 })();
