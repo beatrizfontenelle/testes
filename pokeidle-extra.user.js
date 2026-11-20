@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         PokeIdle: conta extra
 // @namespace    biafontenelle.pokeidle
-// @version      1.20
+// @version      1.21
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra.user.js
-// @description  (1.20, 20/11, pedido dela: os comandos da principal passam a valer para as extras. Pelo Telegram, com o nome da conta na frente ("capivara anunciar #código 580", "coxinha status", "vortek hunt larvitar") ou respondendo em cima de uma mensagem da extra ("anunciar 580"), a principal manda a ordem pelo quadro e esta conta executa: anunciar, mudar o preço, cancelar, status, relatório, pausar e retomar os sorteios, hunt fixa ("hunt auto" devolve a escolha ao script). O preço do anúncio e a escada de descida são os mesmos da principal: quem calcula é a principal, com a base e o modelo dela, e ela manda os "mudar" quando for a hora (sem mensagem, como na principal). Esta conta lista os próprios anúncios abertos a cada 10 minutos, põe no relatório os dados que a principal usa (pokemon vendáveis com a ficha e anúncios abertos) e avisa quando um anúncio dela vende ("💰 Vendeu").) (1.19, 18/11 14h, pedido dela: a extra resgata o Passe (grátis) sozinha todo dia às 00:05, como a principal; o resgate fica no registro e no relatório.) (1.18, 18/11, pedido dela: o aviso de compra da extra traz o mesmo começo e o mesmo piso de venda que a principal usaria no anúncio e na resposta de preço (antes dizia o preço justo e a revenda esperada, que não batiam com a resposta de preço).) (1.17, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.16, 18/11 manhã, pedidos dela: (1) a CoxinhaFria fica fixa na Outland (Furious Scizor 150) para pegar os drops: não testa mais degrau de XP enquanto estiver lá e volta sozinha se sair; só desce se desmaiar demais ou o ouro não pagar a poção; (2) som quase mudo na aba do jogo, para o Chrome não atrasar o pedido do sorteio com a janela em segundo plano; (3) freio de sorteios de 12 para 30 pedidos por hora.) (1.15, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a lista de hunts fica guardada no navegador, então a conta não fica mais "esperando o jogo" quando o script perde a mensagem de entrada do jogo (foi o que deixou a CapivaraZen cega das 13:26 às 15:19, sem amostra, sem sorteio e sem aviso); se mesmo assim passar 8 minutos sem conseguir ler a conta, avisa no Telegram e recarrega a aba uma vez; (2) avisa no Telegram quando a conta fica 15 minutos sem ganhar XP; (3) a etiqueta mostra quando a ponte parou; (4) Shield do Novato: abaixo do nível 1.160 o tipo do dia não deixa mais o selvagem forte, então a conta não foge nem evita alvo do tipo do dia; (5) o resultado do sorteio mostra o número de participantes em vez de "?" e não guarda mais mensagens de batalha; o pedido de relatório não aparece mais como "pulso") (1.14: pedido dela em 17/11: reserva de ouro nos sorteios em Coins = ouro para uns 10 minutos de bolas e poções (de 5 mil a 50 mil; antes era 50 mil fixos e a Vortek77 ficou fora de um anúncio de 2 Coins); o aviso 🎉 diz quantos participaram do sorteio, quanto vale pela conta da principal e se é para revender aqui ou passar para a principal; o relatório traz os stats do pokemon ativo e pode ir ao Telegram pelo "exportar tudo" da principal; na Larvitar 290 (alvo de shiny) fica mesmo com até 10% menos XP) (1.13: o aviso 📦 também sai para anúncio em Coins, com o comando pronto para a principal comprar e passar ouro para esta conta) (1.12: sorteio com relógio próprio (um worker, que o Chrome não atrasa com a janela em segundo plano), e aceita pedir até 3,2 s depois de liberar; a CapivaraZen perdia a janela por chegar 3 s atrasada) (1.11: ouro e poção. Só sobe de hunt com poção para 1,5 h; desce quando o ouro não paga a poção; sem poção e sem ouro, cura de graça e caça 30 níveis abaixo para juntar ouro, em vez de ficar parada no Centro) Para as contas extras (nunca para a principal). Faz só três coisas: repõe poção e revive com o ouro da própria conta, religa a caçada quando a conta fica parada no Centro Pokemon, e sobe de hunt sozinha conforme a treinadora libera, testando cada troca pelo XP por hora (se piorar, volta). Não anuncia nada, não usa diamantes, não manda mensagem no Telegram sozinho. Desde a 1.6 entra em sorteios do Mercado, mas só quando a conta principal avisa e só nos casos combinados (ver 1.6). Aprende a comprar poção e revive na primeira compra feita à mão. 1.1: insiste na ida ao Centro (o jogo recusa enquanto a conta está em combate), escolhe uma hunt sozinho quando não conhece nenhuma, e a etiqueta deixou de mostrar o contador de abates, que não funcionava. 1.2: usa o Desistir do Combate quando o jogo não deixa ir ao Centro. 1.3: a troca de hunt anda no ritmo das mensagens do jogo (com a janela em segundo plano o Chrome atrasava os temporizadores e cada troca levava 7 minutos); repõe bolas quando vê que a conta está arremessando (Lançar sem Parar ligado no jogo, precisa de VIP): Poke Ball sempre, Ultra Ball só com o ouro que sobra. 1.4: hunt que rende menos de 75% do XP da atual só é testada de novo 10 níveis depois (antes eram 4, e a CapivaraZen passou a manhã de 16/11 retestando Marowak 50 e Seaking 50, que davam metade do XP). 1.5: avisa quando um pokemon entra na Coleção (o filtro do próprio jogo) e quando captura shiny; o aviso vai ao Telegram pelo script irmão "PokeIdle: avisos das extras". Ao religar depois de um F5, volta para a última hunt aprovada, nunca para uma reprovada. 1.6: (a) sorteios do Mercado a pedido da principal: o monitor dela publica cada lance num quadro, o script irmão "PokeIdle: ponte das extras" lê e entrega aqui; a conta só entra se o lance está na regra das extras (Gemas: custa até 25% da saída pessimista, ou shiny abaixo do piso; erro em Coins até 200 mil; item muito barato), se tem o saldo e se o aviso chegou a tempo; nunca anuncia nem revende: se ganhar, só avisa no Telegram. Tudo o que chega fica anotado com o atraso, mesmo quando não entra. (b) O relatório agora é um arquivo, com o nick no nome, baixado pelo botão da etiqueta ou pelo menu do Tampermonkey. (c) Guarda uma amostra da conta a cada 10 minutos (nível, XP por hora, ouro, Gemas, bolas). 1.7: quando você anuncia algo em Gemas nesta conta, manda ao Telegram o número do anúncio já no formato do comando da principal (\"comprar anúncio NÚMERO PREÇO\"), porque a tela de itens do jogo não deixa achar um anúncio caro no meio de milhares. Para isso pede ao jogo a lista \"Meus anúncios\" (só leitura). 1.8: tipo do dia. Quando o XP por hora da hunt cai para menos de 55% do que vinha dando (foi o caso da CoxinhaFria em 16/11 às 18h: o alvo virou do tipo do dia e passou a levar um quarto do dano), testa o degrau de baixo da escada e fica nele se render mais; e quando o tipo do dia muda, esquece as reprovações e testa a escada de novo. 1.9: agora olha o tipo de cada alvo da escada. Alvo que é do tipo do dia leva um quarto do dano: a conta sai dele assim que o dia vira (sem esperar o XP cair), nunca testa um alvo do tipo do dia, e ao descer escolhe o degrau mais alto que não seja desse tipo. 1.10: o pedido de sorteio não depende mais só de chegar mensagem do jogo na hora certa (em 16/11 a CapivaraZen perdeu a janela do Wooper shiny porque a página ficou 3 s sem mensagem): ao aceitar um lance, marca também três despertadores diretos para a hora de liberar.
+// @description  (1.21, 20/11: Prey. Todo dia às 18h pede a roleta grátis (só ela, um pedido por dia; se vier com custo, desliga e avisa) e escolhe a espécie da hunt desta conta, ou a primeira da lista se ela não vier. Nunca paga reroll nem a cartela 2. Na principal quem cuida é o monitor.) (1.20, 20/11, pedido dela: os comandos da principal passam a valer para as extras. Pelo Telegram, com o nome da conta na frente ("capivara anunciar #código 580", "coxinha status", "vortek hunt larvitar") ou respondendo em cima de uma mensagem da extra ("anunciar 580"), a principal manda a ordem pelo quadro e esta conta executa: anunciar, mudar o preço, cancelar, status, relatório, pausar e retomar os sorteios, hunt fixa ("hunt auto" devolve a escolha ao script). O preço do anúncio e a escada de descida são os mesmos da principal: quem calcula é a principal, com a base e o modelo dela, e ela manda os "mudar" quando for a hora (sem mensagem, como na principal). Esta conta lista os próprios anúncios abertos a cada 10 minutos, põe no relatório os dados que a principal usa (pokemon vendáveis com a ficha e anúncios abertos) e avisa quando um anúncio dela vende ("💰 Vendeu").) (1.19, 18/11 14h, pedido dela: a extra resgata o Passe (grátis) sozinha todo dia às 00:05, como a principal; o resgate fica no registro e no relatório.) (1.18, 18/11, pedido dela: o aviso de compra da extra traz o mesmo começo e o mesmo piso de venda que a principal usaria no anúncio e na resposta de preço (antes dizia o preço justo e a revenda esperada, que não batiam com a resposta de preço).) (1.17, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.16, 18/11 manhã, pedidos dela: (1) a CoxinhaFria fica fixa na Outland (Furious Scizor 150) para pegar os drops: não testa mais degrau de XP enquanto estiver lá e volta sozinha se sair; só desce se desmaiar demais ou o ouro não pagar a poção; (2) som quase mudo na aba do jogo, para o Chrome não atrasar o pedido do sorteio com a janela em segundo plano; (3) freio de sorteios de 12 para 30 pedidos por hora.) (1.15, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a lista de hunts fica guardada no navegador, então a conta não fica mais "esperando o jogo" quando o script perde a mensagem de entrada do jogo (foi o que deixou a CapivaraZen cega das 13:26 às 15:19, sem amostra, sem sorteio e sem aviso); se mesmo assim passar 8 minutos sem conseguir ler a conta, avisa no Telegram e recarrega a aba uma vez; (2) avisa no Telegram quando a conta fica 15 minutos sem ganhar XP; (3) a etiqueta mostra quando a ponte parou; (4) Shield do Novato: abaixo do nível 1.160 o tipo do dia não deixa mais o selvagem forte, então a conta não foge nem evita alvo do tipo do dia; (5) o resultado do sorteio mostra o número de participantes em vez de "?" e não guarda mais mensagens de batalha; o pedido de relatório não aparece mais como "pulso") (1.14: pedido dela em 17/11: reserva de ouro nos sorteios em Coins = ouro para uns 10 minutos de bolas e poções (de 5 mil a 50 mil; antes era 50 mil fixos e a Vortek77 ficou fora de um anúncio de 2 Coins); o aviso 🎉 diz quantos participaram do sorteio, quanto vale pela conta da principal e se é para revender aqui ou passar para a principal; o relatório traz os stats do pokemon ativo e pode ir ao Telegram pelo "exportar tudo" da principal; na Larvitar 290 (alvo de shiny) fica mesmo com até 10% menos XP) (1.13: o aviso 📦 também sai para anúncio em Coins, com o comando pronto para a principal comprar e passar ouro para esta conta) (1.12: sorteio com relógio próprio (um worker, que o Chrome não atrasa com a janela em segundo plano), e aceita pedir até 3,2 s depois de liberar; a CapivaraZen perdia a janela por chegar 3 s atrasada) (1.11: ouro e poção. Só sobe de hunt com poção para 1,5 h; desce quando o ouro não paga a poção; sem poção e sem ouro, cura de graça e caça 30 níveis abaixo para juntar ouro, em vez de ficar parada no Centro) Para as contas extras (nunca para a principal). Faz só três coisas: repõe poção e revive com o ouro da própria conta, religa a caçada quando a conta fica parada no Centro Pokemon, e sobe de hunt sozinha conforme a treinadora libera, testando cada troca pelo XP por hora (se piorar, volta). Não anuncia nada, não usa diamantes, não manda mensagem no Telegram sozinho. Desde a 1.6 entra em sorteios do Mercado, mas só quando a conta principal avisa e só nos casos combinados (ver 1.6). Aprende a comprar poção e revive na primeira compra feita à mão. 1.1: insiste na ida ao Centro (o jogo recusa enquanto a conta está em combate), escolhe uma hunt sozinho quando não conhece nenhuma, e a etiqueta deixou de mostrar o contador de abates, que não funcionava. 1.2: usa o Desistir do Combate quando o jogo não deixa ir ao Centro. 1.3: a troca de hunt anda no ritmo das mensagens do jogo (com a janela em segundo plano o Chrome atrasava os temporizadores e cada troca levava 7 minutos); repõe bolas quando vê que a conta está arremessando (Lançar sem Parar ligado no jogo, precisa de VIP): Poke Ball sempre, Ultra Ball só com o ouro que sobra. 1.4: hunt que rende menos de 75% do XP da atual só é testada de novo 10 níveis depois (antes eram 4, e a CapivaraZen passou a manhã de 16/11 retestando Marowak 50 e Seaking 50, que davam metade do XP). 1.5: avisa quando um pokemon entra na Coleção (o filtro do próprio jogo) e quando captura shiny; o aviso vai ao Telegram pelo script irmão "PokeIdle: avisos das extras". Ao religar depois de um F5, volta para a última hunt aprovada, nunca para uma reprovada. 1.6: (a) sorteios do Mercado a pedido da principal: o monitor dela publica cada lance num quadro, o script irmão "PokeIdle: ponte das extras" lê e entrega aqui; a conta só entra se o lance está na regra das extras (Gemas: custa até 25% da saída pessimista, ou shiny abaixo do piso; erro em Coins até 200 mil; item muito barato), se tem o saldo e se o aviso chegou a tempo; nunca anuncia nem revende: se ganhar, só avisa no Telegram. Tudo o que chega fica anotado com o atraso, mesmo quando não entra. (b) O relatório agora é um arquivo, com o nick no nome, baixado pelo botão da etiqueta ou pelo menu do Tampermonkey. (c) Guarda uma amostra da conta a cada 10 minutos (nível, XP por hora, ouro, Gemas, bolas). 1.7: quando você anuncia algo em Gemas nesta conta, manda ao Telegram o número do anúncio já no formato do comando da principal (\"comprar anúncio NÚMERO PREÇO\"), porque a tela de itens do jogo não deixa achar um anúncio caro no meio de milhares. Para isso pede ao jogo a lista \"Meus anúncios\" (só leitura). 1.8: tipo do dia. Quando o XP por hora da hunt cai para menos de 55% do que vinha dando (foi o caso da CoxinhaFria em 16/11 às 18h: o alvo virou do tipo do dia e passou a levar um quarto do dano), testa o degrau de baixo da escada e fica nele se render mais; e quando o tipo do dia muda, esquece as reprovações e testa a escada de novo. 1.9: agora olha o tipo de cada alvo da escada. Alvo que é do tipo do dia leva um quarto do dano: a conta sai dele assim que o dia vira (sem esperar o XP cair), nunca testa um alvo do tipo do dia, e ao descer escolhe o degrau mais alto que não seja desse tipo. 1.10: o pedido de sorteio não depende mais só de chegar mensagem do jogo na hora certa (em 16/11 a CapivaraZen perdeu a janela do Wooper shiny porque a página ficou 3 s sem mensagem): ao aceitar um lance, marca também três despertadores diretos para a hora de liberar.
 // @match        https://pokeidle.io/*
 // @run-at       document-start
 // @grant        none
@@ -13,7 +13,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.20';
+  const VERSAO = '1.21';
   const CONTA_PRINCIPAL = 'biafontenelle';   // trava: nesta conta o script não faz nada (ela tem o monitor)
 
   // ===== REGRAS (tudo que dá para ajustar está aqui) =====
@@ -175,6 +175,7 @@
     if (typeof e.orbs === 'number') S.orbs = e.orbs; // Gemas
     if (e.passe && typeof e.passe === 'object') { S.passe = Object.assign({}, S.passe || {}, e.passe); S.passeT = agora(); } // 1.19
     if (e.diaSazonal && e.diaSazonal.tipo) diaNovo(e.diaSazonal.tipo, e.diaSazonal.fim || e.diaSazonal.chave);
+    try { preyDoEstado(e, cheio); } catch (err) {} // 1.21
     if (cheio && Array.isArray(e.pokemons)) { try { S.pk = new Map(e.pokemons.map((p) => [p.id, p])); S.pkEm = agora(); conferirSumidos(); } catch (err) {} } // 1.20
     if (cheio && Array.isArray(e.pokemons)) { try { S.vendaveis = e.pokemons.filter((p) => !p.starter && (p.shiny || (p.potencia || 1) >= 5 || ((p.level || 0) >= 50 && (p.nota || 0) >= 3.5))).map((p) => fichaTxt(p) + ' #' + p.id).slice(0, 12); } catch (err) {} }
     if (typeof e.servidorAgora === 'number') S.difServidor = e.servidorAgora - agora();
@@ -255,7 +256,7 @@
       if (txt.startsWith('{"t":"passe"')) { try { const r = JSON.parse(txt).resgate; if (r) registrar('Passe: dia ' + r.degrau + ' resgatado' + (agora() - (M.passeTentou || 0) < 2 * 60e3 ? ' (automático)' : '') + (r.quebrou ? '; a sequência quebrou' : '') + ': ' + (r.premios || []).map((x) => x.tipo === 'boost' ? x.boost + ' ' + x.horas + ' h' : x.tipo === 'coins' ? fmt(x.qtd) + ' Coins' : (x.qtd || '') + ' ' + (x.nome || x.tipo)).join(', ')); } catch (e) {} return; }
       if (txt.startsWith('{"t":"welcome"')) {
         const w = JSON.parse(txt);
-        if (Array.isArray(w.hunts)) { S.hunts = w.hunts.map((h) => ({ slug: h.slug, nome: h.nome, nivel: h.nivel, area: h.area })); M.hunts = S.hunts; salvar(); } // 1.15: guarda
+        if (Array.isArray(w.hunts)) { S.hunts = w.hunts.map((h) => ({ slug: h.slug, nome: h.nome, nivel: h.nivel, area: h.area, pk: (h.especies || []).map((e) => e && e.pokeId).filter(Boolean) })); M.hunts = S.hunts; salvar(); } // 1.15: guarda; 1.21: espécies
         try { // 1.6: nomes dos itens que o Mercado aceita (pedras e o catálogo da vitrine), para o relatório
           for (const k of Object.keys(w.pedrasEvolucao || {})) { const x = w.pedrasEvolucao[k]; if (x && x.itemId) S.nomesItem[x.itemId] = x.nome; }
           for (const c of (w.mercado && w.mercado.catalogo) || []) if (c && c.id && c.categoria !== 'casa' && c.categoria !== 'bicicleta') S.nomesItem[c.id] = c.nome;
@@ -266,7 +267,7 @@
         fundirEstado(o.estado, !!(o.estado && o.estado.cheio));
       } else if (txt.startsWith('{"t":"batalha"')) {
         const temMorte = txt.indexOf('"k":"morte"') >= 0, temAbate = txt.indexOf('"k":"abate"') >= 0, temCompra = txt.indexOf('"k":"compra"') >= 0, temShiny = txt.indexOf('"shiny":true') >= 0;
-        const temMercado = txt.indexOf('"k":"mktSorteio"') >= 0 || txt.indexOf('"k":"marketComprado"') >= 0 || txt.indexOf('"k":"diaSazonal"') >= 0;
+        const temMercado = txt.indexOf('"k":"mktSorteio"') >= 0 || txt.indexOf('"k":"marketComprado"') >= 0 || txt.indexOf('"k":"diaSazonal"') >= 0 || txt.indexOf('"k":"prey') >= 0;
         if (!temMorte && !temAbate && !temCompra && !temShiny && !temMercado) return;
         const o = JSON.parse(txt), t = agora();
         for (const ev of o.ev || []) {
@@ -275,6 +276,7 @@
           else if (ev.k === 'compra') aprender(ev);
           else if (ev.k === 'mktSorteio' || ev.k === 'marketComprado') { try { eventoMercado(ev); } catch (err) {} }
           else if (ev.k === 'diaSazonal' && ev.tipo) diaNovo(ev.tipo, ev.fim || ev.tipo);
+          else if ((ev.k === 'preyRoletou' || ev.k === 'preyEscolheu') && ev.c) { try { preyEvento(ev); } catch (err) {} } // 1.21
           else if (ev.k === 'bola' && ev.shiny && ev.sucesso && String(S.nick || '').toLowerCase() !== CONTA_PRINCIPAL) avisar('✨✨ SHINY CAPTURADO na ' + S.nick + '! Os detalhes chegam em até 5 minutos.');
         }
       }
@@ -845,6 +847,7 @@
       if (!S.pronto || M.pausado) { pintar(); return; }
       if (String(S.nick).toLowerCase() === CONTA_PRINCIPAL) { pintar(); return; }
       try { cuidarDoPasse(); } catch (e) {} // 1.19
+      try { preyCuidar(); } catch (e) {} // 1.21
       passoTroca(); passoSorteio(); amostrar();
       try { if (agora() - Math.max(S.meusEm || 0, ultimoPedidoMeus) > 10 * 60e3) { ultimoPedidoMeus = agora(); mandar({ t: 'market.meus' }); } conferirSumidos(); } catch (e) { /* nada */ } // 1.20
       if (!religar()) { repor(); escada(); }
@@ -852,6 +855,58 @@
     } catch (e) {}
   }
   setInterval(tique, 20e3);
+
+  // ===== 1.21: Prey (atualização de 20/11) =====
+  // Pedidos gravados na principal no clique dela: {"t":"prey.roletar","cartela":0,"categoria":"tudo","dia":"2026-11-20","n":0} (a roleta grátis do dia,
+  // resposta preyRoletou com custo 0) e {"t":"prey.escolher","cartela":0,"dia":"2026-11-20","pk":172}. O estado vem em automation.prey.
+  // Só a roleta grátis, um pedido por dia, e só depois de ver o estado (conta que nunca roletou não tem a chave). Se vier com custo, desliga e avisa.
+  const diaPrey = (t) => new Date((t || agora()) + (S.difServidor || 0) + 3 * 3600e3).toISOString().slice(0, 10); // vira às 18h de Brasília
+  let preyVisto = null;
+  const preyC0 = () => (M.prey && M.prey.dia === diaPrey() && Array.isArray(M.prey.cartelas) ? M.prey.cartelas[0] : null);
+  function preyBonusTxt(c) { const b = String((c && c.bonus) || ''), e = Number(c && c.est) || 0; return /spawn/i.test(b) ? 'Spawn +' + e : /captur/i.test(b) ? 'Capture +' + 2 * e + '%' : /dano|dmg|damage|ataq/i.test(b) ? 'Dano +' + 10 * e + '%' : /defens/i.test(b) ? 'Defensivo -' + 10 * e + '%' : b + ' ' + e; }
+  function preyDoEstado(e, cheio) {
+    const a = e && e.automation, p = (a && a.prey) || (e && e.prey) || null;
+    if (p && p.dia) {
+      const c0 = (x) => (x && Array.isArray(x.cartelas) ? x.cartelas[0] : null), cur = M.prey;
+      if (!cur || !cur.dia || p.dia > cur.dia || (p.dia === cur.dia && ((c0(p) && c0(p).pk && !(c0(cur) && c0(cur).pk)) || (c0(p) && c0(p).lista && !(c0(cur) && c0(cur).lista))))) { M.prey = { dia: p.dia, cartelas: Array.isArray(p.cartelas) ? p.cartelas : [null, null] }; salvar(); }
+    } else if (!M.prey && cheio && a && typeof a === 'object' && Object.keys(a).length) { M.prey = { dia: '', cartelas: [null, null] }; salvar(); } // nunca roletou
+  }
+  function preyEvento(ev) {
+    if (!M.prey || M.prey.dia !== ev.dia) M.prey = { dia: ev.dia, cartelas: [null, null] };
+    M.prey.cartelas[ev.cartela || 0] = ev.c; salvar();
+    if (ev.k === 'preyRoletou') {
+      registrar('Prey: roleta ' + (ev.custo ? 'com custo ' + fmt(ev.custo) : 'grátis') + ' (' + ev.dia + '): ' + preyBonusTxt(ev.c) + '; lista ' + (ev.c.lista || []).join(', '));
+      if (ev.custo > 0 && M.preyRolouDia === ev.dia && agora() - (M.preyRolouEm || 0) < 60e3) { M.preyDesligado = true; salvar(); avisar('⚠️ ' + S.nick + ': a roleta do Prey que o bot pediu veio com custo (' + fmt(ev.custo) + '). Desliguei a roleta automática nesta conta.'); }
+      if (M.preyRolouDia === ev.dia) setTimeout(preyEscolher, 3000); else preyVisto = { dia: ev.dia, t: agora() };
+    } else registrar('Prey: escolhido ' + ev.c.pk + ' (' + preyBonusTxt(ev.c) + ')');
+  }
+  function preyEscolher() {
+    const dia = diaPrey(), c = preyC0();
+    if (!c || !Array.isArray(c.lista) || !c.lista.length || c.pk || M.preyEscolheuDia === dia) return;
+    const lista = c.lista.map(Number), h = huntDe(S.huntSlug) || huntDe(M.ultimaHunt), minhas = ((h && h.pk) || []).map(Number);
+    let pk = minhas.find((id) => lista.includes(id)); const minha = !!pk;
+    if (!pk) pk = lista[0];
+    if (!mandar({ t: 'prey.escolher', cartela: 0, dia, pk })) return;
+    M.preyEscolheuDia = dia; salvar();
+    registrar('Prey: escolhi ' + pk + (minha ? ' (a espécie da minha hunt, ' + nomeHunt(h.slug) + ')' : ' (a minha hunt não veio na lista; peguei a primeira)') + '; ' + preyBonusTxt(c));
+  }
+  function preyCuidar() {
+    if (ehPrincipal() || M.preyDesligado || !S.pronto) return;
+    const t = agora(), dia = diaPrey(t);
+    if (dia !== diaPrey(t - 3 * 60e3) || t - prontoEm < 3 * 60e3) return;
+    const c = preyC0();
+    if (c && Array.isArray(c.lista) && c.lista.length) {
+      if (c.pk) return;
+      if (M.preyRolouDia === dia) return preyEscolher();
+      if (!preyVisto || preyVisto.dia !== dia) preyVisto = { dia, t };
+      if (t - preyVisto.t > 15 * 60e3) preyEscolher();
+      return;
+    }
+    if (!M.prey || M.preyRolouDia === dia || M.prey.dia > dia) return;
+    if (!mandar({ t: 'prey.roletar', cartela: 0, categoria: 'tudo', dia, n: 0 })) return;
+    M.preyRolouDia = dia; M.preyRolouEm = t; salvar();
+    registrar('Prey: pedi a roleta grátis de ' + dia);
+  }
 
   // ===== etiqueta na tela (clique abre o registro) =====
   let caixa = null, aberto = false;
@@ -883,6 +938,7 @@
       situacao(),
       'tipo do inicial: ' + (S.tipo || '?') + ' | tipo do dia: ' + (M.diaTipo || '?') + ' | ouro ' + fmt(S.gold) + ' | Gemas ' + (S.orbs === null ? '?' : fmt(S.orbs)) + ' | gasto de poção: ' + (gastoPocaoH === null ? 'ainda não medido' : fmt(gastoPocaoH) + ' por hora') + ' | loja: ' + JSON.stringify(M.loja) + ' | reprovadas: ' + JSON.stringify(M.bloqueio),
       'pokemon ativo: ' + ativoTxt(), // 1.14
+      'Prey: ' + (M.preyDesligado ? 'roleta automática DESLIGADA' : (() => { const c = preyC0(); return c && c.lista ? preyBonusTxt(c) + (c.pk ? ', escolhido ' + c.pk : ', sem escolha') : M.prey ? 'ainda não roletado hoje' : 'estado ainda não visto'; })()), // 1.21
       'passe: ' + (S.passe ? 'degrau ' + S.passe.degrau + ', último resgate ' + (Number(S.passe.ultimo) >= Math.floor((t - 3 * 3600e3) / 864e5) ? 'hoje' : 'no dia ' + S.passe.ultimo) + ' | resgate automático às 00:05' : 'ainda não lido'), // 1.19
       '',
       '## Ponte com a principal',
