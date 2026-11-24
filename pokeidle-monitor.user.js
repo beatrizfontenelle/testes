@@ -7726,7 +7726,7 @@
     if (semMercado > 5 * 60e3 && agora - est('avisouMercadoEm', 0) > 30 * 60e3) {
       salvar('avisouMercadoEm', agora);
       const escondida = (() => { try { return document.hidden || document.visibilityState === 'hidden'; } catch (e) { return false; } })();
-      enviar('🔧 Há ' + Math.round(semMercado / 60e3) + ' minutos não chega nenhum anúncio do Mercado.' + (escondida ? ' A aba do jogo está atrás de outra aba ou janela: clique nela para voltar a ficar na frente.' : ' Confira se a aba do jogo está na frente, se o Auto-Snipe do Sniper está ligado e se o script "PokeIdle: ponte do Mercado" está ativo no Tampermonkey.'), true);
+      enviar('🔧 Há ' + Math.round(semMercado / 60e3) + ' minutos não chega nenhum anúncio do Mercado.' + (escondida ? ' A aba do jogo está atrás de outra aba ou janela: clique nela para voltar a ficar na frente.' : ' Confira se a aba do jogo está na frente, se o Auto-Snipe do Sniper está ligado e se o script "PokeIdle: ponte do Mercado" está ativo no Tampermonkey.'));
     }
 
     // 1) Shiny capturado por você (anúncio do servidor com o seu nick)
