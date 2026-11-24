@@ -2559,7 +2559,7 @@
   setTimeout(() => lerConta(() => {}), 20e3);
   setInterval(() => lerConta(() => {}), 10 * 60e3);
   const fichaDaConta = (p) => ({ nome: p.nome, level: p.level, nota: p.nota, potencia: p.potencia || 1, quality: p.quality, id: p.id, ivs: p.ivs || null, speciesId: p.speciesId || 0,
-    ivTotal: p.ivTotal || Object.values(p.ivs || {}).reduce((a, b) => a + b, 0), shiny: !!p.shiny, extra: !!(p.tmAoe || p.tmElemental || p.refinoTotal > 0) });
+    ivTotal: p.ivTotal || Object.values(p.ivs || {}).reduce((a, b) => a + b, 0), shiny: !!p.shiny, extra: !!(p.tmAoe || p.tmElemental || p.refinoTotal > 0), soRefino: !!(p.refinoTotal > 0 && !p.tmAoe && !p.tmElemental) });
   function timeTexto() {
     const ids = est('timePvp', null), c = contaCache;
     const ps = ids && c ? ids.map((id) => c.todos.get(id)).filter(Boolean) : [];
@@ -5079,7 +5079,7 @@
     /* 2.12.63 (24/11, combinado com ela): a escada estava íngreme. As revendas medidas vendem em 20 h na mediana, 38 h no 3o quartil e 65 h no 9o decil, e as 4 que saíram na queima deram prejuízo (41% da mediana). Barato perde o prazo curto de 12 h; espera de 12 h na saída; queima de 5% a cada 8 h. */
     const ref = Math.max(justo0, zero), prazoH = ruim ? 0 : giro ? GIRO_PRAZO_H : Math.round(prazoVenda(conf, justo0) * 10) / 10;
     const esperaH = esperaDe({ ruim }), queimaH = QUEIMA_H;
-    const manual = f.shiny || ehLendario(f.nome) ? 'shiny ou lendário' : f.extra ? 'tem TM ou refino, que as vendas comparadas não têm' : '';
+    const manual = f.shiny || ehLendario(f.nome) ? 'shiny ou lendário' : f.extra && !(f.soRefino && (est('compradosPeloBot', {}) || {})[pokemonId]) ? 'tem TM ou refino, que as vendas comparadas não têm' : ''; /* 2.12.71: compra do bot só com refino desce sozinha */
     return { v: PLANO_V, sintetico: !!b.sintetico, mediana: b.mediana, modelo: b.modelo || null, justo, conf: Math.round(conf * 100) / 100, esperado: esp, alto: b.alto, vendas: b.vendas, ingenua: b.ingenua ? Math.round(b.ingenua.media) : 0,
       custo, zero, mercado, saida, piso: fundo, pisoCusto: zero, ruim, ancora, tabelado: tab, barato: false, prazoH, esperaH, queimaH, passo: Math.max(1, Math.ceil((justo - saida) / VENDA_DEGRAUS)), isca: 0, giro, manual, avaliadoEm: Date.now() };
   }
