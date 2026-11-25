@@ -124,6 +124,38 @@ agora = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-3)))
 M = {'versao': agora.strftime('%Y-%m-%d %H:%M'), 'feats': FEAT, 'minEspecie': MIN_ESPECIE, 'vendas': int(len(d)), 'limpas': int(len(limpo)), 'sujas': [int(x) for x in d[d.suja].id],
      'ultimaVenda': int(d['min'].max()), 'especies40': int(sum(1 for e in esp.values() if e['n'] >= MIN_ESPECIE)), 'esp': esp, 'arvores': arv}
 
+# ---------- IV do ataque que a espécie usa (monitor 2.12.90) ----------
+# O modelo vê o IV total. Aqui mede quanto o IV do ataque do papel (físico: Ataque; especial: Ataque Especial, pelos atributos base) explica do que sobra,
+# nas vendas que têm IV por atributo, com a previsão feita sem ver a própria venda (as 5 dobras da limpeza). Duas faixas: abaixo e a partir de 100 Gemas previstas.
+def iv_ataque():
+    import os
+    try: BS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'bases-especies.json'), encoding='utf-8'))['especies']
+    except Exception: return None
+    ivs = {}
+    for l in H[i + 1:]:
+        if l.startswith('## '): break
+        r = l.strip().split(',')
+        if len(r) >= 14 and '/' in r[13]:
+            try:
+                v = [int(x) for x in r[13].split('/')]
+                if len(v) == 6: ivs[int(r[0])] = v
+            except Exception: pass
+    t = d[~d.suja & d.id.isin(list(ivs.keys()))].copy()
+    t['res'] = (t.lp - pd.Series(pred, index=d.index)[t.index]); t['pg'] = np.exp(pd.Series(pred, index=d.index)[t.index])
+    bb = [BS.get(e) or BS.get(b) for e, b in zip(t.esp, t.base)]
+    t = t[[x is not None for x in bb]]; bb = [x for x in bb if x is not None]
+    if len(t) < 300: return None
+    t['ivA'] = [ivs[int(k)][1] if b[1] >= b[3] else ivs[int(k)][3] for k, b in zip(t.id, bb)]
+    def faixa(s):
+        if len(s) < 200: return None
+        x = s.ivA.values.astype(float); r = np.clip(s.res.values - np.median(s.res.values), -1.5, 1.5); xc = x - x.mean()
+        b10 = 10 * float((xc * r).sum() / (xc * xc).sum())
+        return {'beta10': round(min(0.14, max(0.0, b10)), 4), 'media': round(float(x.mean()), 2), 'n': int(len(s)), 'cru': round(b10, 4)}
+    CORTE = 100
+    return {'corte': CORTE, 'baixo': faixa(t[t.pg < CORTE]), 'alto': faixa(t[t.pg >= CORTE])}
+try: M['ivAtq'] = iv_ataque()
+except Exception as e: M['ivAtq'] = None; print('ivAtq falhou:', e, file=sys.stderr)
+
 # ---------- avaliador do JSON (o mesmo que o monitor usa) ----------
 def avaliar(M, linhas):
     out = []
@@ -170,6 +202,7 @@ if A and A.get('arvores'):
             usar = A; A.setdefault('recusados', []).append({'em': M['versao'], 'tipica': round(tip, 4), 'mais2x': round(x2, 4)})
             A['recusados'] = A['recusados'][-10:]
             nota = 'modelo novo recusado: mudou %.0f%% típico, %.1f%% acima de 2x (limites %d%% e %d%%); mantido o de %s' % (100 * tip, 100 * x2, 100 * ESTAVEL_TIPICO, 100 * ESTAVEL_2X, A.get('versao'))
+usar['ivAtq'] = M.get('ivAtq')
 json.dump(usar, open(SAIDA, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print(json.dumps({'versao': M['versao'], 'vendas': M['vendas'], 'limpas': M['limpas'], 'sujas': len(M['sujas']), 'especies40': M['especies40'], 'arvores': len(arv),
-                  'estabilidade': M.get('estabilidade'), 'gravado': usar['versao'], 'nota': nota}, ensure_ascii=False))
+                  'estabilidade': M.get('estabilidade'), 'ivAtq': M.get('ivAtq'), 'gravado': usar['versao'], 'nota': nota}, ensure_ascii=False))
