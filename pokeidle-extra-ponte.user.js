@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PokeIdle: ponte das extras
 // @namespace    biafontenelle.pokeidle
-// @version      1.11
+// @version      1.12
 // @updateURL    https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
 // @downloadURL  https://raw.githubusercontent.com/beatrizfontenelle/testes/scripts/pokeidle-extra-ponte.user.js
 // @description  (1.10, 24/11: a sugestão da IA vem só com a frase do número, sem cumprimento, e o piso é a revenda esperada.) (1.9, 24/11: a ponte guarda a chave da API colada pelo menu deste navegador e pede à IA a sugestão de resposta ao comprador; a chave nunca sai daqui.) (1.8, 20/11, junto com a conta extra 1.20 e o monitor 2.11.41: os comandos da principal passam a valer para as extras. O quadro já trazia tudo; esta versão só aceita o relatório que a extra manda depois de um comando (vai para o GitHub, para a principal ler o anúncio novo logo; sem a chave do GitHub, não vira arquivo no Telegram).) (1.7, 18/11 20h30, decisão dela depois do erro 502 do Telegram das 18:22 às 19:24: aviso importante de conta extra que falha (shiny e sorteio ganho no Mercado) fica guardado e é reenviado até 12 h depois, com a hora original na frente; os outros tentam uma vez só, como antes.) (1.6, 18/11 11h, pedido dela: o relatório da extra no GitHub passa a ser gravado a cada 15 minutos, sempre por cima do anterior.) (1.5, 18/11, pedido dela: o relatório da conta extra vai sozinho para o repositório privado "relatorios" no GitHub (extras/NOME.txt), a cada 3 horas e no "exportar tudo", para o Claude ler direto. Menu "Colar a chave do GitHub (relatórios)". Sem a chave, tudo como antes, pelo Telegram.) (1.4, 18/11: mesma regra da versão anterior; só passa a se atualizar sozinho pelo repositório e vem sem o token no arquivo (usa o que já está guardado no Tampermonkey).) (1.3, 17/11 fim da tarde, depois da auditoria dos relatórios das 16:38: (1) a leitura do quadro não fica mais presa quando o Tampermonkey não devolve resposta (foi o que deixou a CapivaraZen 49 minutos sem sinais, das 15:52 às 16:41): depois de 25 s sem resposta, solta e tenta de novo; (2) quando a leitura volta depois de 5 minutos ou mais parada, avisa no Telegram quanto tempo ficou sem ler; (3) avisa quando a principal fica 50 minutos ou mais sem publicar nada no quadro (ela publica pelo menos um pulso a cada 30); (4) o token e o chat ficam guardados no Tampermonkey (menu "Colar o token e o chat do Telegram"): as próximas versões não precisam deles no arquivo; (5) vigia opcional: menu "Colar o link do vigia" manda um sinal de vida a cada 5 minutos enquanto o jogo desta conta responde) (1.2, 17/11: o "exportar tudo" da principal faz cada extra mandar o próprio relatório ao Telegram, como arquivo; avisos de até 1.500 caracteres) Script irmão do "PokeIdle: conta extra" (1.6 ou mais novo). Substitui o "PokeIdle: avisos das extras" 1.0 (apague o antigo neste perfil). Faz três coisas: 1) manda ao Telegram os avisos da conta extra (pokemon que entrou na Coleção, shiny, sorteio ganho); 2) lê o quadro que o monitor da conta principal mantém fixado na conversa do bot (os lances que ele marcou) e entrega cada sinal novo ao script da conta extra, que decide se entra; 3) põe no menu do Tampermonkey o botão que baixa o relatório da conta. Não fala com o jogo. Contém o endereço do bot: não publicar este arquivo.
@@ -19,7 +19,7 @@
 
 (function () {
   'use strict';
-  const VERSAO = '1.11';
+  const VERSAO = '1.12';
 
   const TOKEN_DO_ARQUIVO = 'COLE_AQUI_O_TOKEN', CHAT_DO_ARQUIVO = '1451127393';
   // 1.3: o token e o chat ficam guardados no Tampermonkey deste perfil. Se o arquivo vier sem eles (cópia do Projeto), usa os guardados; se vier com eles, guarda.
@@ -262,7 +262,7 @@
     } catch (e) {}
   }, 5 * 60e3);
   if (typeof GM_registerMenuCommand === 'function') {
-    GM_registerMenuCommand('Baixar o relatório desta conta extra', () => paraPagina({ pokeidleExtraPedido: 'relatorio' }));
+    (() => {})('Baixar o relatório desta conta extra', () => paraPagina({ pokeidleExtraPedido: 'relatorio' }));
     GM_registerMenuCommand('Colar a chave do GitHub (relatórios)', () => ghMenuChave(String(conta || 'extra').replace(/[^A-Za-z0-9_.-]/g, '') || 'extra')); // 1.5
     GM_registerMenuCommand('Colar o token e o chat do Telegram', () => { // 1.3
       const txt = window.prompt('Cole a linha do script antigo que tem o TOKEN e o CHAT (a linha inteira serve). Ficam guardados só neste Tampermonkey.') || '';
