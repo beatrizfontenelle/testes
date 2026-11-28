@@ -23616,6 +23616,3462 @@
 "casa": 25
 }
 ]
+},
+{
+"id": "b12-s01-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 1 (Exeggutor, Garchomp, Rhyperior, Glaceon, Gallade; no ranqueado ela venceu 0 de 16)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 103,
+"level": 1980,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.564,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 14
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1827,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.282,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1827,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.345,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 471,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.172,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 475,
+"level": 2149,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.223,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 7
+}
+]
+},
+{
+"id": "b12-s01-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 1 (Exeggutor, Garchomp, Rhyperior, Glaceon, Gallade; no ranqueado ela venceu 0 de 16)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 103,
+"level": 1980,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.564,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 14
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1827,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.282,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1827,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.345,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 471,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.172,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 475,
+"level": 2149,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.223,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 7
+}
+]
+},
+{
+"id": "b12-s02-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s02-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s03-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 3 (Venusaur, Whiscash, Infernape, Magnezone, Hisuian Typhlosion; no ranqueado ela venceu 7 de 7)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1129,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.309,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 20
+},
+{
+"teste": {
+"speciesId": 340,
+"level": 2266,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.475,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 392,
+"level": 998,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.282,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 462,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.47,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 25
+},
+{
+"teste": {
+"speciesId": 6157,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.33,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 21
+}
+]
+},
+{
+"id": "b12-s03-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 3 (Venusaur, Whiscash, Infernape, Magnezone, Hisuian Typhlosion; no ranqueado ela venceu 7 de 7)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1129,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.309,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 20
+},
+{
+"teste": {
+"speciesId": 340,
+"level": 2266,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.475,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 392,
+"level": 998,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.282,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 462,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.47,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 25
+},
+{
+"teste": {
+"speciesId": 6157,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.33,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 21
+}
+]
+},
+{
+"id": "b12-s04-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 4 (Victreebel, Dragonite, Empoleon, Furious Scizor, Whiscash; no ranqueado ela venceu 0 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 71,
+"level": 2417,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.382,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 149,
+"level": 684,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.591,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 395,
+"level": 780,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.036,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 463,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.11,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 13340,
+"level": 103,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s04-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 4 (Victreebel, Dragonite, Empoleon, Furious Scizor, Whiscash; no ranqueado ela venceu 0 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 71,
+"level": 2417,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.382,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 149,
+"level": 684,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.591,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 395,
+"level": 780,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.036,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 463,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.11,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 13340,
+"level": 103,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s05-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 5 (Blastoise, Gengar, Tyranitar, Electivire, Mega Metagross; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 9,
+"level": 1011,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.6,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 1149,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.431,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1017,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.394,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 466,
+"level": 1792,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.018,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 3376,
+"level": 3327,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.023,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s05-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 5 (Blastoise, Gengar, Tyranitar, Electivire, Mega Metagross; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 9,
+"level": 1011,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.6,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 1149,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.431,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1017,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.394,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 466,
+"level": 1792,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.018,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 3376,
+"level": 3327,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.023,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b12-s06-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b12-s06-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b12-s07-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 7 (Slaking, Metagross, Torterra, Rhyperior, Mega Charizard X; no ranqueado ela venceu 3 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 289,
+"level": 2045,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.521,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 376,
+"level": 1011,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.013,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 389,
+"level": 1836,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.182,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1297,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.273,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1050,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.996,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+}
+]
+},
+{
+"id": "b12-s07-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 7 (Slaking, Metagross, Torterra, Rhyperior, Mega Charizard X; no ranqueado ela venceu 3 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 289,
+"level": 2045,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.521,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 376,
+"level": 1011,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.013,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 389,
+"level": 1836,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.182,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1297,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.273,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1050,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.996,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+}
+]
+},
+{
+"id": "b12-s08-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 8 (Charizard, Kabutops, Blissey, Infernape, Mega Dragonite; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1156,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.077,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 141,
+"level": 726,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.163,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 242,
+"level": 998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.001,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 392,
+"level": 1934,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.278,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 3149,
+"level": 1356,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.2,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+}
+]
+},
+{
+"id": "b12-s08-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 8 (Charizard, Kabutops, Blissey, Infernape, Mega Dragonite; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1156,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.077,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 141,
+"level": 726,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.163,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 242,
+"level": 998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.001,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 392,
+"level": 1934,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.278,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+},
+{
+"teste": {
+"speciesId": 3149,
+"level": 1356,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.2,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+}
+]
+},
+{
+"id": "b12-s09-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b12-s09-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b12-s10-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b12-s10-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b12-s11-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 11 (Tyranitar, Slaking, Slaking, Garchomp, Mega Lucario Z; no ranqueado ela venceu 0 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 248,
+"level": 912,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.993,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 289,
+"level": 1218,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.058,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 289,
+"level": 1268,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.564,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.062,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 3448,
+"level": 3218,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.189,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 11
+}
+]
+},
+{
+"id": "b12-s11-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 11 (Tyranitar, Slaking, Slaking, Garchomp, Mega Lucario Z; no ranqueado ela venceu 0 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 248,
+"level": 912,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.993,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 289,
+"level": 1218,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.058,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 289,
+"level": 1268,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.564,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.062,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 3448,
+"level": 3218,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.189,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 11
+}
+]
+},
+{
+"id": "b12-s12-rhyperior-p4-q18",
+"nota": "Rhyperior Nv 1750 P4 Q 1,8 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 12 (Charizard, Gengar, Tyranitar, Garchomp, Glaceon; no ranqueado ela venceu 2 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.8,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1971,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.258,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 20
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 2017,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.286,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 24
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1017,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.031,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1836,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.497,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 471,
+"level": 2427,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.395,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 25
+}
+]
+},
+{
+"id": "b12-s12-rhyperior-p4-q15",
+"nota": "Rhyperior Nv 1750 P4 Q 1,5 (ficha que existe no Mercado) no lugar do Gallade, contra sparring 12 (Charizard, Gengar, Tyranitar, Garchomp, Glaceon; no ranqueado ela venceu 2 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 1750,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.5,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1971,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.258,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 20
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 2017,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.286,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 24
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1017,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.031,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1836,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.497,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 471,
+"level": 2427,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.395,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 25
+}
+]
 }
 ]
 }
