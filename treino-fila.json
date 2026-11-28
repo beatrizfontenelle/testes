@@ -6720,6 +6720,5446 @@
 "casa": 25
 }
 ]
+},
+{
+"id": "b8-rep2-s06-real",
+"nota": "repeticao 2: time real dela contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b8-rep2-s06-drud-no-garchomp",
+"nota": "repeticao 2: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b8-rep2-s09-real",
+"nota": "repeticao 2: time real dela contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep2-s09-drud-no-garchomp",
+"nota": "repeticao 2: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep2-s10-real",
+"nota": "repeticao 2: time real dela contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep2-s10-drud-no-garchomp",
+"nota": "repeticao 2: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep2-s02-real",
+"nota": "repeticao 2: time real dela contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b8-rep2-s02-drud-no-garchomp",
+"nota": "repeticao 2: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b8-rep3-s06-real",
+"nota": "repeticao 3: time real dela contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b8-rep3-s06-drud-no-garchomp",
+"nota": "repeticao 3: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 6 (Aggron, Floatzel, Scolipede, Hydreigon, Mega Sceptile; no ranqueado ela venceu 5 de 6)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 306,
+"level": 1715,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.038,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 419,
+"level": 1102,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.224,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 2159,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.027,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 635,
+"level": 1818,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.515,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3254,
+"level": 2417,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.328,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+}
+]
+},
+{
+"id": "b8-rep3-s09-real",
+"nota": "repeticao 3: time real dela contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep3-s09-drud-no-garchomp",
+"nota": "repeticao 3: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 9 (Steelix, Scizor, Tyranitar, Gardevoir, Staraptor; no ranqueado ela venceu 1 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 208,
+"level": 1163,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.341,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 212,
+"level": 1063,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.051,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 3158,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.441,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 282,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.246,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 13
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1889,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.505,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep3-s10-real",
+"nota": "repeticao 3: time real dela contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep3-s10-drud-no-garchomp",
+"nota": "repeticao 3: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 10 (Sceptile, Abomasnow, Rhyperior, Mega Charizard X, Mudkip; no ranqueado ela venceu 0 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 254,
+"level": 399,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.096,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 2846,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.083,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 659,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.378,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1356,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 13258,
+"level": 1024,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.427,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-rep3-s02-real",
+"nota": "repeticao 3: time real dela contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b8-rep3-s02-drud-no-garchomp",
+"nota": "repeticao 3: Druddigon Nv 1992 P4 (o vendido a 400 em 27/11) no lugar do Garchomp, Intimidate ligada contra sparring 2 (Charizard, Jynx, Garchomp, Lucario, Abomasnow; no ranqueado ela venceu 4 de 8)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 369,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.008,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 124,
+"level": 3513,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.536,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 22
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 980,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.507,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 26
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 808,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.308,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1037,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.579,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b8-s13-real",
+"nota": "time real dela contra sparring 13 (Venusaur, Charizard, Parasect, Furious Scizor, Nincada; no ranqueado ela venceu 2 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 2227,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.233,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 6,
+"level": 918,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 47,
+"level": 1211,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.18,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 596,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.35,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 13290,
+"level": 40,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.321,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s13-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 13 (Venusaur, Charizard, Parasect, Furious Scizor, Nincada; no ranqueado ela venceu 2 de 5)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 2227,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.233,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 6,
+"level": 918,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.498,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 16
+},
+{
+"teste": {
+"speciesId": 47,
+"level": 1211,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.18,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 596,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.35,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 13290,
+"level": 40,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.321,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s14-real",
+"nota": "time real dela contra sparring 14 (Venusaur, Tyranitar, Swampert, Vespiquen, Mega Charizard X; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1005,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.31,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1184,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.186,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 260,
+"level": 2648,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.552,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 11
+},
+{
+"teste": {
+"speciesId": 416,
+"level": 1190,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.188,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1818,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.386,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 24
+}
+]
+},
+{
+"id": "b8-s14-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 14 (Venusaur, Tyranitar, Swampert, Vespiquen, Mega Charizard X; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1005,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.31,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1184,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.186,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 260,
+"level": 2648,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.552,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 11
+},
+{
+"teste": {
+"speciesId": 416,
+"level": 1190,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.188,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 1818,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.386,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 24
+}
+]
+},
+{
+"id": "b8-s15-real",
+"nota": "time real dela contra sparring 15 (Venusaur, Gyarados, Tyranitar, Shiftry, Camerupt; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1631,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.51,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 130,
+"level": 1349,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.486,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 2073,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.012,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 7
+},
+{
+"teste": {
+"speciesId": 275,
+"level": 1542,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.571,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.105,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s15-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 15 (Venusaur, Gyarados, Tyranitar, Shiftry, Camerupt; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1631,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.51,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 130,
+"level": 1349,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.486,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 2073,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.012,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 7
+},
+{
+"teste": {
+"speciesId": 275,
+"level": 1542,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.571,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.105,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s16-real",
+"nota": "time real dela contra sparring 16 (Charizard, Golem, Enraged Typhlosion, Furious Scizor, Psy Exeggutor; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 980,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.108,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 76,
+"level": 2500,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.142,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2022,
+"level": 825,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.115,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 1043,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.036,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 2055,
+"level": 1005,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.99,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+}
+]
+},
+{
+"id": "b8-s16-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 16 (Charizard, Golem, Enraged Typhlosion, Furious Scizor, Psy Exeggutor; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 980,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.108,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 76,
+"level": 2500,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.142,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2022,
+"level": 825,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.115,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 1043,
+"shiny": true,
+"potencia": 1,
+"qualidade": 1.036,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 2055,
+"level": 1005,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.99,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+}
+]
+},
+{
+"id": "b8-s17-real",
+"nota": "time real dela contra sparring 17 (Venusaur, Tyranitar, Camerupt, Staraptor, Rhyperior; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1233,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.268,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1775,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.487,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1089,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 742,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s17-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 17 (Venusaur, Tyranitar, Camerupt, Staraptor, Rhyperior; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1233,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.268,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1775,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.487,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1089,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 742,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s18-real",
+"nota": "time real dela contra sparring 18 (Gyarados, Tyranitar, Blaziken, Abomasnow, Mega Abomasnow; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 130,
+"level": 1275,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.057,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1275,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.583,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 257,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.528,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1247,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.017,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 3460,
+"level": 2746,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.361,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-s18-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 18 (Gyarados, Tyranitar, Blaziken, Abomasnow, Mega Abomasnow; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 130,
+"level": 1275,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.057,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1275,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.583,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 257,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.528,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 460,
+"level": 1247,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.017,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 0
+},
+{
+"teste": {
+"speciesId": 3460,
+"level": 2746,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.361,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+}
+]
+},
+{
+"id": "b8-s19-real",
+"nota": "time real dela contra sparring 19 (Venusaur, Tyranitar, Camerupt, Staraptor, Rhyperior; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1233,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.268,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1783,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.487,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1089,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 742,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s19-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 19 (Venusaur, Tyranitar, Camerupt, Staraptor, Rhyperior; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 1233,
+"shiny": false,
+"potencia": 1,
+"qualidade": 1.268,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 5
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 830,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 323,
+"level": 1783,
+"shiny": true,
+"potencia": 4,
+"qualidade": 1.487,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 12
+},
+{
+"teste": {
+"speciesId": 398,
+"level": 1089,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 464,
+"level": 742,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.518,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s20-real",
+"nota": "time real dela contra sparring 20 (Charizard, Victreebel, Feraligatr, Tyranitar, Garchomp; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.453,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 71,
+"level": 1424,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.26,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 160,
+"level": 2376,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.019,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1810,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.385,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.438,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+}
+]
+},
+{
+"id": "b8-s20-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 20 (Charizard, Victreebel, Feraligatr, Tyranitar, Garchomp; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.453,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 19
+},
+{
+"teste": {
+"speciesId": 71,
+"level": 1424,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.26,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 160,
+"level": 2376,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.019,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1810,
+"shiny": false,
+"potencia": 3,
+"qualidade": 1.385,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 445,
+"level": 1364,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.438,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+}
+]
+},
+{
+"id": "b8-s21-real",
+"nota": "time real dela contra sparring 21 (Venusaur, Tyranitar, Lucario, Scolipede, Mega Dragonite; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 924,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.326,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1163,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.45,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 802,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.991,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 1304,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.565,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3149,
+"level": 2306,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.342,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+}
+]
+},
+{
+"id": "b8-s21-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 21 (Venusaur, Tyranitar, Lucario, Scolipede, Mega Dragonite; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 3,
+"level": 924,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.326,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 248,
+"level": 1163,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.45,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 448,
+"level": 802,
+"shiny": false,
+"potencia": 5,
+"qualidade": 0.991,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 8
+},
+{
+"teste": {
+"speciesId": 545,
+"level": 1304,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.565,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3149,
+"level": 2306,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.342,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 10
+}
+]
+},
+{
+"id": "b8-s22-real",
+"nota": "time real dela contra sparring 22 (Tyranitar, Sceptile, Mega Charizard X, Hisuian Typhlosion, Swampert; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 248,
+"level": 1998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.075,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 254,
+"level": 2073,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.409,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 2824,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.304,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 6157,
+"level": 865,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.323,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 13260,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.572,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s22-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 22 (Tyranitar, Sceptile, Mega Charizard X, Hisuian Typhlosion, Swampert; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 248,
+"level": 1998,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.075,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 254,
+"level": 2073,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.409,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 9
+},
+{
+"teste": {
+"speciesId": 3006,
+"level": 2824,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.304,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 6157,
+"level": 865,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.323,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 13260,
+"level": 998,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.572,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s23-real",
+"nota": "time real dela contra sparring 23 (Charizard, Gengar, Exeggutor, Mega Tyranitar, Nincada; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1334,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.503,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 236,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.56,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 103,
+"level": 577,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.437,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3248,
+"level": 1494,
+"shiny": true,
+"potencia": 2,
+"qualidade": 1.312,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 13290,
+"level": 586,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.263,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s23-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 23 (Charizard, Gengar, Exeggutor, Mega Tyranitar, Nincada; no ranqueado ela venceu 4 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 6,
+"level": 1334,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.503,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 94,
+"level": 236,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.56,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 23
+},
+{
+"teste": {
+"speciesId": 103,
+"level": 577,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.437,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 18
+},
+{
+"teste": {
+"speciesId": 3248,
+"level": 1494,
+"shiny": true,
+"potencia": 2,
+"qualidade": 1.312,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 13290,
+"level": 586,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.263,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+}
+]
+},
+{
+"id": "b8-s24-real",
+"nota": "time real dela contra sparring 24 (Abomasnow, Enraged Typhlosion, Brave Tyranitar, Furious Scizor, Mega Tyranitar; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"meu": 13728784,
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 460,
+"level": 1590,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.059,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 2022,
+"level": 1424,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.337,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 2048,
+"level": 1989,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.604,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 1304,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3248,
+"level": 2692,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.467,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
+},
+{
+"id": "b8-s24-drud-no-garchomp",
+"nota": "Druddigon Nv 1992 P4 no lugar do Garchomp contra sparring 24 (Abomasnow, Enraged Typhlosion, Brave Tyranitar, Furious Scizor, Mega Tyranitar; no ranqueado ela venceu 3 de 4)",
+"a": [
+{
+"meu": 41405324,
+"casa": 1
+},
+{
+"meu": 47568088,
+"casa": 2
+},
+{
+"teste": {
+"speciesId": 621,
+"level": 1992,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.501,
+"ivs": {
+"hp": 17,
+"atk": 29,
+"def": 1,
+"spAtk": 22,
+"spDef": 18,
+"speed": 22
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"meu": 168353130,
+"casa": 23
+},
+{
+"meu": 173919975,
+"casa": 24
+}
+],
+"b": [
+{
+"teste": {
+"speciesId": 460,
+"level": 1590,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.059,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 1
+},
+{
+"teste": {
+"speciesId": 2022,
+"level": 1424,
+"shiny": false,
+"potencia": 5,
+"qualidade": 1.337,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 17
+},
+{
+"teste": {
+"speciesId": 2048,
+"level": 1989,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.604,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 4
+},
+{
+"teste": {
+"speciesId": 2050,
+"level": 1304,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.383,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 3
+},
+{
+"teste": {
+"speciesId": 3248,
+"level": 2692,
+"shiny": false,
+"potencia": 4,
+"qualidade": 1.467,
+"ivs": {
+"hp": 20,
+"atk": 20,
+"def": 20,
+"spAtk": 20,
+"spDef": 20,
+"speed": 20
+},
+"tmElemental": null,
+"tmFisico": false
+},
+"casa": 2
+}
+]
 }
 ]
 }
